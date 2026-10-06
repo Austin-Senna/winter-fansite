@@ -62,7 +62,7 @@ export const ERAS: Era[] = [
   { slug: 'my-world', title: 'MY WORLD', shortTitle: 'MY WORLD', releaseDate: '2023-05-08', year: '2023', type: '3rd mini album',
     kicker: 'Third mini album. Spicy. The lore goes quiet.', concept: 'Y2K campus, cherry red, candy',
     theme: { a: '#FF3D7F', b: '#FFE066', glow: '#7CC6FF', ink: '#1A1A1E', mode: 3 },
-    spotify: { album: '69xF8jTd0c4Zoo7DT3Rwrn', tracks: [{ id: '1ULdASrNy5rurl1TZfFaMP', title: 'Spicy' }, { id: '3q5qpprtugUIEPExuI7tRD', title: 'Welcome To MY world' }] },
+    spotify: { album: '69xF8jTd0c4Zoo7DT3Rwrn', tracks: [{ id: '1ULdASrNy5rurl1TZfFaMP', title: 'Spicy' }, { id: '3q5qpprtugUIEPExuI7tRD', title: 'Welcome To MY World' }] },
     story: { loreStatus: 'season-2', text: [
       'SM framed MY WORLD as Season 2: the members travel from KWANGYA to the real world. Karina described it as going from warriors in a virtual world to looking like their peers.',
       'The pre-release Welcome To MY World invites nævis into the real world, after which an anomaly keeps occurring. That track is the only one that carries story.',
