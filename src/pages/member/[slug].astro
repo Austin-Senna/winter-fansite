@@ -1,0 +1,57 @@
+---
+import Base from '@/layouts/Base.astro';
+import Listen from '@/components/Listen.astro';
+import Photocards from '@/components/Photocards.astro';
+import { MEMBERS } from '@/data/members';
+import { ERAS, eraBySlug } from '@/data/eras';
+import type { Era } from '@/data/types';
+import { getCollection } from 'astro:content';
+export function getStaticPaths() { return MEMBERS.map(m => ({ params: { slug: m.slug }, props: { member: m } })); }
+const { member } = Astro.props;
+const entries = await getCollection('eras');
+const latest = entries.filter(e => e.data.images[member.slug].length).sort((a, b) => b.data.releaseDate.localeCompare(a.data.releaseDate))[0];
+const soloEra = member.slug === 'winter' ? eraBySlug('winter-solo')! : undefined;
+const theme = soloEra?.theme ?? { a: '#0B0B10', b: '#A9D6FF', glow: '#FFFFFF', ink: '#F3EFE6', mode: 0 as const };
+const trackEra: Era = soloEra ?? { ...ERAS[0], title: member.name, spotify: { tracks: member.solo.filter(s => s.spotifyTrack).map(s => ({ id: s.spotifyTrack!, title: s.title })) } };
+const base = import.meta.env.BASE_URL;
+const emptyImages = { karina: [], giselle: [], winter: [], ningning: [], group: [] } as Record<string, any[]>;
+---
+<Base title={`${member.name}, aespa`} description={`${member.name} (${member.hangul}), ${member.position}. ${member.loreRole}.`} theme={theme}>
+  <section class="hero">
+    <p class="kicker" data-synk>{member.hangul}. {member.position}.</p>
+    <h1 class="chrome" data-decode>{member.name}</h1>
+    <div class="strip">
+      <div data-synk>born<b>{member.born.replaceAll('-', '.')}, {member.birthplace}</b></div>
+      <div data-synk>lore role<b>{member.loreRole}</b></div>
+      <div data-synk>fan-sourced<b>{member.fanSourced.symbol}, {member.fanSourced.color}, {member.fanSourced.animal}</b></div>
+    </div>
+  </section>
+  <section class="notes"><div>
+    <h2>Role</h2><p>{member.loreNote}</p>
+    <h2>Solo</h2>
+    <ul class="solo">{member.solo.map(s => <li><b>{s.title}</b><small>{s.date}</small><span>{s.note}</span></li>)}</ul>
+    <h2>Moments</h2><ul class="solo">{member.moments.map(m => <li><span>{m}</span></li>)}</ul>
+    <p class="src">Sources: {member.sources.map((s, i) => <><a href={s.url} target="_blank" rel="noopener">{s.label}</a>{i < member.sources.length - 1 ? '; ' : ''}</>)}</p>
+  </div></section>
+  <Listen era={trackEra} />
+  {latest && <><section class="sec"><p class="lede">Latest photos: <a href={`${base}era/${latest.data.slug}/`}>{latest.data.title}</a>.</p></section><Photocards images={{ ...emptyImages, [member.slug]: latest.data.images[member.slug].slice(0, 9) }} eraSlug={latest.data.slug} /></>}
+</Base>
+<style>
+  .hero{min-height:80svh;display:grid;align-content:end;padding:0 var(--gutter) clamp(24px,5vh,56px)}
+  .kicker{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.6vw,36px);margin:0 0 .4em;color:var(--ink-dim)}
+  h1{margin:0;font-family:var(--display);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(72px,18vw,260px);line-height:.86}
+  .strip{display:grid;grid-template-columns:repeat(3,auto) 1fr;gap:clamp(16px,4vw,64px);margin-top:clamp(20px,3vh,36px);padding-top:14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--ink-dim)}
+  .strip b{display:block;font-weight:400;color:var(--ink);margin-top:2px}
+  .notes{padding:clamp(56px,10vh,120px) var(--gutter) 0;max-width:64ch}
+  .notes h2{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(24px,3vw,40px);line-height:1;margin:1.2em 0 .4em}
+  .notes p{font-size:clamp(16px,1.3vw,19px)}
+  .solo{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+  .solo li{display:grid;grid-template-columns:auto auto;gap:4px 12px;align-items:baseline;border-top:1px solid var(--line);padding-top:8px}
+  .solo b{font-weight:500} .solo small{font-family:var(--mono);color:var(--ink-dim)} .solo span{grid-column:1/-1;color:var(--ink-dim)}
+  .src{font-family:var(--mono);font-size:11px;color:var(--ink-dim)} .src a{color:inherit}
+  @media (max-width:720px){.strip{grid-template-columns:1fr}}
+</style>
+<script>
+  import { initMotion } from '@/scripts/motion';
+  document.addEventListener('astro:page-load', initMotion);
+</script>

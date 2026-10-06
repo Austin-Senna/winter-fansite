@@ -1,0 +1,25 @@
+---
+import Base from '@/layouts/Base.astro';
+import { getCollection } from 'astro:content';
+const entries = await getCollection('eras');
+const commons = entries.flatMap(e => Object.values(e.data.images).flat()).filter(i => i.license).map(i => `${i.credit ?? 'unknown'}, ${i.license}`);
+const uniq = [...new Set(commons)].sort();
+---
+<Base title="About, aespa fan site" description="Fan-made aespa site. Credits, sources, licenses and how to request a takedown.">
+  <section class="notes"><div>
+    <h1>About</h1>
+    <p>A fan-made site about aespa, Winter first. Not affiliated with SM Entertainment or the members.</p>
+    <h2>Media</h2>
+    <p>Official release artwork comes from aespa's official sites and belongs to SM Entertainment. Photos from Wikimedia Commons are used under their Creative Commons licenses, listed below. Fan photos from Pinterest are shown from their original hosts with a link to the pin; nothing from Pinterest is copied here. Videos are YouTube embeds. Music is embedded from Spotify.</p>
+    <p>If you own a photo shown here and want it removed or credited differently, open an issue on the GitHub repository and it will be handled within a day.</p>
+    <h2>Commons credits</h2>
+    <ul>{uniq.map(c => <li>{c}</li>)}</ul>
+    <h2>Facts</h2>
+    <p>Dates and release details follow Wikipedia and SM press coverage. Lore terms follow SM's published material. Representative colors, symbols and animals are fan-sourced and labeled as such wherever they appear.</p>
+  </div></section>
+</Base>
+<style>
+  .notes{padding:clamp(80px,14vh,160px) var(--gutter) 80px;max-width:64ch}
+  h1,h2{font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:1} h1{font-size:clamp(48px,8vw,120px);margin:0 0 .3em} h2{font-size:clamp(22px,3vw,36px);margin:1.4em 0 .4em}
+  ul{font-family:var(--mono);font-size:12px;color:var(--ink-dim);padding-left:1.2em}
+</style>
