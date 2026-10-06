@@ -33,7 +33,7 @@ A personal aespa fansite, Winter first. The site is organized by **era**: one pa
 ```
 /                     Home: the Portal. Era timeline 2020 -> 2026, enter any era.
 /era/<slug>/          Era page (template, ~17 instances).
-/member/<slug>/       Per member: profile, lore role, solo work. Winter first; others follow.
+/member/<slug>/       Per member: featured portrait, profile, lore role, solo work, and an "across eras" strip of their featured photo per era. Each member page carries a palette from the member's fan-sourced color.
 /story/               The SMCU storyline in order, Black Mamba to Girls, then the post-lore concepts.
 /about/               Credits, sources, takedown contact, "fan-made, not affiliated".
 ```
@@ -41,7 +41,7 @@ A personal aespa fansite, Winter first. The site is organized by **era**: one pa
 Era slugs: black-mamba, forever, next-level, savage, dreams-come-true, girls, my-world, better-things, drama, armageddon (incl. Supernova), parallel-line, whiplash, dirty-work, rich-man, aexis-line, wda, lemonade, kiss-n-tell. The media fetch may merge or drop thin ones; the spec does not require all to ship at launch.
 
 ### Era page template (top to bottom)
-1. **Hero.** Full-bleed shader background in the era palette. Era title in the era-skinned display face, revealed with a scramble/decode effect. Release date, type (single/EP/album), and Winter's look that era (hair color, one-line styling note) in a monospace HUD strip.
+1. **Hero.** Full-bleed shader background in the era palette. A featured group photo, picked by eye per era (`docs/copy/featured.json`, chosen from contact sheets of the quality-controlled candidates), sits on the left; title and HUD strip on the right. Under the hero, a strip of the four members' featured portraits for the era jumps to their photocards tab. Era title in the era-skinned display face, revealed with a scramble/decode effect. Release date, type (single/EP/album), and Winter's look that era (hair color, one-line styling note) in a monospace HUD strip.
 2. **Watch.** The official MV as the LCP-safe poster with click-to-load player. Below it a horizontal, pinned, scroll-scrubbed rail of the top videos ranked by YouTube view count, split into official (MV, performance, dance practice) and fancams.
 3. **Photocards.** Member subtabs (Karina, Giselle, Winter, Ningning, plus Group) above a masonry grid of curated photos as holographic photocards. Tilt and foil sheen on hover. Click opens a lightbox with a shared-element morph. Tag chips (teaser, stage, behind, fan-taken) reflow with FLIP. Tab choice persists across eras within the session.
 4. **Listen.** The release on Spotify as an album embed (full tracklist, 30-second previews for logged-out listeners, full tracks when logged in). Title track and most-streamed tracks called out above it.

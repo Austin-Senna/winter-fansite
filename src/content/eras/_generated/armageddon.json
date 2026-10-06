@@ -1348,7 +1348,59 @@
       }
     ]
   },
+  "featured": {
+    "karina": {
+      "member": "karina",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/46/1e/ce/461ece32ab882766651d5b26a4729f7b.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/281543725155134/",
+      "credit": "pinterest:grady3568",
+      "width": 1497,
+      "height": 1995,
+      "tags": []
+    },
+    "giselle": {
+      "member": "giselle",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/46/e4/17/46e4170f9814d2c7e88d077e8b8290ea.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/1829656095767209/",
+      "credit": "pinterest:magaliehu",
+      "width": 2000,
+      "height": 3000,
+      "tags": []
+    },
+    "winter": {
+      "member": "winter",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/62/7d/a5/627da531e2bd3676f41c0d6d014d9464.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/1266706140018842/",
+      "credit": "pinterest:JuliaSophie7",
+      "width": 1332,
+      "height": 1996,
+      "tags": []
+    },
+    "ningning": {
+      "member": "ningning",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/b0/60/15/b06015eaa928a6448180b3db2f8d2573.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/769552655107498484/",
+      "credit": "pinterest:soraeverse",
+      "width": 1261,
+      "height": 1645,
+      "tags": []
+    },
+    "group": {
+      "member": "group",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/a7/fa/78/a7fa78bc6fdefad6b6cd82b2f58f070a.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/440930619791428655/",
+      "credit": "pinterest:kierraaharris",
+      "width": 3000,
+      "height": 2000,
+      "tags": []
+    }
+  },
   "title": "Armageddon",
   "releaseDate": "2024-05-27",
-  "generatedAt": "2026-10-06T05:34:52.149Z"
+  "generatedAt": "2026-10-06T05:38:19.901Z"
 }

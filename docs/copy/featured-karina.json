@@ -1,0 +1,84 @@
+{
+  "karina": {
+    "armageddon": {
+      "file": "armageddon/karina/pinterest/281543725155134.jpg",
+      "grid": 4,
+      "why": "Teal-lit styled teaser, face sharp, portrait"
+    },
+    "attitude": {
+      "file": "attitude/karina/pinterest/647814727664429326.jpg",
+      "grid": 3,
+      "why": "Green-lit close concept shot, striking face"
+    },
+    "better-things": {
+      "file": "better-things/karina/pinterest/918030705308617746.jpg",
+      "grid": 5,
+      "why": "Pastel concept, clear face, clean light"
+    },
+    "black-mamba": {
+      "file": "black-mamba/karina/pinterest/655484920765714126.jpg",
+      "grid": 4,
+      "why": "Vivid concept portrait, face sharp, pastel glow"
+    },
+    "dirty-work": {
+      "file": "dirty-work/karina/pinterest/728879520985363591.jpg",
+      "grid": 6,
+      "why": "Styled concept, strong pose, warm tones"
+    },
+    "drama": {
+      "file": "drama/karina/pinterest/523121312994524025.jpg",
+      "grid": 12,
+      "why": "Close concept portrait, sharp face, cool blue"
+    },
+    "dreams-come-true": {
+      "file": "dreams-come-true/karina/pinterest/621637554850289875.jpg",
+      "grid": 7,
+      "why": "Solo teaser, pretty face, lavender palette"
+    },
+    "forever": {
+      "file": "forever/karina/pinterest/590816044906939810.jpg",
+      "grid": 5,
+      "why": "Snow concept, clear face, soft clean light"
+    },
+    "girls": {
+      "file": "girls/karina/pinterest/865676359603259599.jpg",
+      "grid": 8,
+      "why": "Red backdrop, sharp face, bold concept"
+    },
+    "kiss-n-tell": {
+      "file": "kiss-n-tell/karina/pinterest/641833384443170774.jpg",
+      "grid": 12,
+      "why": "Close concept portrait, vivid colors, sharp"
+    },
+    "lemonade": {
+      "file": "lemonade/karina/pinterest/331507222597080748.jpg",
+      "grid": 12,
+      "why": "Pink hair teaser, face sharp, vivid colors"
+    },
+    "my-world": {
+      "file": "my-world/karina/pinterest/547468898467556130.jpg",
+      "grid": 10,
+      "why": "Soft styled portrait, clear face, good light"
+    },
+    "next-level": {
+      "file": "next-level/karina/pinterest/737042295293236259.jpg",
+      "grid": 7,
+      "why": "Metallic concept portrait, sharp face, vertical"
+    },
+    "rich-man": {
+      "file": "rich-man/karina/pinterest/445786063140601495.jpg",
+      "grid": 10,
+      "why": "Studio concept, striking face, silver nails"
+    },
+    "savage": {
+      "file": "savage/karina/pinterest/15058979994878161.jpg",
+      "grid": 7,
+      "why": "Clean white-backdrop concept portrait, sharp face"
+    },
+    "whiplash": {
+      "file": "whiplash/karina/pinterest/403353710396846911.jpg",
+      "grid": 6,
+      "why": "Yellow backdrop concept, sharp face, strong color"
+    }
+  }
+}

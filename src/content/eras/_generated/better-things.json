@@ -1320,7 +1320,59 @@
       }
     ]
   },
+  "featured": {
+    "karina": {
+      "member": "karina",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/42/eb/2e/42eb2ef2513f761c09c0a18c807c0244.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/918030705308617746/",
+      "credit": "pinterest:dahliasflame",
+      "width": 1224,
+      "height": 1632,
+      "tags": []
+    },
+    "giselle": {
+      "member": "giselle",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/2d/60/3a/2d603ade99068b5fceb5c852d20ed754.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/633318766384599729/",
+      "credit": "pinterest:shprism",
+      "width": 1214,
+      "height": 1708,
+      "tags": []
+    },
+    "winter": {
+      "member": "winter",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/24/94/99/24949983053524934bce93aaf7a959f5.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/616289530286733880/",
+      "credit": "pinterest:sara__0510",
+      "width": 1080,
+      "height": 1920,
+      "tags": []
+    },
+    "ningning": {
+      "member": "ningning",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/61/48/40/61484026d9fda5c1dd8e2537ebf3c341.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/616289530286734040/",
+      "credit": "pinterest:sara__0510",
+      "width": 1080,
+      "height": 1920,
+      "tags": []
+    },
+    "group": {
+      "member": "group",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/90/64/00/906400ee1e85b0d12e318baac3b8464f.png",
+      "pageUrl": "https://www.pinterest.com/pin/12736811441209621/",
+      "credit": "pinterest:larad2001",
+      "width": 3024,
+      "height": 4032,
+      "tags": []
+    }
+  },
   "title": "Better Things",
   "releaseDate": "2023-08-18",
-  "generatedAt": "2026-10-06T05:34:45.694Z"
+  "generatedAt": "2026-10-06T05:38:19.897Z"
 }

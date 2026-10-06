@@ -1334,7 +1334,59 @@
       }
     ]
   },
+  "featured": {
+    "karina": {
+      "member": "karina",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/3f/54/83/3f5483069151c7dfbef270dbe7767eda.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/728879520985363591/",
+      "credit": "pinterest:thaiv312",
+      "width": 2728,
+      "height": 3636,
+      "tags": []
+    },
+    "giselle": {
+      "member": "giselle",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/92/34/cd/9234cdcafcd83a279c8fad16cfe88677.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/896146025895518197/",
+      "credit": "pinterest:chaninmyp",
+      "width": 2730,
+      "height": 3641,
+      "tags": []
+    },
+    "winter": {
+      "member": "winter",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/84/e7/a5/84e7a582729cb03710c32663cc8241e5.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/292804413295566459/",
+      "credit": "pinterest:eviegreenie",
+      "width": 1872,
+      "height": 2500,
+      "tags": []
+    },
+    "ningning": {
+      "member": "ningning",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/68/b3/34/68b334df3f7318b49750e15c320d7452.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/639722322110554783/",
+      "credit": "pinterest:mrizal1100",
+      "width": 1849,
+      "height": 2465,
+      "tags": []
+    },
+    "group": {
+      "member": "group",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/58/d6/dd/58d6dd3b50a494cbcb9a48df959784c0.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/59954238840530989/",
+      "credit": "pinterest:yves_aquarium_",
+      "width": 2731,
+      "height": 2731,
+      "tags": []
+    }
+  },
   "title": "Dirty Work",
   "releaseDate": "2025-06-27",
-  "generatedAt": "2026-10-06T05:34:57.345Z"
+  "generatedAt": "2026-10-06T05:38:19.905Z"
 }

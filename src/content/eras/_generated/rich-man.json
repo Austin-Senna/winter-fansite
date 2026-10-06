@@ -1422,7 +1422,61 @@
       }
     ]
   },
+  "featured": {
+    "karina": {
+      "member": "karina",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/50/e9/8f/50e98f4b5832f6b46ae1d428e62a783e.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/445786063140601495/",
+      "credit": "pinterest:VanessaMaria99",
+      "width": 1639,
+      "height": 2048,
+      "tags": []
+    },
+    "giselle": {
+      "member": "giselle",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/a4/14/e0/a414e05701764a4d99a99b7a51ebeb49.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/559431584985002307/",
+      "credit": "pinterest:esquivelmarin23",
+      "width": 2731,
+      "height": 4096,
+      "tags": []
+    },
+    "winter": {
+      "member": "winter",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/60/87/ec/6087ec6c34c9ad2c550bc87cb214ee83.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/212584044906152688/",
+      "credit": "pinterest:ramoblue",
+      "width": 1502,
+      "height": 2108,
+      "tags": []
+    },
+    "ningning": {
+      "member": "ningning",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/d8/43/34/d843342d93c78dd86d2c5470b458c4f7.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/8444318047413914/",
+      "credit": "pinterest:DearNaevis",
+      "width": 2731,
+      "height": 4096,
+      "tags": []
+    },
+    "group": {
+      "member": "group",
+      "kind": "local",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Aespa_@_East_End_Studios_11_13_2025_(54996848733).jpg",
+      "credit": "Justin Higuchi",
+      "width": 3200,
+      "height": 3200,
+      "tags": [],
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "src": "media/rich-man/group/group-b8ea474c01.jpg"
+    }
+  },
   "title": "Rich Man",
   "releaseDate": "2025-09-05",
-  "generatedAt": "2026-10-06T05:35:01.654Z"
+  "generatedAt": "2026-10-06T05:38:20.100Z"
 }

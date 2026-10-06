@@ -1,8 +1,11 @@
 ---
 import type { Era } from '@/data/types';
-const { era } = Astro.props as { era: Era };
+import Feature from './Feature.astro';
+const { era, feature } = Astro.props as { era: Era; feature?: any };
 ---
-<section class="hero" aria-labelledby="title">
+<section class={`hero${feature ? ' with-feature' : ''}`} aria-labelledby="title">
+  {feature && <div class="photo"><Feature img={feature} alt={`aespa, ${era.title}`} eager /></div>}
+  <div class="text">
   <p class="kicker" data-synk>{era.kicker}</p>
   <h1 id="title" class="chrome" data-decode>{era.title}</h1>
   <div class="strip">
@@ -10,11 +13,18 @@ const { era } = Astro.props as { era: Era };
     <div data-synk>format<b>{era.type}</b></div>
     <div data-synk>concept<b>{era.concept}</b></div>
   </div>
+  </div>
 </section>
 <style>
   .hero{min-height:100svh;display:grid;align-content:end;padding:0 var(--gutter) clamp(24px,5vh,56px)}
+  .hero.with-feature{grid-template-columns:minmax(220px,30vw) minmax(0,1fr);gap:clamp(24px,4vw,72px);align-items:end;padding-top:96px}
+  .photo{max-height:72svh;display:flex;align-items:flex-end;justify-content:flex-start}
+  .photo :global(.feature){max-height:72svh;width:auto}
+  .photo :global(.feature img){max-height:72svh;width:auto}
+  .text{min-width:0}
+  @media (max-width:900px){.hero.with-feature{grid-template-columns:1fr;align-content:end}.photo{order:-1;justify-content:flex-start;max-height:46svh;margin-top:72px}.photo :global(.feature),.photo :global(.feature img){max-height:46svh}}
   .kicker{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.6vw,36px);line-height:1.1;margin:0 0 .4em;max-width:28ch;text-shadow:0 1px 18px color-mix(in oklab,var(--era-a) 70%,transparent)}
-  h1{margin:0;font-family:var(--display);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(64px,15vw,240px);line-height:.86;filter:drop-shadow(0 2px 0 rgba(0,0,0,.25))}
+  h1{margin:0;font-family:var(--display);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(56px,11vw,200px);line-height:.86;overflow-wrap:anywhere;filter:drop-shadow(0 2px 0 rgba(0,0,0,.25))}
   .strip{display:grid;grid-template-columns:repeat(3,auto) 1fr;gap:clamp(16px,4vw,64px);margin-top:clamp(20px,3vh,36px);padding-top:14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--ink-dim)}
   .strip b{display:block;font-weight:400;color:var(--ink);margin-top:2px}
   @media (max-width:720px){.strip{grid-template-columns:1fr 1fr}}

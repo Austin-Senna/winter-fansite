@@ -1338,7 +1338,59 @@
       }
     ]
   },
+  "featured": {
+    "karina": {
+      "member": "karina",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/6a/28/de/6a28debb30024aed96f63d658dcb44cb.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/865676359603259599/",
+      "credit": "pinterest:yourbby945",
+      "width": 1000,
+      "height": 1066,
+      "tags": []
+    },
+    "giselle": {
+      "member": "giselle",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/cf/54/5b/cf545b2fcb67dc1ca88e220497104506.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/587438345195243306/",
+      "credit": "pinterest:chedamiaa",
+      "width": 1540,
+      "height": 2056,
+      "tags": []
+    },
+    "winter": {
+      "member": "winter",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/a0/15/b7/a015b71dad8a0706d806b9f85ce10903.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/117375134029808727/",
+      "credit": "pinterest:sophsteashop",
+      "width": 1080,
+      "height": 1460,
+      "tags": []
+    },
+    "ningning": {
+      "member": "ningning",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/b5/8b/fc/b58bfc7489007f2db208dfe89f6dae6d.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/399835273184163177/",
+      "credit": "pinterest:jphillip132",
+      "width": 1367,
+      "height": 2048,
+      "tags": []
+    },
+    "group": {
+      "member": "group",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/05/14/88/051488d382e0949e104e5d9ac7d0df9d.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/118852877664053631/",
+      "credit": "pinterest:genessibastos",
+      "width": 1500,
+      "height": 1000,
+      "tags": []
+    }
+  },
   "title": "Girls",
   "releaseDate": "2022-07-08",
-  "generatedAt": "2026-10-06T05:34:44.851Z"
+  "generatedAt": "2026-10-06T05:38:19.891Z"
 }

@@ -6,14 +6,18 @@ import WatchRail from '@/components/WatchRail.astro';
 import Photocards from '@/components/Photocards.astro';
 import Listen from '@/components/Listen.astro';
 import Story from '@/components/Story.astro';
+import MemberStrip from '@/components/MemberStrip.astro';
 import { ERAS, nextEra } from '@/data/eras';
 import { getEntry } from 'astro:content';
 export function getStaticPaths() { return ERAS.map(e => ({ params: { slug: e.slug }, props: { era: e } })); }
 const { era } = Astro.props;
 const content = await getEntry('eras', era.slug);
+const featured = content?.data.featured ?? { karina: null, giselle: null, winter: null, ningning: null, group: null };
+const hero = featured.group ?? featured.winter ?? null;
 ---
 <Base title={`${era.title}, aespa`} description={`${era.title}, ${era.type}, ${era.releaseDate}. ${era.concept}.`} theme={era.theme} current={era.slug}>
-  <EraHero era={era} />
+  <EraHero era={era} feature={hero} />
+  {era.membersEra && <MemberStrip featured={featured} />}
   <WatchRail videos={content?.data.videos ?? []} />
   <Photocards images={content?.data.images ?? { karina: [], giselle: [], winter: [], ningning: [], group: [] }} eraSlug={era.slug} />
   <Listen era={era} />

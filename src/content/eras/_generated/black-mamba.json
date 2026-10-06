@@ -1312,7 +1312,59 @@
       }
     ]
   },
+  "featured": {
+    "karina": {
+      "member": "karina",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/f3/2e/00/f32e00d3b094dfa430b0aa0c0dd6833c.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/655484920765714126/",
+      "credit": "pinterest:alegia2504",
+      "width": 1412,
+      "height": 2048,
+      "tags": []
+    },
+    "giselle": {
+      "member": "giselle",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/55/b6/a0/55b6a0d3fb81b3374c70118120524438.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/373517362867421635/",
+      "credit": "pinterest:katietheteenagewitch",
+      "width": 2000,
+      "height": 2997,
+      "tags": []
+    },
+    "winter": {
+      "member": "winter",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/fe/0b/4f/fe0b4fd390f34e84763858eb11c83018.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/103371753945929121/",
+      "credit": "pinterest:revthedepp",
+      "width": 1378,
+      "height": 2048,
+      "tags": []
+    },
+    "ningning": {
+      "member": "ningning",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/6b/f5/78/6bf578199c4e09dfcf8ebc2d9e40813d.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/594193744582103387/",
+      "credit": "pinterest:xxfreazbie",
+      "width": 1182,
+      "height": 1986,
+      "tags": []
+    },
+    "group": {
+      "member": "group",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/cf/9b/7f/cf9b7f3391cdf456d6b735810a3005c6.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/25755029108828318/",
+      "credit": "pinterest:L0VEDU",
+      "width": 2997,
+      "height": 2000,
+      "tags": []
+    }
+  },
   "title": "Black Mamba",
   "releaseDate": "2020-11-17",
-  "generatedAt": "2026-10-06T05:34:42.883Z"
+  "generatedAt": "2026-10-06T05:38:19.880Z"
 }

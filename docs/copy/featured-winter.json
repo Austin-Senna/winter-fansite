@@ -1,0 +1,89 @@
+{
+  "winter": {
+    "armageddon": {
+      "file": "armageddon/winter/pinterest/1266706140018842.jpg",
+      "grid": 7,
+      "why": "Styled braids, direct gaze, vivid color, portrait"
+    },
+    "attitude": {
+      "file": "attitude/winter/pinterest/743586588521017583.jpg",
+      "grid": 5,
+      "why": "Clean studio portrait, burgundy jacket, face sharp"
+    },
+    "better-things": {
+      "file": "better-things/winter/pinterest/616289530286733880.jpg",
+      "grid": 3,
+      "why": "Teaser portrait, glitter makeup, bright clean light"
+    },
+    "black-mamba": {
+      "file": "black-mamba/winter/pinterest/103371753945929121.jpg",
+      "grid": 2,
+      "why": "Chain headpiece concept, face sharp, portrait"
+    },
+    "dirty-work": {
+      "file": "dirty-work/winter/pinterest/292804413295566459.jpg",
+      "grid": 8,
+      "why": "Moody concept portrait, face clear, solo"
+    },
+    "drama": {
+      "file": "drama/winter/pinterest/64598575902526794.jpg",
+      "grid": 12,
+      "why": "Sharp close portrait, good light, solo"
+    },
+    "dreams-come-true": {
+      "file": "dreams-come-true/winter/pinterest/833377106055979544.jpg",
+      "grid": 4,
+      "why": "Soft pastel concept, face clear, portrait"
+    },
+    "forever": {
+      "file": "forever/winter/pinterest/720998221638815065.jpg",
+      "grid": 3,
+      "why": "Warm light portrait, face sharp, solo"
+    },
+    "girls": {
+      "file": "girls/winter/pinterest/117375134029808727.jpg",
+      "grid": 7,
+      "why": "Dark teaser portrait, face clear, solo"
+    },
+    "kiss-n-tell": {
+      "file": "kiss-n-tell/winter/pinterest/113434484359308663.jpg",
+      "grid": 7,
+      "why": "Blue-hair concept, face sharp, soft light"
+    },
+    "lemonade": {
+      "file": "lemonade/winter/pinterest/597501075610486138.jpg",
+      "grid": 5,
+      "why": "Styled teaser, white hair, high-contrast portrait"
+    },
+    "my-world": {
+      "file": "my-world/winter/pinterest/127086020728968746.jpg",
+      "grid": 11,
+      "why": "Sharp concept close-up, face clear, solo"
+    },
+    "next-level": {
+      "file": "next-level/winter/pinterest/1122874119623756848.jpg",
+      "grid": 5,
+      "why": "Studio portrait, blue jacket, sharp face"
+    },
+    "rich-man": {
+      "file": "rich-man/winter/pinterest/212584044906152688.jpg",
+      "grid": 8,
+      "why": "Vivid purple backdrop, face sharp, portrait"
+    },
+    "savage": {
+      "file": "savage/winter/pinterest/440930619791427351.jpg",
+      "grid": 6,
+      "why": "Polished studio concept, white outfit, face clear"
+    },
+    "whiplash": {
+      "file": "whiplash/winter/pinterest/624170829644461332.jpg",
+      "grid": 1,
+      "why": "Yellow studio teaser, face sharp, portrait"
+    },
+    "winter-solo": {
+      "file": "winter-solo/winter/pinterest/318559373660485522.jpg",
+      "grid": 10,
+      "why": "Bright styled portrait, face visible, solo"
+    }
+  }
+}

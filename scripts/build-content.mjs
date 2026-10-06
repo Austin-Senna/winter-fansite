@@ -15,6 +15,7 @@ const CURATED = path.join(ROOT, 'src', 'content', 'eras');
 const OUT = path.join(CURATED, '_generated');
 const PUBLIC = path.join(ROOT, 'public', 'media');
 const BUDGET = 400 * 1024 * 1024;
+const FEATURED = path.join(ROOT, 'docs', 'copy', 'featured.json'); // hand-picked hero photo per era and member
 
 async function readJson(p) { return JSON.parse(await fs.readFile(p, 'utf8')); }
 async function curationFor(slug) { const p = path.join(CURATED, slug + '.json'); return existsSync(p) ? readJson(p) : null; }
@@ -41,6 +42,13 @@ async function dirSize(d) {
 }
 
 const manifest = await readJson(path.join(RAW, 'manifest.json'));
+const featuredPicks = existsSync(FEATURED) ? await readJson(FEATURED) : {};
+function shapeFeatured(era, file) {
+  const i = era.images.find(x => x.file === file);
+  if (!i) return null;
+  const local = i.source === 'official' || i.source === 'commons';
+  return { member: i.member || 'group', kind: local ? 'local' : 'remote', ...(local ? {} : { remote: i.sourceUrl }), pageUrl: i.pageUrl ?? null, credit: i.credit ?? null, width: i.width ?? null, height: i.height ?? null, tags: [], ...(i.license ? { license: i.license, licenseUrl: i.licenseUrl ?? null } : {}), file };
+}
 await fs.mkdir(OUT, { recursive: true });
 let totalImages = 0;
 for (const era of manifest.eras) {
@@ -52,6 +60,14 @@ for (const era of manifest.eras) {
       delete img.file; // raw paths never ship
       totalImages++;
     }
+  }
+  content.featured = {};
+  for (const m of MEMBERS) {
+    const file = featuredPicks[era.slug]?.[m];
+    const f = file ? shapeFeatured(era, file) : null;
+    if (f && f.kind === 'local') { f.src = await localize(era.slug, f); referenced.add(f.src); }
+    if (f) delete f.file;
+    content.featured[m] = f;
   }
   const pruned = pruneUnreferenced(PUBLIC, era.slug, referenced);
   if (pruned.length) console.log(`pruned ${pruned.length} unreferenced files under public/media/${era.slug}`);

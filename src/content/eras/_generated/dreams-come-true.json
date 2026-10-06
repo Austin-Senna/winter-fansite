@@ -1310,7 +1310,59 @@
       }
     ]
   },
+  "featured": {
+    "karina": {
+      "member": "karina",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/04/d6/b9/04d6b9adb62cb3f247b547e08e6c8081.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/621637554850289875/",
+      "credit": "pinterest:tryu003",
+      "width": 1000,
+      "height": 1500,
+      "tags": []
+    },
+    "giselle": {
+      "member": "giselle",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/fc/7d/08/fc7d087eeff9cd62fb4ece439af1dda3.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/308707749475216861/",
+      "credit": "pinterest:thegr1mreaper",
+      "width": 1208,
+      "height": 1716,
+      "tags": []
+    },
+    "winter": {
+      "member": "winter",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/3e/b0/2b/3eb02bf1964774878b504665aaf0cef2.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/833377106055979544/",
+      "credit": "pinterest:9ksk0011",
+      "width": 1006,
+      "height": 1185,
+      "tags": []
+    },
+    "ningning": {
+      "member": "ningning",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/4f/de/01/4fde01082f8beb6b6bc403de4353f1f5.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/1104718983612666427/",
+      "credit": "pinterest:bcwfsh",
+      "width": 2666,
+      "height": 4096,
+      "tags": []
+    },
+    "group": {
+      "member": "group",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/6b/6c/ba/6b6cbabaf41f597183eca99f01dd34b8.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/40180621666726548/",
+      "credit": "pinterest:astridferbri",
+      "width": 1392,
+      "height": 1869,
+      "tags": []
+    }
+  },
   "title": "Dreams Come True",
   "releaseDate": "2021-12-20",
-  "generatedAt": "2026-10-06T05:34:43.722Z"
+  "generatedAt": "2026-10-06T05:38:19.888Z"
 }

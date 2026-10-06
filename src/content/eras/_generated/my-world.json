@@ -1320,7 +1320,59 @@
       }
     ]
   },
+  "featured": {
+    "karina": {
+      "member": "karina",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/0d/c4/f2/0dc4f24f8554df8ed996af52264168d7.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/547468898467556130/",
+      "credit": "pinterest:carminezachary",
+      "width": 1362,
+      "height": 2043,
+      "tags": []
+    },
+    "giselle": {
+      "member": "giselle",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/33/27/7f/33277f4e655855b57efffe44a86ed3e4.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/555420566563632679/",
+      "credit": "pinterest:diniinnee",
+      "width": 1168,
+      "height": 1752,
+      "tags": []
+    },
+    "winter": {
+      "member": "winter",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/5d/68/a4/5d68a4b4e0c84d3642c32d87729a4485.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/127086020728968746/",
+      "credit": "pinterest:LoveEmmaW",
+      "width": 1124,
+      "height": 1124,
+      "tags": []
+    },
+    "ningning": {
+      "member": "ningning",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/03/25/d2/0325d2ef20cf797931de59338efeae5f.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/693976623881570493/",
+      "credit": "pinterest:httpshiyori",
+      "width": 1200,
+      "height": 1800,
+      "tags": []
+    },
+    "group": {
+      "member": "group",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/64/17/61/6417615e89f8c0a9907989aafcff52fe.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/313703930309078190/",
+      "credit": "pinterest:gamemoka09",
+      "width": 2000,
+      "height": 3000,
+      "tags": []
+    }
+  },
   "title": "My World",
   "releaseDate": "2023-05-08",
-  "generatedAt": "2026-10-06T05:34:45.256Z"
+  "generatedAt": "2026-10-06T05:38:19.895Z"
 }

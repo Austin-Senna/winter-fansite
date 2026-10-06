@@ -2,6 +2,7 @@
 import Base from '@/layouts/Base.astro';
 import Listen from '@/components/Listen.astro';
 import Photocards from '@/components/Photocards.astro';
+import Feature from '@/components/Feature.astro';
 import { MEMBERS } from '@/data/members';
 import { ERAS, eraBySlug } from '@/data/eras';
 import type { Era } from '@/data/types';
@@ -14,10 +15,16 @@ const soloEra = member.slug === 'winter' ? eraBySlug('winter-solo')! : undefined
 const theme = member.theme;
 const trackEra: Era = soloEra ?? { ...ERAS[0], title: member.name, spotify: { tracks: member.solo.filter(s => s.spotifyTrack).map(s => ({ id: s.spotifyTrack!, title: s.title })) } };
 const base = import.meta.env.BASE_URL;
+const byDate = [...entries].sort((a, b) => a.data.releaseDate.localeCompare(b.data.releaseDate));
+const featuredAcross = byDate.filter(e => e.data.featured?.[member.slug]).map(e => ({ slug: e.data.slug, title: eraBySlug(e.data.slug)?.title ?? e.data.title, year: eraBySlug(e.data.slug)?.year ?? '', img: e.data.featured[member.slug]! }));
+const portrait = [...featuredAcross].reverse()[0]?.img ?? null;
+const thumb = (img: any) => img.kind === 'local' ? base + img.src : img.remote?.replace('/originals/', '/736x/');
 const emptyImages = { karina: [], giselle: [], winter: [], ningning: [], group: [] } as Record<string, any[]>;
 ---
 <Base title={`${member.name}, aespa`} description={`${member.name} (${member.hangul}), ${member.position}. ${member.loreRole}.`} theme={theme}>
-  <section class="hero">
+  <section class={`hero${portrait ? ' with-feature' : ''}`}>
+    {portrait && <div class="photo"><Feature img={portrait} alt={member.name} eager /></div>}
+    <div class="text">
     <p class="kicker" data-synk>{member.intro ?? `${member.hangul}. ${member.position}.`}</p>
     <h1 class="chrome" data-decode>{member.name}</h1>
     <div class="strip">
@@ -25,7 +32,14 @@ const emptyImages = { karina: [], giselle: [], winter: [], ningning: [], group: 
       <div data-synk>lore role<b>{member.loreRole}</b></div>
       <div data-synk>fan-sourced<b>{member.fanSourced.symbol}, {member.fanSourced.color}, {member.fanSourced.animal}</b></div>
     </div>
+    </div>
   </section>
+  {featuredAcross.length > 0 && <>
+    <section class="sec"><h2>Across eras</h2></section>
+    <nav class="across" aria-label={`${member.name} by era`}>
+      {featuredAcross.map(f => <a href={`${base}era/${f.slug}/`}><span class="frame"><img src={thumb(f.img)} alt={`${member.name}, ${f.title}`} loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('a').remove()" /></span><b>{f.title}</b><small>{f.year}</small></a>)}
+    </nav>
+  </>}
   <section class="notes"><div>
     <h2>Role</h2><p>{member.loreNote}</p>
     <h2>Solo</h2>
@@ -39,8 +53,19 @@ const emptyImages = { karina: [], giselle: [], winter: [], ningning: [], group: 
 </Base>
 <style>
   .hero{min-height:80svh;display:grid;align-content:end;padding:0 var(--gutter) clamp(24px,5vh,56px)}
+  .hero.with-feature{grid-template-columns:minmax(220px,28vw) minmax(0,1fr);gap:clamp(24px,4vw,72px);align-items:end;padding-top:96px}
+  .photo{display:flex;align-items:flex-end;justify-content:flex-start}
+  .photo :global(.feature),.photo :global(.feature img){max-height:70svh;width:auto}
+  .text{min-width:0}
+  @media (max-width:900px){.hero.with-feature{grid-template-columns:1fr}.photo{order:-1;justify-content:flex-start;margin-top:72px}.photo :global(.feature),.photo :global(.feature img){max-height:46svh}}
+  .across{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:clamp(10px,1.4vw,20px);padding:clamp(16px,3vh,32px) var(--gutter) 0}
+  .across a{text-decoration:none;color:inherit;display:grid;gap:6px}
+  .across .frame{display:block;aspect-ratio:3/4;border-radius:6px;overflow:hidden;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+  .across img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+  .across a:hover img{transform:scale(1.04)}
+  .across b{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:14px} .across small{font-family:var(--mono);font-size:11px;color:var(--ink-dim)}
   .kicker{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.6vw,36px);margin:0 0 .4em;color:var(--ink-dim)}
-  h1{margin:0;font-family:var(--display);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(72px,18vw,260px);line-height:.86}
+  h1{margin:0;font-family:var(--display);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(56px,12vw,200px);line-height:.86;overflow-wrap:anywhere}
   .strip{display:grid;grid-template-columns:repeat(3,auto) 1fr;gap:clamp(16px,4vw,64px);margin-top:clamp(20px,3vh,36px);padding-top:14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--ink-dim)}
   .strip b{display:block;font-weight:400;color:var(--ink);margin-top:2px}
   .notes{padding:clamp(56px,10vh,120px) var(--gutter) 0;max-width:64ch}

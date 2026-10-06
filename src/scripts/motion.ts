@@ -19,7 +19,7 @@ export function initMotion() {
     gsap.ticker.add(t => lenis!.raf(t * 1000)); gsap.ticker.lagSmoothing(0);
   }
   if (!(history.state && 'scrollY' in history.state)) lenis?.scrollTo(0, { immediate: true }); // let the router restore scroll on back/forward
-  progress(); hero(reduced); rail(reduced); tilt(reduced || coarse); tabs();
+  progress(); hero(reduced); rail(reduced); tilt(reduced || coarse); tabs(); tabJumps();
   ScrollTrigger.refresh();
 }
 
@@ -91,4 +91,15 @@ function tabs() {
     let initial = server; try { const stored = sessionStorage.getItem('tab:' + key); if (stored && hasContent(stored)) initial = stored; } catch {}
     if (initial) select(initial);
   });
+}
+
+function tabJumps() {
+  document.querySelectorAll<HTMLElement>('[data-select-tab]').forEach(el => el.addEventListener('click', () => {
+    const tab = document.querySelector<HTMLButtonElement>(`[data-tabs=photocards] [role=tab][data-tab="${el.dataset.selectTab}"]`);
+    if (!tab) return;
+    tab.click();
+    const target = document.getElementById('gal-h') ?? tab;
+    const y = target.getBoundingClientRect().top + scrollY - 24;
+    lenis ? lenis.scrollTo(y) : scrollTo({ top: y, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  }));
 }

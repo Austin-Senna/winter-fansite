@@ -1310,7 +1310,59 @@
       }
     ]
   },
+  "featured": {
+    "karina": {
+      "member": "karina",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/18/77/cf/1877cfe6d76c186ddefae419aa2fc188.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/590816044906939810/",
+      "credit": "pinterest:awandadian03",
+      "width": 1323,
+      "height": 2048,
+      "tags": []
+    },
+    "giselle": {
+      "member": "giselle",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/f7/ce/0f/f7ce0f436a0d93f358e0929c87f0864e.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/373517362867421665/",
+      "credit": "pinterest:katietheteenagewitch",
+      "width": 1279,
+      "height": 2048,
+      "tags": []
+    },
+    "winter": {
+      "member": "winter",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/e0/6b/f8/e06bf8a0623e6d3dd87fad5da96b5594.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/720998221638815065/",
+      "credit": "pinterest:rc18240896",
+      "width": 1440,
+      "height": 1440,
+      "tags": []
+    },
+    "ningning": {
+      "member": "ningning",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/4e/25/fd/4e25fd122fdb11a8f98f28b1ba307f21.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/408279522484129416/",
+      "credit": "pinterest:doyoungiii12",
+      "width": 1366,
+      "height": 2048,
+      "tags": []
+    },
+    "group": {
+      "member": "group",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/6b/79/74/6b7974d7c82243e48ea71a34fe042d98.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/678354762631820053/",
+      "credit": "pinterest:niishimvra",
+      "width": 1250,
+      "height": 1875,
+      "tags": []
+    }
+  },
   "title": "Forever",
   "releaseDate": "2021-02-05",
-  "generatedAt": "2026-10-06T05:34:42.885Z"
+  "generatedAt": "2026-10-06T05:38:19.882Z"
 }

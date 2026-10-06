@@ -5,7 +5,7 @@ import { ERAS } from '@/data/eras';
 import { getCollection } from 'astro:content';
 import { COPY } from '@/data/copy';
 const entries = await getCollection('eras');
-const items = ERAS.filter(e => e.membersEra).map(era => { const c = entries.find(x => x.data.slug === era.slug)?.data; const image = c?.images.group[0] ?? c?.images.winter[0]; return { era, image }; });
+const items = ERAS.filter(e => e.membersEra).map(era => { const c = entries.find(x => x.data.slug === era.slug)?.data; const image = c?.featured?.group ?? c?.featured?.winter ?? c?.images.group[0] ?? c?.images.winter[0]; return { era, image }; });
 const base = import.meta.env.BASE_URL;
 ---
 <Base title="aespa, by era" description="Fan-made aespa site, Winter first. Every era with its photos, videos, music and story.">

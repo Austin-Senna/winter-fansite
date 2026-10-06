@@ -1338,7 +1338,59 @@
       }
     ]
   },
+  "featured": {
+    "karina": {
+      "member": "karina",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/b5/23/28/b52328144c00aec45ff046b654d2f350.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/15058979994878161/",
+      "credit": "pinterest:marym11_7",
+      "width": 1000,
+      "height": 1550,
+      "tags": []
+    },
+    "giselle": {
+      "member": "giselle",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/ba/a4/a2/baa4a2f962465bd32a7c7780760c1988.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/744993963390242116/",
+      "credit": "pinterest:aespamyaycia",
+      "width": 1364,
+      "height": 2048,
+      "tags": []
+    },
+    "winter": {
+      "member": "winter",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/a9/7e/33/a97e3306a3e1bde9fed3ddc39244e106.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/440930619791427351/",
+      "credit": "pinterest:kierraaharris",
+      "width": 1200,
+      "height": 1798,
+      "tags": []
+    },
+    "ningning": {
+      "member": "ningning",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/0d/28/3c/0d283cc792e4fe54b0dd7f193d1c93d1.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/972214638299321087/",
+      "credit": "pinterest:red9siobhan9",
+      "width": 1168,
+      "height": 1752,
+      "tags": []
+    },
+    "group": {
+      "member": "group",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/d2/14/e2/d214e258ebf6e9171e9719ed33ce109a.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/422282902584759279/",
+      "credit": "pinterest:wiki_97",
+      "width": 1367,
+      "height": 2048,
+      "tags": []
+    }
+  },
   "title": "Savage",
   "releaseDate": "2021-10-05",
-  "generatedAt": "2026-10-06T05:34:43.721Z"
+  "generatedAt": "2026-10-06T05:38:19.887Z"
 }

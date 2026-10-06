@@ -26,6 +26,7 @@ const eras = defineCollection({
     slug: z.string(), title: z.string(), releaseDate: z.string(), generatedAt: z.string(),
     videos: z.array(video),
     images: z.object({ karina: z.array(image), giselle: z.array(image), winter: z.array(image), ningning: z.array(image), group: z.array(image) }),
+    featured: z.object({ karina: image.nullable(), giselle: image.nullable(), winter: image.nullable(), ningning: image.nullable(), group: image.nullable() }),
   }),
 });
 

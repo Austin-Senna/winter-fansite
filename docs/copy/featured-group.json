@@ -1,0 +1,95 @@
+{
+  "group": {
+    "armageddon": {
+      "file": "armageddon/group/pinterest/440930619791428655.jpg",
+      "grid": 3,
+      "orientation": "landscape",
+      "why": "hooded four in styled concept, faces sharp"
+    },
+    "attitude": {
+      "file": "attitude/group/pinterest/1088815647440114556.jpg",
+      "grid": 8,
+      "orientation": "square",
+      "why": "four in sparkly carousel concept, bright and sharp"
+    },
+    "better-things": {
+      "file": "better-things/group/pinterest/12736811441209621.png",
+      "grid": 2,
+      "orientation": "portrait",
+      "why": "all four in purple concept outfits, clear faces"
+    },
+    "black-mamba": {
+      "file": "black-mamba/group/pinterest/25755029108828318.jpg",
+      "grid": 3,
+      "orientation": "landscape",
+      "why": "four in glittery purple teaser, faces clear"
+    },
+    "dirty-work": {
+      "file": "dirty-work/group/pinterest/59954238840530989.jpg",
+      "grid": 9,
+      "orientation": "square",
+      "why": "four in warm orange concept, close and sharp"
+    },
+    "drama": {
+      "file": "drama/group/pinterest/1128785094089037749.jpg",
+      "grid": 9,
+      "orientation": "portrait",
+      "why": "four in red and black concept; small title text"
+    },
+    "dreams-come-true": {
+      "file": "dreams-come-true/group/pinterest/40180621666726548.jpg",
+      "grid": 8,
+      "orientation": "portrait",
+      "why": "four in neon-lit concept, faces clear"
+    },
+    "forever": {
+      "file": "forever/group/pinterest/678354762631820053.jpg",
+      "grid": 6,
+      "orientation": "portrait",
+      "why": "four in graffiti concept, fisheye, faces visible"
+    },
+    "girls": {
+      "file": "girls/group/pinterest/118852877664053631.jpg",
+      "grid": 5,
+      "orientation": "landscape",
+      "why": "four in GIRLS concept outfits, clean, no logo"
+    },
+    "kiss-n-tell": null,
+    "lemonade": {
+      "file": "lemonade/group/pinterest/185492078403262177.jpg",
+      "grid": 6,
+      "orientation": "portrait",
+      "why": "four in neon green car concept teaser"
+    },
+    "my-world": {
+      "file": "my-world/group/pinterest/313703930309078190.jpg",
+      "grid": 3,
+      "orientation": "portrait",
+      "why": "four on street in concept outfits, sharp"
+    },
+    "next-level": {
+      "file": "next-level/group/pinterest/408772103694624811.jpg",
+      "grid": 12,
+      "orientation": "square",
+      "why": "four in white sequins, magenta backdrop, sharp"
+    },
+    "rich-man": {
+      "file": "rich-man/group/commons/180506682.jpg",
+      "grid": 6,
+      "orientation": "square",
+      "why": "four on stage in era outfits, good light"
+    },
+    "savage": {
+      "file": "savage/group/pinterest/422282902584759279.jpg",
+      "grid": 3,
+      "orientation": "portrait",
+      "why": "four in Savage styling, faces sharp, no text"
+    },
+    "whiplash": {
+      "file": "whiplash/group/pinterest/211174978597605.jpg",
+      "grid": 12,
+      "orientation": "portrait",
+      "why": "four in black studio concept, crisp, high contrast"
+    }
+  }
+}
