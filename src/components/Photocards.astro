@@ -1,18 +1,19 @@
 ---
 import Photocard from './Photocard.astro';
 const MEMBERS = [['karina','Karina'],['giselle','Giselle'],['winter','Winter'],['ningning','Ningning'],['group','Group']] as const;
-const { images, eraSlug } = Astro.props as { images: Record<string, any[]>; eraSlug: string };
+const { images, eraSlug, tabs = true, heading = 'Photocards' } = Astro.props as { images: Record<string, any[]>; eraSlug: string; tabs?: boolean; heading?: string };
 const first = MEMBERS.find(([m]) => images[m]?.length)?.[0] ?? 'winter';
+const shown = tabs ? MEMBERS : MEMBERS.filter(([m]) => m === first);
 ---
 <section class="sec" aria-labelledby="gal-h">
-  <h2 id="gal-h">Photocards</h2>
+  <h2 id="gal-h">{heading}</h2>
 </section>
-<div class="wrap" data-tabs="photocards">
-  <div class="tabs" role="tablist" aria-label="Member">
+<div class="wrap" data-tabs={tabs ? 'photocards' : undefined}>
+  {tabs && <div class="tabs" role="tablist" aria-label="Member">
     {MEMBERS.map(([m, label]) => <button role="tab" data-tab={m} aria-selected={m === first ? 'true' : 'false'}>{label}<small>{images[m]?.length ?? 0}</small></button>)}
-  </div>
-  {MEMBERS.map(([m, label]) => (
-    <div role="tabpanel" data-panel={m} hidden={m !== first}>
+  </div>}
+  {shown.map(([m, label]) => (
+    <div role={tabs ? 'tabpanel' : undefined} data-panel={m} hidden={m !== first}>
       {images[m]?.length
         ? <div class="gallery">{images[m].map((img, i) => <Photocard img={img} index={i} era={eraSlug} />)}</div>
         : <p class="empty">No {label === 'Group' ? 'group' : label} photos yet for this era.</p>}
