@@ -2,6 +2,7 @@
 import Base from '@/layouts/Base.astro';
 import EraHero from '@/components/EraHero.astro';
 import NextEra from '@/components/NextEra.astro';
+import WatchRail from '@/components/WatchRail.astro';
 import { ERAS, nextEra } from '@/data/eras';
 import { getEntry } from 'astro:content';
 export function getStaticPaths() { return ERAS.map(e => ({ params: { slug: e.slug }, props: { era: e } })); }
@@ -10,6 +11,7 @@ const content = await getEntry('eras', era.slug);
 ---
 <Base title={`${era.title}, aespa`} description={`${era.title}, ${era.type}, ${era.releaseDate}. ${era.concept}.`} theme={era.theme} current={era.slug}>
   <EraHero era={era} />
+  <WatchRail videos={content?.data.videos ?? []} />
   <NextEra era={nextEra(era.slug)} />
 </Base>
 <script>

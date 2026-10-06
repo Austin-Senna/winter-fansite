@@ -1,0 +1,35 @@
+---
+import 'lite-youtube-embed/src/lite-yt-embed.css';
+interface Video { ytId: string; title: string; channel: string | null; kind: string; views: number; member: string | null }
+const { videos } = Astro.props as { videos: Video[] };
+const fmt = (n: number) => n >= 1e6 ? (n / 1e6).toFixed(1) + 'M views' : n >= 1e3 ? Math.round(n / 1e3) + 'K views' : n + ' views';
+const mv = videos.find(v => v.kind === 'mv');
+const rest = videos.filter(v => v !== mv);
+---
+{videos.length > 0 && (
+<>
+<section class="sec" aria-labelledby="watch-h">
+  <h2 id="watch-h">Watch</h2>
+  <p class="lede">MV, stages, fancams. Ranked by views.</p>
+</section>
+<section class="rail" aria-label="Videos">
+  <div class="track">
+    {mv && <div class="vid mv"><lite-youtube videoid={mv.ytId} playlabel={`Play ${mv.title}`} style={`background-image:url(https://i.ytimg.com/vi/${mv.ytId}/hqdefault.jpg)`}></lite-youtube><div class="cap"><span>{mv.title}</span><small>{mv.channel} · {fmt(mv.views)}</small></div></div>}
+    {rest.map(v => <div class="vid" data-member={v.member ?? 'group'}><lite-youtube videoid={v.ytId} playlabel={`Play ${v.title}`} style={`background-image:url(https://i.ytimg.com/vi/${v.ytId}/hqdefault.jpg)`}></lite-youtube><div class="cap"><span>{v.title}</span><small>{v.channel} · {fmt(v.views)}</small></div></div>)}
+  </div>
+</section>
+</>
+)}
+<style>
+  .rail{height:100svh;display:grid;align-content:center;overflow:hidden}
+  .track{display:flex;gap:clamp(12px,1.6vw,24px);padding:0 var(--gutter);width:max-content;will-change:transform}
+  .vid{position:relative;flex:0 0 auto;width:clamp(260px,34vw,520px);border-radius:4px;overflow:hidden;background:var(--surface);box-shadow:0 30px 60px -30px rgba(0,0,0,.6),inset 0 0 0 1px var(--line)}
+  .vid.mv{width:clamp(300px,46vw,720px)}
+  .vid lite-youtube{max-width:none;aspect-ratio:16/9}
+  .cap{display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:10px 12px;font-size:13px}
+  .cap small{font-family:var(--mono);font-size:11px;color:var(--ink-dim);white-space:nowrap}
+  .cap span{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+</style>
+<script>
+  import 'lite-youtube-embed';
+</script>
