@@ -1384,20 +1384,20 @@
     "giselle": {
       "member": "giselle",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/09/cc/8b/09cc8bb90ddef5c545249b5ccf4409b7.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/934989572661785290/",
-      "credit": "pinterest:A4l1y4hAl1",
-      "width": 1287,
-      "height": 2048,
+      "remote": "https://i.pinimg.com/originals/8d/b4/a0/8db4a0a5795b3f4b7d63796bdf9108f6.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/700661654577953643/",
+      "credit": "pinterest:anacarolinabggg",
+      "width": 3072,
+      "height": 4096,
       "tags": []
     },
     "winter": {
       "member": "winter",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/8f/81/1d/8f811d7b3b55dbe6acbf9bfdf2e1946f.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/491455378110889186/",
-      "credit": "pinterest:lazypeachi",
-      "width": 3219,
+      "remote": "https://i.pinimg.com/originals/20/0c/2e/200c2e33d288cf1d1debb9daefd5b6c8.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/757871443587522512/",
+      "credit": "pinterest:Ysatis_the_killer",
+      "width": 3072,
       "height": 4096,
       "tags": []
     },
@@ -1434,5 +1434,5 @@
   },
   "title": "Kiss n Tell (JP mini)",
   "releaseDate": "2026-07-24",
-  "generatedAt": "2026-10-06T06:03:35.665Z"
+  "generatedAt": "2026-10-06T06:05:57.160Z"
 }
