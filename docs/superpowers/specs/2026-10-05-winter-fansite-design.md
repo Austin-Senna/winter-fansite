@@ -171,12 +171,13 @@ An image is either `src` (self-hosted, lives in `public/media/<era>/`) or `embed
 
 ## 6. Curator tool (`tools/curator/`)
 
-A local dev tool, not shipped with the site.
+Built 2026-10-06. A local dev tool, not shipped with the site. `node tools/curator/server.mjs` serves the UI at `http://127.0.0.1:4747`, the raw media read-only, on-demand thumbnails (cached in `media/thumbs/`), and the curation API.
 
-- `node tools/curator/server.mjs` serves `media/raw/` read-only plus a single page at `http://localhost:4747`, and accepts `PUT /curation/<era>.json`.
-- UI: era picker on the left, member tabs across the top. Main area is a grid of fetched images for that era and member with the YouTube thumbnails in a second tab. Keyboard: `K` keep, `X` reject, `1-4` tag (teaser / stage / behind / fan), `M` cycle member assignment (fixes Pinterest results that landed in the wrong member or era), `E` move to another era, arrows move, `Space` opens full size. Drag to reorder kept items; the kept rail on the right shows the final order.
-- Writes `src/content/eras/<slug>.json` by merging the kept, ordered, tagged items with the era metadata. Rejected items are listed in `media/raw/<era>/rejected.txt` so re-running the fetch does not resurface them.
-- A `Copy to public/` button writes kept files into `public/media/<era>/<member>/` with zero-padded names, resized to 1600 px long edge as AVIF plus JPEG fallback, and shows the running total against the 400 MB budget.
+- UI: eras on the left, member tabs and a Photos/Videos switch at the top, filter chips (all, unreviewed, kept, rejected, flagged), the grid in the middle with the fetch's quality-control flags on each card, and the kept list in order on the right with drag reorder.
+- Keyboard: `K` keep, `X` reject, `U` unreview, `1-4` tag (teaser, stage, behind, fan), `M` cycle member assignment, `E` move to another era, arrows move, `Space` full size, `S` save. The selection stays in place after a decision; the unreviewed filter removes decided cards so reviewing flows.
+- Writes `src/content/eras/<slug>.json` (autosave) holding every decision with state, order, tags, member, credit and source URLs, plus `media/raw/<slug>/rejected.txt` so a re-fetch skips rejected pins. A move writes both eras' files.
+- "Export kept" resizes kept photos to 1600 px JPEG into `public/media/<era>/<member>/NNN.jpg`, records `src` on each item and reports the `public/media` total against the 400 MB budget. AVIF comes from the site build, not the curator.
+- The site build reads only `src/content/eras/*.json`; the raw pool and curator are never deployed.
 
 ## 7. Performance and accessibility
 - Largest Contentful Paint is the era title or MV poster, never the canvas.

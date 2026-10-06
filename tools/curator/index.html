@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curator</title>
+<style>
+  :root{--bg:#121216;--panel:#1a1a20;--line:#2a2a33;--ink:#ececf1;--dim:#8d8d99;--keep:#7fd8a6;--reject:#e0646c;--flag:#f3c86b;--accent:#a9d6ff;--mono:ui-monospace,Menlo,monospace;--sans:system-ui,-apple-system,sans-serif}
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:13px/1.4 var(--sans)}
+  body{display:grid;grid-template-columns:200px 1fr 260px;grid-template-rows:48px 1fr;height:100vh}
+  header{grid-column:1/-1;display:flex;align-items:center;gap:14px;padding:0 14px;border-bottom:1px solid var(--line);background:var(--panel)}
+  header h1{font-size:14px;margin:0 14px 0 0;font-weight:600}
+  .tabs{display:flex;gap:2px}
+  .tabs button{background:transparent;border:1px solid transparent;color:var(--dim);padding:6px 10px;border-radius:6px;cursor:pointer;font:inherit}
+  .tabs button:hover{color:var(--ink)}
+  .tabs button[aria-selected="true"]{color:var(--ink);border-color:var(--line);background:var(--bg)}
+  .spacer{flex:1}
+  .status{font-family:var(--mono);font-size:11px;color:var(--dim)}
+  .btn{background:var(--bg);border:1px solid var(--line);color:var(--ink);padding:6px 10px;border-radius:6px;cursor:pointer;font:inherit}
+  .btn:hover{border-color:var(--dim)}
+  aside,nav{overflow:auto;border-right:1px solid var(--line);background:var(--panel)}
+  nav{padding:8px}
+  nav button{display:flex;justify-content:space-between;width:100%;background:transparent;border:0;color:var(--dim);padding:7px 8px;border-radius:6px;cursor:pointer;font:inherit;text-align:left}
+  nav button:hover{color:var(--ink);background:var(--bg)}
+  nav button[aria-current="true"]{color:var(--ink);background:var(--bg)}
+  nav small{font-family:var(--mono);font-size:10px}
+  main{overflow:auto;padding:12px;outline:none}
+  .toolbar{display:flex;gap:8px;align-items:center;margin-bottom:10px;flex-wrap:wrap}
+  .chip{background:transparent;border:1px solid var(--line);color:var(--dim);padding:3px 9px;border-radius:999px;cursor:pointer;font:inherit;font-size:12px}
+  .chip[aria-pressed="true"]{color:var(--ink);border-color:var(--dim)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+  .card{position:relative;background:var(--panel);border:2px solid transparent;border-radius:8px;overflow:hidden;cursor:pointer;aspect-ratio:3/4}
+  .card img{width:100%;height:100%;object-fit:cover;display:block;background:#000}
+  .card.sel{border-color:var(--accent)}
+  .card.keep{outline:2px solid var(--keep);outline-offset:-2px}
+  .card.reject{opacity:.35}
+  .card .n{position:absolute;left:6px;top:6px;font-family:var(--mono);font-size:10px;background:rgba(0,0,0,.6);padding:2px 5px;border-radius:4px}
+  .card .ord{position:absolute;right:6px;top:6px;font-family:var(--mono);font-size:11px;background:var(--keep);color:#000;padding:2px 6px;border-radius:4px;font-weight:600}
+  .card .flags{position:absolute;left:6px;bottom:6px;display:flex;gap:4px;flex-wrap:wrap}
+  .card .flags span{font-family:var(--mono);font-size:10px;background:rgba(0,0,0,.65);color:var(--flag);padding:2px 5px;border-radius:4px}
+  .card .flags span.src{color:var(--dim)}
+  .card .tags{position:absolute;right:6px;bottom:6px;display:flex;gap:4px}
+  .card .tags span{font-size:10px;background:rgba(0,0,0,.65);padding:2px 5px;border-radius:4px}
+  .card.vid{aspect-ratio:16/9}
+  .card .title{position:absolute;left:0;right:0;bottom:0;padding:24px 8px 6px;font-size:11px;background:linear-gradient(transparent,rgba(0,0,0,.8))}
+  aside.rail{border-right:0;border-left:1px solid var(--line);padding:10px}
+  aside.rail h2{font-size:12px;margin:0 0 8px;color:var(--dim);font-weight:500}
+  .kept{display:grid;gap:6px}
+  .kept .item{display:grid;grid-template-columns:44px 1fr auto;gap:8px;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:4px;cursor:grab}
+  .kept .item img{width:44px;height:44px;object-fit:cover;border-radius:4px;display:block}
+  .kept .item.drag{opacity:.4}
+  .kept .item .meta{font-family:var(--mono);font-size:10px;color:var(--dim);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+  .kept .item .mv{display:flex;flex-direction:column;gap:2px}
+  .kept .item .mv button{background:transparent;border:0;color:var(--dim);cursor:pointer;padding:0 4px;font-size:11px}
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;place-items:center;z-index:10}
+  .lightbox.open{display:grid}
+  .lightbox img{max-width:96vw;max-height:92vh;object-fit:contain}
+  .lightbox .info{position:absolute;left:16px;bottom:12px;font-family:var(--mono);font-size:11px;color:var(--dim);max-width:80vw}
+  .help{position:fixed;right:270px;bottom:10px;font-family:var(--mono);font-size:10px;color:var(--dim);background:var(--panel);border:1px solid var(--line);padding:6px 10px;border-radius:6px}
+  dialog{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:14px;min-width:260px}
+  dialog::backdrop{background:rgba(0,0,0,.6)}
+  dialog select,dialog button{font:inherit}
+  .empty{color:var(--dim);padding:40px;text-align:center}
+</style>
+</head>
+<body>
+<header>
+  <h1>Curator</h1>
+  <div class="tabs" id="members" role="tablist"></div>
+  <div class="tabs" id="modes" role="tablist">
+    <button role="tab" data-mode="images" aria-selected="true">Photos</button>
+    <button role="tab" data-mode="videos" aria-selected="false">Videos</button>
+  </div>
+  <span class="spacer"></span>
+  <span class="status" id="status">loading</span>
+  <button class="btn" id="save">Save</button>
+  <button class="btn" id="export" title="Resize kept photos to 1600px and copy into public/media">Export kept</button>
+</header>
+<nav id="eras" aria-label="Eras"></nav>
+<main id="main" tabindex="0">
+  <div class="toolbar" id="filters">
+    <button class="chip" data-f="all" aria-pressed="true">all</button>
+    <button class="chip" data-f="unreviewed" aria-pressed="false">unreviewed</button>
+    <button class="chip" data-f="keep" aria-pressed="false">kept</button>
+    <button class="chip" data-f="reject" aria-pressed="false">rejected</button>
+    <button class="chip" data-f="flagged" aria-pressed="false">flagged</button>
+    <span class="status" id="counts"></span>
+  </div>
+  <div class="grid" id="grid"></div>
+</main>
+<aside class="rail" id="rail"><h2>Kept, in order</h2><div class="kept" id="kept"></div></aside>
+<div class="lightbox" id="lightbox"><img id="lb-img" alt=""><div class="info" id="lb-info"></div></div>
+<div class="help">K keep · X reject · U unreview · 1-4 tag · M member · E move era · arrows move · Space view · S save · use the unreviewed filter to flow</div>
+<dialog id="move-dialog"><form method="dialog"><p>Move to era</p><select id="move-select"></select><p><button value="ok">Move</button> <button value="cancel">Cancel</button></p></form></dialog>
+
+<script>
+const MEMBERS=['karina','giselle','winter','ningning','group'];
+const TAGS=['teaser','stage','behind','fan'];
+const $=s=>document.querySelector(s);
+let manifest=null, curations={}, era=null, member='winter', mode='images', filter='all', sel=0, dirty=new Set(), saveTimer=null;
+
+async function api(p,opt){ const r=await fetch(p,opt); if(!r.ok) throw new Error(p+' '+r.status); return r.json(); }
+function setStatus(t){ $('#status').textContent=t; }
+
+// ---- data model: curation per era = {slug,title,releaseDate,images:[{file,member,state,tags,order,...}],videos:[{id,state,order,...}]}
+function cur(slug){ if(!curations[slug]){ const e=manifest.eras.find(x=>x.slug===slug); curations[slug]={slug,title:e?.title,releaseDate:e?.releaseDate,images:[],videos:[]}; } return curations[slug]; }
+function rec(slug,kind,key){ const c=cur(slug); const list=c[kind]; let r=list.find(x=>(kind==='images'?x.file:x.id)===key); if(!r){ r=kind==='images'?{file:key}:{id:key}; list.push(r); } return r; }
+function keptList(slug,kind){ return cur(slug)[kind].filter(x=>x.state==='keep').sort((a,b)=>(a.order??1e9)-(b.order??1e9)); }
+function renumber(slug,kind){ keptList(slug,kind).forEach((x,i)=>x.order=i); }
+function markDirty(slug){ dirty.add(slug); setStatus('unsaved'); clearTimeout(saveTimer); saveTimer=setTimeout(saveAll,1200); }
+async function saveAll(){ for(const slug of [...dirty]){ await api('/api/curation/'+slug,{method:'PUT',headers:{'content-type':'application/json'},body:JSON.stringify(cur(slug))}); dirty.delete(slug); } setStatus('saved '+new Date().toLocaleTimeString()); renderEras(); }
+
+// ---- items for the current view
+function eraData(){ return manifest.eras.find(x=>x.slug===era); }
+function items(){
+  const e=eraData(); if(!e) return [];
+  if(mode==='images'){
+    const base=e.images.filter(i=>i.file&&(i.member||'group')===member);
+    // images moved here from other eras
+    const moved=cur(era).images.filter(r=>r.movedFrom&&(r.member||'group')===member).map(r=>({...r.src,file:r.file,member:r.member,qc:r.qc}));
+    return [...base,...moved].map(i=>{ const r=cur(era).images.find(x=>x.file===i.file)||{}; return {key:i.file,img:i,rec:r,flags:(i.qc?.flags||[]).filter(f=>f!=='unverified')}; });
+  }
+  return e.videos.filter(v=>member==='group'?!v.member:v.member===member).map(v=>({key:v.id,vid:v,rec:cur(era).videos.find(x=>x.id===v.id)||{},flags:[]}));
+}
+function visible(){ return items().filter(it=>{ const st=it.rec.state; if(filter==='unreviewed') return !st; if(filter==='keep') return st==='keep'; if(filter==='reject') return st==='reject'; if(filter==='flagged') return it.flags.length; return true; }); }
+
+// ---- render
+function renderEras(){
+  const nav=$('#eras'); nav.innerHTML='';
+  manifest.eras.forEach(e=>{ const b=document.createElement('button'); const k=cur(e.slug).images.filter(x=>x.state==='keep').length; const n=e.images.filter(i=>i.file).length;
+    b.innerHTML=`<span>${e.title}</span><small>${k}/${n}</small>`; b.setAttribute('aria-current',e.slug===era?'true':'false'); b.onclick=()=>{era=e.slug;sel=0;render();}; nav.appendChild(b); });
+}
+function renderMembers(){
+  const t=$('#members'); t.innerHTML='';
+  MEMBERS.forEach(m=>{ const b=document.createElement('button'); b.setAttribute('role','tab'); b.textContent=m; b.setAttribute('aria-selected',m===member?'true':'false'); b.onclick=()=>{member=m;sel=0;render();}; t.appendChild(b); });
+}
+function renderGrid(){
+  const g=$('#grid'); g.innerHTML='';
+  const vis=visible(); if(sel>=vis.length) sel=Math.max(0,vis.length-1);
+  if(!vis.length){ g.innerHTML='<div class="empty">Nothing here. Try another member, filter, or era.</div>'; }
+  const kept=keptList(era,mode);
+  vis.forEach((it,i)=>{ const c=document.createElement('div'); c.className='card'+(mode==='videos'?' vid':'')+(i===sel?' sel':'')+(it.rec.state?' '+it.rec.state:''); c.dataset.i=i;
+    const thumb=mode==='images'?'/thumb/'+it.img.file:'/raw/'+it.vid.thumbnail;
+    const ord=it.rec.state==='keep'?kept.indexOf(it.rec)+1:null;
+    const flags=it.flags.map(f=>`<span>${f}</span>`).join('')+(mode==='images'?`<span class="src">${it.img.source}${it.img.width?' '+it.img.width+'×'+it.img.height:''}</span>`:`<span class="src">${it.vid.kind} ${fmtViews(it.vid.viewCount)}</span>`);
+    const tags=(it.rec.tags||[]).map(t=>`<span>${t}</span>`).join('');
+    c.innerHTML=`<img src="${thumb}" loading="lazy" alt=""><span class="n">${i+1}${it.rec.member&&it.rec.member!==member?' → '+it.rec.member:''}</span>${ord?`<span class="ord">${ord}</span>`:''}<div class="flags">${flags}</div><div class="tags">${tags}</div>${mode==='videos'?`<div class="title">${esc(it.vid.title)}</div>`:''}`;
+    c.onclick=()=>{sel=i;renderGrid();}; c.ondblclick=()=>openLightbox(it); g.appendChild(c); });
+  const all=items(); $('#counts').textContent=`${vis.length} shown · ${all.filter(x=>x.rec.state==='keep').length} kept · ${all.filter(x=>x.rec.state==='reject').length} rejected · ${all.filter(x=>!x.rec.state).length} unreviewed`;
+  document.querySelector('.card.sel')?.scrollIntoView({block:'nearest'});
+}
+function renderKept(){
+  const k=$('#kept'); k.innerHTML='';
+  const list=keptList(era,mode);
+  list.forEach((r,i)=>{ const d=document.createElement('div'); d.className='item'; d.draggable=true; d.dataset.i=i;
+    const src=mode==='images'?'/thumb/'+r.file:'/raw/'+(eraData().videos.find(v=>v.id===r.id)?.thumbnail||'');
+    d.innerHTML=`<img src="${src}" alt=""><div class="meta">${i+1}. ${mode==='images'?(r.member||'')+' '+(r.tags||[]).join(',')+'<br>'+r.file.split('/').pop():esc(r.title||r.id)}</div><div class="mv"><button data-d="-1" title="up">▲</button><button data-d="1" title="down">▼</button></div>`;
+    d.querySelectorAll('button').forEach(b=>b.onclick=ev=>{ev.stopPropagation(); move(i,i+Number(b.dataset.d));});
+    d.ondragstart=ev=>{ev.dataTransfer.setData('text/plain',String(i)); d.classList.add('drag');}; d.ondragend=()=>d.classList.remove('drag');
+    d.ondragover=ev=>ev.preventDefault(); d.ondrop=ev=>{ev.preventDefault(); move(Number(ev.dataTransfer.getData('text/plain')),i);};
+    k.appendChild(d); });
+}
+function move(from,to){ const list=keptList(era,mode); if(to<0||to>=list.length||from===to) return; const [x]=list.splice(from,1); list.splice(to,0,x); list.forEach((r,i)=>r.order=i); markDirty(era); renderGrid(); renderKept(); }
+function render(){ renderEras(); renderMembers(); document.querySelectorAll('#modes button').forEach(b=>b.setAttribute('aria-selected',b.dataset.mode===mode?'true':'false')); document.querySelectorAll('#filters .chip').forEach(b=>b.setAttribute('aria-pressed',b.dataset.f===filter?'true':'false')); renderGrid(); renderKept(); }
+function esc(s){ return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function fmtViews(n){ return !n?'':n>=1e6?(n/1e6).toFixed(1)+'M':n>=1e3?Math.round(n/1e3)+'K':String(n); }
+
+// ---- actions
+function current(){ return visible()[sel]; }
+function setState(st){
+  const it=current(); if(!it) return;
+  const r=mode==='images'?rec(era,'images',it.key):rec(era,'videos',it.key);
+  if(mode==='images'){ Object.assign(r,{member:r.member||it.img.member||'group',source:it.img.source,sourceUrl:it.img.sourceUrl,pageUrl:it.img.pageUrl,credit:it.img.credit,width:it.img.width,height:it.img.height,qc:it.img.qc?.flags||[]}); }
+  else { Object.assign(r,{title:it.vid.title,channel:it.vid.channel,kind:it.vid.kind,views:it.vid.viewCount,member:it.vid.member,url:it.vid.url}); }
+  if(st===null) delete r.state; else r.state=st;
+  if(st==='keep'&&r.order==null) r.order=keptList(era,mode).length;
+  renumber(era,mode); markDirty(era);
+  // In the unreviewed, kept and rejected filters the card leaves the view, so the same index is the next card.
+  sel=Math.min(sel,Math.max(0,visible().length-1));
+  renderGrid(); renderKept();
+}
+function toggleTag(t){ const it=current(); if(!it||mode!=='images') return; const r=rec(era,'images',it.key); r.tags=r.tags||[]; const i=r.tags.indexOf(t); i>=0?r.tags.splice(i,1):r.tags.push(t); markDirty(era); renderGrid(); renderKept(); }
+function cycleMember(){ const it=current(); if(!it||mode!=='images') return; const r=rec(era,'images',it.key); const curM=r.member||it.img.member||'group'; r.member=MEMBERS[(MEMBERS.indexOf(curM)+1)%MEMBERS.length]; markDirty(era); renderGrid(); renderKept(); }
+async function moveEra(){
+  const it=current(); if(!it||mode!=='images') return;
+  const dlg=$('#move-dialog'), selEl=$('#move-select'); selEl.innerHTML=manifest.eras.filter(e=>e.slug!==era).map(e=>`<option value="${e.slug}">${e.title}</option>`).join('');
+  dlg.showModal();
+  dlg.onclose=()=>{ if(dlg.returnValue!=='ok') return; const target=selEl.value;
+    const r=rec(era,'images',it.key); r.state='reject'; r.movedTo=target;
+    const tr=rec(target,'images',it.key); Object.assign(tr,{state:'keep',member:r.member||it.img.member||'group',movedFrom:era,src:it.img,source:it.img.source,sourceUrl:it.img.sourceUrl,pageUrl:it.img.pageUrl,credit:it.img.credit,width:it.img.width,height:it.img.height,qc:it.img.qc?.flags||[]}); tr.order=keptList(target,'images').length;
+    renumber(era,'images'); markDirty(era); markDirty(target); renderGrid(); renderKept(); };
+}
+function openLightbox(it){ const lb=$('#lightbox'); if(mode==='images'){ $('#lb-img').src='/raw/'+it.img.file; $('#lb-info').textContent=`${it.img.file}  ${it.img.width}×${it.img.height}  ${it.img.credit||''}  ${it.img.pageUrl||''}`; lb.classList.add('open'); } else { window.open(it.vid.url,'_blank'); } }
+$('#lightbox').onclick=()=>$('#lightbox').classList.remove('open');
+
+document.addEventListener('keydown',ev=>{
+  if(ev.target.tagName==='SELECT'||$('#move-dialog').open) return;
+  if($('#lightbox').classList.contains('open')){ if(ev.key==='Escape'||ev.key===' ') { ev.preventDefault(); $('#lightbox').classList.remove('open'); } return; }
+  const n=visible().length;
+  switch(ev.key){
+    case 'k': case 'K': setState('keep'); break;
+    case 'x': case 'X': setState('reject'); break;
+    case 'u': case 'U': setState(null); break;
+    case '1': case '2': case '3': case '4': toggleTag(TAGS[Number(ev.key)-1]); break;
+    case 'm': case 'M': cycleMember(); break;
+    case 'e': case 'E': moveEra(); break;
+    case 'ArrowRight': sel=Math.min(sel+1,n-1); renderGrid(); break;
+    case 'ArrowLeft': sel=Math.max(sel-1,0); renderGrid(); break;
+    case 'ArrowDown': { ev.preventDefault(); const cols=Math.max(1,Math.floor($('#grid').clientWidth/180)); sel=Math.min(sel+cols,n-1); renderGrid(); break; }
+    case 'ArrowUp': { ev.preventDefault(); const cols=Math.max(1,Math.floor($('#grid').clientWidth/180)); sel=Math.max(sel-cols,0); renderGrid(); break; }
+    case ' ': ev.preventDefault(); if(current()) openLightbox(current()); break;
+    case 's': case 'S': saveAll(); break;
+  }
+});
+$('#save').onclick=saveAll;
+$('#export').onclick=async()=>{ await saveAll(); setStatus('exporting…'); const r=await api('/api/export/'+era,{method:'POST'}); setStatus(`exported ${r.exported} · ${(r.bytes/1e6).toFixed(1)} MB · public total ${(r.publicTotalBytes/1e6).toFixed(0)} MB`); };
+$('#modes').onclick=ev=>{ const b=ev.target.closest('button'); if(!b) return; mode=b.dataset.mode; sel=0; render(); };
+$('#filters').onclick=ev=>{ const b=ev.target.closest('.chip'); if(!b) return; filter=b.dataset.f; sel=0; render(); };
+
+(async function boot(){
+  manifest=await api('/api/manifest'); curations=await api('/api/curations');
+  era=manifest.eras[0].slug; render(); setStatus(`manifest ${manifest.generated?.slice(0,16)||''}`); $('#main').focus();
+})().catch(e=>setStatus('error: '+e.message));
+</script>
+</body>
+</html>

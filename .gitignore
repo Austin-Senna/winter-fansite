@@ -3,6 +3,7 @@ media/raw/*
 !media/raw/REPORT.md
 media/tools/.venv/
 media/tools/work/
+media/thumbs/
 demo/shots/
 node_modules/
 dist/
