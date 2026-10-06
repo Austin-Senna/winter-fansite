@@ -103,7 +103,7 @@
       {
         "member": "karina",
         "kind": "local",
-        "src": "media/my-world/karina/karina-001.jpg",
+        "src": "media/my-world/karina/karina-93c54ce100.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:230601_Karina_(aespa).jpg",
         "credit": "K-POPIT 케이팝잇",
         "width": 960,
@@ -589,7 +589,7 @@
       {
         "member": "winter",
         "kind": "local",
-        "src": "media/my-world/winter/winter-001.jpg",
+        "src": "media/my-world/winter/winter-85f2dd8491.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:230601_Winter_(aespa).jpg",
         "credit": "K-POPIT 케이팝잇",
         "width": 960,
@@ -833,7 +833,7 @@
       {
         "member": "ningning",
         "kind": "local",
-        "src": "media/my-world/ningning/ningning-001.jpg",
+        "src": "media/my-world/ningning/ningning-b923a13170.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:Ningning_at_Versace_La_Vacanza_on_230711.png",
         "credit": "Marie Claire Korea",
         "width": 2160,
@@ -845,7 +845,7 @@
       {
         "member": "ningning",
         "kind": "local",
-        "src": "media/my-world/ningning/ningning-002.jpg",
+        "src": "media/my-world/ningning/ningning-74426c041d.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:Ningning_at_Versace_La_Vacanza_on_230711_(2).png",
         "credit": "Marie Claire Korea",
         "width": 1836,
@@ -857,7 +857,7 @@
       {
         "member": "ningning",
         "kind": "local",
-        "src": "media/my-world/ningning/ningning-003.jpg",
+        "src": "media/my-world/ningning/ningning-a78076c779.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:Ningning_at_Versace_La_Vacanza_on_230711_(cropped).png",
         "credit": "Marie Claire Korea",
         "width": 1632,
@@ -1081,7 +1081,7 @@
       {
         "member": "group",
         "kind": "local",
-        "src": "media/my-world/group/group-001.jpg",
+        "src": "media/my-world/group/group-355e06c86d.jpg",
         "pageUrl": "https://aespa-official.jp/discography/myworld/",
         "credit": "SM Entertainment / aespa-official.jp",
         "width": 1000,
@@ -1322,5 +1322,5 @@
   },
   "title": "My World",
   "releaseDate": "2023-05-08",
-  "generatedAt": "2026-10-06T05:20:47.684Z"
+  "generatedAt": "2026-10-06T05:34:45.256Z"
 }

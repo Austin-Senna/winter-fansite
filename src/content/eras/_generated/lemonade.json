@@ -103,7 +103,7 @@
       {
         "member": "karina",
         "kind": "local",
-        "src": "media/lemonade/karina/karina-001.jpg",
+        "src": "media/lemonade/karina/karina-5ea7c29abe.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:062026_aespa_KARINA_Incheon_Airport_Departure_2.jpg",
         "credit": "K-POPIT 케이팝잇",
         "width": 747,
@@ -589,7 +589,7 @@
       {
         "member": "winter",
         "kind": "local",
-        "src": "media/lemonade/winter/winter-001.jpg",
+        "src": "media/lemonade/winter/winter-a3194df7e5.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:Winter_at_Incheon_Airport_on_July_10,_2026_02.png",
         "credit": "K-POPIT 케이팝잇",
         "width": 1341,
@@ -601,7 +601,7 @@
       {
         "member": "winter",
         "kind": "local",
-        "src": "media/lemonade/winter/winter-002.jpg",
+        "src": "media/lemonade/winter/winter-e6d9341cbf.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:Winter_at_Incheon_Airport_on_July_10,_2026.png",
         "credit": "K-POPIT 케이팝잇",
         "width": 1314,
@@ -1318,5 +1318,5 @@
   },
   "title": "Lemonade",
   "releaseDate": "2026-05-29",
-  "generatedAt": "2026-10-06T05:21:07.077Z"
+  "generatedAt": "2026-10-06T05:35:02.238Z"
 }

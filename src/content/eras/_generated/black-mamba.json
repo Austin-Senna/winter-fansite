@@ -1071,7 +1071,7 @@
       {
         "member": "group",
         "kind": "local",
-        "src": "media/black-mamba/group/group-001.jpg",
+        "src": "media/black-mamba/group/group-57a5f1a8ef.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:20201209_%EC%97%90%EC%8A%A4%ED%8C%8C_aespa_SBS_Radio.png",
         "credit": "SBS Radio",
         "width": 1190,
@@ -1314,5 +1314,5 @@
   },
   "title": "Black Mamba",
   "releaseDate": "2020-11-17",
-  "generatedAt": "2026-10-06T05:20:45.468Z"
+  "generatedAt": "2026-10-06T05:34:42.883Z"
 }

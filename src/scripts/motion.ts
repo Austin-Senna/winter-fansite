@@ -18,7 +18,7 @@ export function initMotion() {
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add(t => lenis!.raf(t * 1000)); gsap.ticker.lagSmoothing(0);
   }
-  lenis?.scrollTo(0, { immediate: true });
+  if (!(history.state && 'scrollY' in history.state)) lenis?.scrollTo(0, { immediate: true }); // let the router restore scroll on back/forward
   progress(); hero(reduced); rail(reduced); tilt(reduced || coarse); tabs();
   ScrollTrigger.refresh();
 }
@@ -45,15 +45,20 @@ function hero(reduced: boolean) {
 function rail(reduced: boolean) {
   const rail = document.querySelector<HTMLElement>('.rail'), track = document.querySelector<HTMLElement>('.rail .track');
   if (!rail || !track) return;
-  gsap.to(track, { x: () => -(track.scrollWidth - innerWidth), ease: 'none', scrollTrigger: { trigger: rail, pin: true, scrub: reduced ? false : .8, end: () => '+=' + (track.scrollWidth - innerWidth), invalidateOnRefresh: true } });
+  if (reduced) { rail.style.overflowX = 'auto'; rail.style.height = 'auto'; rail.style.padding = '24px 0'; return; } // native horizontal scroll, no pin, no tween
+  gsap.to(track, { x: () => -(track.scrollWidth - innerWidth), ease: 'none', scrollTrigger: { trigger: rail, pin: true, scrub: .8, end: () => '+=' + (track.scrollWidth - innerWidth), invalidateOnRefresh: true } });
 }
 
 function tilt(off: boolean) {
   if (off) return;
+  const rects = new WeakMap<HTMLElement, DOMRect>();
+  const clear = () => { document.querySelectorAll<HTMLElement>('.card.active').forEach(c => rects.set(c, c.getBoundingClientRect())); };
+  addEventListener('scroll', clear, { passive: true }); addEventListener('resize', clear);
   document.querySelectorAll<HTMLElement>('.card').forEach(card => {
-    card.addEventListener('pointerenter', () => card.classList.add('active'));
+    card.addEventListener('pointerenter', () => { card.classList.add('active'); rects.set(card, card.getBoundingClientRect()); }); // one layout read per hover, none per move
     card.addEventListener('pointermove', ev => {
-      const r = card.getBoundingClientRect(); const px = (ev.clientX - r.left) / r.width, py = (ev.clientY - r.top) / r.height;
+      const r = rects.get(card); if (!r) return;
+      const px = (ev.clientX - r.left) / r.width, py = (ev.clientY - r.top) / r.height;
       card.style.setProperty('--mx', (px * 100).toFixed(1) + '%'); card.style.setProperty('--my', (py * 100).toFixed(1) + '%');
       card.style.setProperty('--ry', ((px - .5) * 22).toFixed(2) + 'deg'); card.style.setProperty('--rx', ((.5 - py) * 22).toFixed(2) + 'deg');
     }, { passive: true });
@@ -63,12 +68,27 @@ function tilt(off: boolean) {
 
 function tabs() {
   document.querySelectorAll<HTMLElement>('[data-tabs]').forEach(root => {
-    const buttons = root.querySelectorAll<HTMLButtonElement>('[role=tab]');
-    const panels = root.querySelectorAll<HTMLElement>('[role=tabpanel]');
+    const buttons = Array.from(root.querySelectorAll<HTMLButtonElement>('[role=tab]'));
+    const panels = Array.from(root.querySelectorAll<HTMLElement>('[role=tabpanel]'));
     const key = root.dataset.tabs!;
-    const select = (id: string) => { buttons.forEach(b => b.setAttribute('aria-selected', String(b.dataset.tab === id))); panels.forEach(p => p.hidden = p.dataset.panel !== id); try { sessionStorage.setItem('tab:' + key, id); } catch {} ScrollTrigger.refresh(); };
-    buttons.forEach(b => b.addEventListener('click', () => select(b.dataset.tab!)));
-    let initial = buttons[0]?.dataset.tab; try { initial = sessionStorage.getItem('tab:' + key) || initial; } catch {}
-    if (initial && Array.from(buttons).some(b => b.dataset.tab === initial)) select(initial);
+    const hasContent = (id: string) => !!panels.find(p => p.dataset.panel === id)?.querySelector('.card');
+    const select = (id: string, focus = false) => {
+      buttons.forEach(b => { const on = b.dataset.tab === id; b.setAttribute('aria-selected', String(on)); b.tabIndex = on ? 0 : -1; if (on && focus) b.focus(); });
+      panels.forEach(p => p.hidden = p.dataset.panel !== id);
+      try { sessionStorage.setItem('tab:' + key, id); } catch {}
+      ScrollTrigger.refresh();
+    };
+    buttons.forEach((b, i) => {
+      b.addEventListener('click', () => select(b.dataset.tab!));
+      b.addEventListener('keydown', e => { // ARIA tabs pattern: arrows move, Home/End jump
+        const n = buttons.length; let j = i;
+        if (e.key === 'ArrowRight') j = (i + 1) % n; else if (e.key === 'ArrowLeft') j = (i - 1 + n) % n; else if (e.key === 'Home') j = 0; else if (e.key === 'End') j = n - 1; else return;
+        e.preventDefault(); select(buttons[j].dataset.tab!, true);
+      });
+    });
+    // Default to the server-chosen tab (the first with photos); restore a remembered tab only when it has photos here.
+    const server = buttons.find(b => b.getAttribute('aria-selected') === 'true')?.dataset.tab ?? buttons[0]?.dataset.tab;
+    let initial = server; try { const stored = sessionStorage.getItem('tab:' + key); if (stored && hasContent(stored)) initial = stored; } catch {}
+    if (initial) select(initial);
   });
 }

@@ -587,7 +587,7 @@
       {
         "member": "winter",
         "kind": "local",
-        "src": "media/better-things/winter/winter-001.jpg",
+        "src": "media/better-things/winter/winter-14eec5b4f7.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:Winter_at_Synk_Hyper_Line_World_Tour_in_Atlanta_on_230825_(1).jpg",
         "credit": "4ever__only",
         "width": 1759,
@@ -599,7 +599,7 @@
       {
         "member": "winter",
         "kind": "local",
-        "src": "media/better-things/winter/winter-002.jpg",
+        "src": "media/better-things/winter/winter-b616ec9370.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:Winter_at_Synk_Hyper_Line_World_Tour_in_Atlanta_on_230825_(2).jpg",
         "credit": "4ever__only",
         "width": 1684,
@@ -611,7 +611,7 @@
       {
         "member": "winter",
         "kind": "local",
-        "src": "media/better-things/winter/winter-003.jpg",
+        "src": "media/better-things/winter/winter-e1eccc726f.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:Winter_for_Synk_Hyper_Line_World_Tour_in_Atlanta_on_230825.jpg",
         "credit": "4ever__only",
         "width": 576,
@@ -1077,7 +1077,7 @@
       {
         "member": "group",
         "kind": "local",
-        "src": "media/better-things/group/group-001.jpg",
+        "src": "media/better-things/group/group-da3b89d9c8.jpg",
         "pageUrl": "https://aespa-official.jp/discography/betterthings/",
         "credit": "SM Entertainment / aespa-official.jp",
         "width": 2000,
@@ -1087,7 +1087,7 @@
       {
         "member": "group",
         "kind": "local",
-        "src": "media/better-things/group/group-002.jpg",
+        "src": "media/better-things/group/group-951bd5ec2e.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:Aespa_at_Synk_Hyper_Line_World_Tour_in_Atlanta_on_230825_(2).jpg",
         "credit": "4ever__only",
         "width": 768,
@@ -1099,7 +1099,7 @@
       {
         "member": "group",
         "kind": "local",
-        "src": "media/better-things/group/group-003.jpg",
+        "src": "media/better-things/group/group-5e76cc70c1.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:Aespa_at_Synk_Hyper_Line_World_Tour_in_Atlanta_on_230825_(1).jpg",
         "credit": "4ever__only",
         "width": 768,
@@ -1322,5 +1322,5 @@
   },
   "title": "Better Things",
   "releaseDate": "2023-08-18",
-  "generatedAt": "2026-10-06T05:20:47.845Z"
+  "generatedAt": "2026-10-06T05:34:45.694Z"
 }

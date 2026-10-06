@@ -12,7 +12,7 @@ const uniq = [...new Set(commons)].sort();
     <p>{COPY.about.intro}</p>
     <h2>Media</h2>
     <p>{COPY.about.media}</p>
-    <p>{COPY.about.takedown}</p>
+    <p>{COPY.about.takedown} <a href="https://github.com/Austin-Senna/winter-fansite/issues" target="_blank" rel="noopener">Open an issue</a>.</p>
     <h2>Commons credits</h2>
     <ul>{uniq.map(c => <li>{c}</li>)}</ul>
     <h2>Facts</h2>

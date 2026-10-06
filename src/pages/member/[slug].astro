@@ -34,7 +34,8 @@ const emptyImages = { karina: [], giselle: [], winter: [], ningning: [], group: 
     <p class="src">Sources: {member.sources.map((s, i) => <><a href={s.url} target="_blank" rel="noopener">{s.label}</a>{i < member.sources.length - 1 ? '; ' : ''}</>)}</p>
   </div></section>
   <Listen era={trackEra} />
-  {latest && <><section class="sec"><p class="lede">Latest photos: <a href={`${base}era/${latest.data.slug}/`}>{latest.data.title}</a>.</p></section><Photocards images={{ ...emptyImages, [member.slug]: latest.data.images[member.slug].slice(0, 9) }} eraSlug={latest.data.slug} tabs={false} /></>}
+  {soloEra && <section class="sec"><p class="lede"><a href={`${base}era/${soloEra.slug}/`}>Solo releases, OSTs and collaborations</a>.</p></section>}
+  {latest && <><section class="sec"><p class="lede">Latest photos: <a href={`${base}era/${latest.data.slug}/`}>{eraBySlug(latest.data.slug)?.title ?? latest.data.title}</a>.</p></section><Photocards images={{ ...emptyImages, [member.slug]: latest.data.images[member.slug].slice(0, 9) }} eraSlug={latest.data.slug} tabs={false} /></>}
 </Base>
 <style>
   .hero{min-height:80svh;display:grid;align-content:end;padding:0 var(--gutter) clamp(24px,5vh,56px)}

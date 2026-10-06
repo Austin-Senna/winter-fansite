@@ -345,7 +345,7 @@
       {
         "member": "giselle",
         "kind": "local",
-        "src": "media/next-level/giselle/giselle-001.jpg",
+        "src": "media/next-level/giselle/giselle-b6c39d387e.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:%EC%A7%80%EC%A0%A4(GISELLE)_SBS_Radio_(derived).jpg",
         "credit": "SBS Radio",
         "width": 1080,
@@ -1073,7 +1073,7 @@
       {
         "member": "group",
         "kind": "local",
-        "src": "media/next-level/group/group-001.jpg",
+        "src": "media/next-level/group/group-b2a6e45352.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:Aespa_in_SBS_Radio_on_260521_(1).jpg",
         "credit": "SBS Radio 에라오",
         "width": 1534,
@@ -1316,5 +1316,5 @@
   },
   "title": "Next Level",
   "releaseDate": "2021-05-17",
-  "generatedAt": "2026-10-06T05:20:45.551Z"
+  "generatedAt": "2026-10-06T05:34:42.996Z"
 }

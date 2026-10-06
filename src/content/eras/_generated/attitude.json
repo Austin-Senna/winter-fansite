@@ -103,7 +103,7 @@
       {
         "member": "karina",
         "kind": "local",
-        "src": "media/attitude/karina/karina-001.jpg",
+        "src": "media/attitude/karina/karina-e665e5aecd.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:Karina_at_Gimpo_Airport_on_April_22,_2026_03.png",
         "credit": "티비텐 TV10",
         "width": 1101,
@@ -831,7 +831,7 @@
       {
         "member": "ningning",
         "kind": "local",
-        "src": "media/attitude/ningning/ningning-001.jpg",
+        "src": "media/attitude/ningning/ningning-b4207852b6.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:Ningning_at_Seoul_Discovery_Expedition_event_on_March_11,_2026.jpg",
         "credit": "티비텐 TV10",
         "width": 1434,
@@ -843,7 +843,7 @@
       {
         "member": "ningning",
         "kind": "local",
-        "src": "media/attitude/ningning/ningning-002.jpg",
+        "src": "media/attitude/ningning/ningning-30f77f6562.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:Ningning_at_Seoul_Discovery_Expedition_event_on_March_11,_2026_03.jpg",
         "credit": "티비텐 TV10",
         "width": 1434,
@@ -855,7 +855,7 @@
       {
         "member": "ningning",
         "kind": "local",
-        "src": "media/attitude/ningning/ningning-003.jpg",
+        "src": "media/attitude/ningning/ningning-7a625cfbeb.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:Ningning_at_Seoul_Discovery_Expedition_event_on_March_11,_2026_02.jpg",
         "credit": "티비텐 TV10",
         "width": 1434,
@@ -867,7 +867,7 @@
       {
         "member": "ningning",
         "kind": "local",
-        "src": "media/attitude/ningning/ningning-004.jpg",
+        "src": "media/attitude/ningning/ningning-575d563375.jpg",
         "pageUrl": "https://commons.wikimedia.org/wiki/File:Ningning_at_Seoul_Discovery_Expedition_event_on_March_11,_2026_04.jpg",
         "credit": "티비텐 TV10",
         "width": 1434,
@@ -1322,5 +1322,5 @@
   },
   "title": "Attitude (JP single)",
   "releaseDate": "2026-03-06",
-  "generatedAt": "2026-10-06T05:21:07.000Z"
+  "generatedAt": "2026-10-06T05:35:02.097Z"
 }

@@ -6,6 +6,7 @@ import path from 'node:path';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { eraContent, MEMBERS } from './lib/select.mjs';
+import { outputName, pruneUnreferenced } from './lib/media-files.mjs';
 
 const exec = promisify(execFile);
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -18,7 +19,7 @@ const BUDGET = 400 * 1024 * 1024;
 async function readJson(p) { return JSON.parse(await fs.readFile(p, 'utf8')); }
 async function curationFor(slug) { const p = path.join(CURATED, slug + '.json'); return existsSync(p) ? readJson(p) : null; }
 
-async function localize(slug, img, idx) {
+async function localize(slug, img) {
   if (img.src) { // curator already exported
     if (!existsSync(path.join(ROOT, 'public', img.src))) throw new Error(`kept image missing on disk: public/${img.src} (from ${img.file})`);
     return img.src;
@@ -27,7 +28,7 @@ async function localize(slug, img, idx) {
   if (!existsSync(srcPath)) throw new Error(`image missing on disk: media/raw/${img.file}`);
   const dir = path.join(PUBLIC, slug, img.member);
   await fs.mkdir(dir, { recursive: true });
-  const name = `${img.member}-${String(idx + 1).padStart(3, '0')}.jpg`;
+  const name = outputName(img); // content-addressed: reordering never changes which pixels sit behind a credit
   const out = path.join(dir, name);
   if (!existsSync(out)) await exec('sips', ['-s', 'format', 'jpeg', '-s', 'formatOptions', '85', '-Z', '1600', srcPath, '--out', out]);
   return path.posix.join('media', slug, img.member, name);
@@ -44,13 +45,16 @@ await fs.mkdir(OUT, { recursive: true });
 let totalImages = 0;
 for (const era of manifest.eras) {
   const content = eraContent(era, await curationFor(era.slug), { limit: 24 });
+  const referenced = new Set();
   for (const m of MEMBERS) {
-    for (const [i, img] of content.images[m].entries()) {
-      if (img.kind === 'local') img.src = await localize(era.slug, img, i);
+    for (const img of content.images[m]) {
+      if (img.kind === 'local') { img.src = await localize(era.slug, img); referenced.add(img.src); }
       delete img.file; // raw paths never ship
       totalImages++;
     }
   }
+  const pruned = pruneUnreferenced(PUBLIC, era.slug, referenced);
+  if (pruned.length) console.log(`pruned ${pruned.length} unreferenced files under public/media/${era.slug}`);
   content.title = era.title; content.releaseDate = era.releaseDate; content.generatedAt = new Date().toISOString();
   await fs.writeFile(path.join(OUT, era.slug + '.json'), JSON.stringify(content, null, 2) + '\n');
 }

@@ -10,17 +10,17 @@ const shown = tabs ? MEMBERS : MEMBERS.filter(([m]) => m === first);
 </section>
 <div class="wrap" data-tabs={tabs ? 'photocards' : undefined}>
   {tabs && <div class="tabs" role="tablist" aria-label="Member">
-    {MEMBERS.map(([m, label]) => <button role="tab" data-tab={m} aria-selected={m === first ? 'true' : 'false'}>{label}<small>{images[m]?.length ?? 0}</small></button>)}
+    {MEMBERS.map(([m, label]) => <button role="tab" id={`tab-${m}`} aria-controls={`panel-${m}`} data-tab={m} aria-selected={m === first ? 'true' : 'false'} tabindex={m === first ? 0 : -1}>{label}<small>{images[m]?.length ?? 0}</small></button>)}
   </div>}
   {shown.map(([m, label]) => (
-    <div role={tabs ? 'tabpanel' : undefined} data-panel={m} hidden={m !== first}>
+    <div role={tabs ? 'tabpanel' : undefined} id={tabs ? `panel-${m}` : undefined} aria-labelledby={tabs ? `tab-${m}` : undefined} data-panel={m} hidden={m !== first}>
       {images[m]?.length
         ? <div class="gallery">{images[m].map((img, i) => <Photocard img={img} index={i} era={eraSlug} />)}</div>
         : <p class="empty">No {label === 'Group' ? 'group' : label} photos yet for this era.</p>}
     </div>
   ))}
 </div>
-<dialog id="lightbox" aria-label="Full size photo"><img alt="" /><form method="dialog"><button aria-label="Close">×</button></form></dialog>
+<dialog id="lightbox" aria-label="Full size photo"><img alt="" referrerpolicy="no-referrer" /><form method="dialog"><button aria-label="Close">×</button></form></dialog>
 <style>
   .wrap{padding:0 var(--gutter)}
   .tabs{display:flex;gap:clamp(14px,2vw,28px);margin:0 0 18px;border-bottom:1px solid var(--line);overflow-x:auto}
@@ -41,11 +41,11 @@ const shown = tabs ? MEMBERS : MEMBERS.filter(([m]) => m === first);
   function bind() {
     const dlg = document.getElementById('lightbox') as HTMLDialogElement | null; if (!dlg) return;
     const img = dlg.querySelector('img')!;
-    document.querySelectorAll<HTMLElement>('.card').forEach(c => {
-      const open = () => { img.src = c.dataset.full || ''; img.alt = c.querySelector('img')?.alt || ''; dlg.showModal(); };
-      c.addEventListener('click', open);
-      c.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+    document.querySelectorAll<HTMLElement>('.card .view').forEach(btn => {
+      const c = btn.closest<HTMLElement>('.card')!;
+      btn.addEventListener('click', () => { img.src = c.dataset.full || ''; img.alt = c.querySelector('img')?.alt || ''; dlg.showModal(); });
     });
+    img.addEventListener('error', () => { if (dlg.open) dlg.close(); });
     dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
   }
   document.addEventListener('astro:page-load', bind);
