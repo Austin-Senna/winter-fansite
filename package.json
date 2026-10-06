@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "content": "node scripts/build-content.mjs",
-    "test": "node --test tests/",
+    "test": "node --experimental-strip-types --test tests/data.test.mjs",
     "check:dist": "node scripts/check-dist.mjs"
   },
   "dependencies": {
