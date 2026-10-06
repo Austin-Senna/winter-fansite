@@ -1,0 +1,13 @@
+:root{
+  --bg:#0B0B10; --ink:#F3EFE6;
+  --ink-dim:color-mix(in oklab,var(--ink) 62%,transparent);
+  --chrome-hi:#DDE2EA; --chrome-lo:#6E7480; --ice:#A9D6FF; --violet:#6A3FC9; --acid:#B6FF3B;
+  --era-a:#0A1E3F; --era-b:#A9D6FF; --era-glow:#FFFFFF;
+  --surface:color-mix(in oklab,var(--ink) 7%,transparent);
+  --line:color-mix(in oklab,var(--ink) 18%,transparent);
+  --display:"Saira Condensed",system-ui,sans-serif;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Inter",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+  --gutter:clamp(16px,4vw,56px);
+}

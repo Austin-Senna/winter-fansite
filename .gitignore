@@ -8,3 +8,5 @@ demo/shots/
 node_modules/
 dist/
 .DS_Store
+.superpowers/
+.astro/
