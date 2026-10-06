@@ -1,0 +1,21 @@
+---
+import type { Era } from '@/data/types';
+const { era } = Astro.props as { era: Era };
+---
+<section class="hero" aria-labelledby="title">
+  <p class="kicker" data-synk>{era.kicker}</p>
+  <h1 id="title" class="chrome" data-decode>{era.title}</h1>
+  <div class="strip">
+    <div data-synk>released<b>{era.releaseDate.replaceAll('-', '.')}</b></div>
+    <div data-synk>format<b>{era.type}</b></div>
+    <div data-synk>concept<b>{era.concept}</b></div>
+  </div>
+</section>
+<style>
+  .hero{min-height:100svh;display:grid;align-content:end;padding:0 var(--gutter) clamp(24px,5vh,56px)}
+  .kicker{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.6vw,36px);line-height:1.1;margin:0 0 .4em;max-width:28ch;text-shadow:0 1px 18px color-mix(in oklab,var(--era-a) 70%,transparent)}
+  h1{margin:0;font-family:var(--display);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(64px,15vw,240px);line-height:.86;filter:drop-shadow(0 2px 0 rgba(0,0,0,.25))}
+  .strip{display:grid;grid-template-columns:repeat(3,auto) 1fr;gap:clamp(16px,4vw,64px);margin-top:clamp(20px,3vh,36px);padding-top:14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--ink-dim)}
+  .strip b{display:block;font-weight:400;color:var(--ink);margin-top:2px}
+  @media (max-width:720px){.strip{grid-template-columns:1fr 1fr}}
+</style>

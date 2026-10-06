@@ -1,0 +1,15 @@
+---
+import type { Era } from '@/data/types';
+const { era } = Astro.props as { era: Era };
+const base = import.meta.env.BASE_URL;
+---
+<section class="next">
+  <span class="lbl">Next era</span>
+  <a class="chrome" href={`${base}era/${era.slug}/`}>{era.title}</a>
+</section>
+<style>
+  .next{padding:clamp(80px,16vh,200px) var(--gutter) clamp(40px,8vh,96px);display:grid;gap:8px}
+  .lbl{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2vw,28px);color:var(--ink-dim)}
+  a{font-family:var(--display);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(56px,12vw,200px);line-height:.9;text-decoration:none;display:inline-block;transition:letter-spacing .4s}
+  a:hover{letter-spacing:.01em}
+</style>
