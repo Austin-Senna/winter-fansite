@@ -1384,11 +1384,11 @@
     "giselle": {
       "member": "giselle",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/69/41/f2/6941f28b1714a6f8ce8680edbab07050.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/582864376820506721/",
-      "credit": "pinterest:lilakkumaa",
-      "width": 3072,
-      "height": 4096,
+      "remote": "https://i.pinimg.com/originals/09/cc/8b/09cc8bb90ddef5c545249b5ccf4409b7.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/934989572661785290/",
+      "credit": "pinterest:A4l1y4hAl1",
+      "width": 1287,
+      "height": 2048,
       "tags": []
     },
     "winter": {
@@ -1404,11 +1404,11 @@
     "ningning": {
       "member": "ningning",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/06/a7/4f/06a74fdc3e96e3312dbf6225bd5adee4.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/722053752811179787/",
-      "credit": "pinterest:qqhaoyu",
-      "width": 2736,
-      "height": 3648,
+      "remote": "https://i.pinimg.com/originals/1a/21/8a/1a218af18566ce1c6d5ee36fdbbde631.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/261842165833211433/",
+      "credit": "pinterest:akwon1230221",
+      "width": 1179,
+      "height": 1809,
       "tags": []
     },
     "group": {
@@ -1434,5 +1434,5 @@
   },
   "title": "Kiss n Tell (JP mini)",
   "releaseDate": "2026-07-24",
-  "generatedAt": "2026-10-06T05:58:46.877Z"
+  "generatedAt": "2026-10-06T06:03:35.665Z"
 }

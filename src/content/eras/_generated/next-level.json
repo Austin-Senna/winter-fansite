@@ -1326,11 +1326,11 @@
     "karina": {
       "member": "karina",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/1f/76/b4/1f76b40d763716144cdb6460c6d07658.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/667447607297029559/",
-      "credit": "pinterest:ani856079",
-      "width": 1364,
-      "height": 2048,
+      "remote": "https://i.pinimg.com/originals/5c/2f/05/5c2f054140bf8d350f5b05e61fea805b.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/737042295293236259/",
+      "credit": "pinterest:golilatmia",
+      "width": 1080,
+      "height": 1920,
       "tags": []
     },
     "giselle": {
@@ -1346,11 +1346,11 @@
     "winter": {
       "member": "winter",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/08/02/00/0802003cbd3377be8c888429de48961e.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/975029388141628618/",
-      "credit": "pinterest:soobhrtzz",
-      "width": 1364,
-      "height": 2048,
+      "remote": "https://i.pinimg.com/originals/d6/59/1e/d6591e7ebf49eb87fe8f256460928f54.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/1122874119623756848/",
+      "credit": "pinterest:ghggbhgh1",
+      "width": 1080,
+      "height": 1920,
       "tags": []
     },
     "ningning": {
@@ -1386,5 +1386,5 @@
   },
   "title": "Next Level",
   "releaseDate": "2021-05-17",
-  "generatedAt": "2026-10-06T05:58:11.739Z"
+  "generatedAt": "2026-10-06T06:03:35.588Z"
 }

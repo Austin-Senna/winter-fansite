@@ -1332,11 +1332,11 @@
     "karina": {
       "member": "karina",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/e8/08/5c/e8085cd7c0f63206b61eba717bca30d0.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/664351382574069276/",
-      "credit": "pinterest:skyfromtiktok",
-      "width": 2043,
-      "height": 2724,
+      "remote": "https://i.pinimg.com/originals/c9/24/c6/c924c693308dc53afed3e66ea6dc3b47.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/331507222597080748/",
+      "credit": "pinterest:agathalopes9",
+      "width": 3076,
+      "height": 5472,
       "tags": []
     },
     "giselle": {
@@ -1352,11 +1352,11 @@
     "winter": {
       "member": "winter",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/37/59/e1/3759e142e51b8568878c9a4d95efb1bf.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/815784920047036429/",
-      "credit": "pinterest:revezies",
-      "width": 2730,
-      "height": 4096,
+      "remote": "https://i.pinimg.com/originals/85/ac/80/85ac80b0cb7ab95e876c6907252ca0c1.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/597501075610486138/",
+      "credit": "pinterest:itzhypeboy",
+      "width": 2094,
+      "height": 3725,
       "tags": []
     },
     "ningning": {
@@ -1392,5 +1392,5 @@
   },
   "title": "Lemonade",
   "releaseDate": "2026-05-29",
-  "generatedAt": "2026-10-06T05:58:45.892Z"
+  "generatedAt": "2026-10-06T06:03:35.656Z"
 }

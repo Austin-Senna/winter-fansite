@@ -1,5 +1,5 @@
 ---
-import { ERAS } from '@/data/eras';
+import { MAIN_ERAS } from '@/data/eras';
 interface Props { current?: string }
 const { current } = Astro.props;
 const base = import.meta.env.BASE_URL;
@@ -8,7 +8,7 @@ const base = import.meta.env.BASE_URL;
   <a class="mark" href={base} aria-label="aespa, home"><span class="ae">æ</span><span class="who">aespa</span></a>
   <nav class="members" aria-label="Members">{['karina','giselle','winter','ningning'].map(m => <a href={`${base}member/${m}/`}>{m}</a>)}</nav>
   <nav class="eras" aria-label="Eras">
-    {ERAS.filter(e => e.membersEra).map(e => (
+    {MAIN_ERAS().map(e => (
       <a href={`${base}era/${e.slug}/`} aria-current={e.slug === current ? 'page' : undefined} aria-label={`${e.title}, ${e.year}`} style={`--a:${e.theme.a};--b:${e.theme.b}`}>
         <span class="sw"></span><span class="yr">{e.year}</span>
       </a>

@@ -17,7 +17,7 @@ const theme = member.theme;
 const trackEra: Era = soloEra ?? { ...ERAS[0], title: member.name, spotify: { tracks: member.solo.filter(s => s.spotifyTrack).map(s => ({ id: s.spotifyTrack!, title: s.title })) } };
 const base = import.meta.env.BASE_URL;
 const byDate = [...entries].sort((a, b) => a.data.releaseDate.localeCompare(b.data.releaseDate));
-const featuredAcross = byDate.filter(e => e.data.featured?.[member.slug]).map(e => ({ slug: e.data.slug, title: eraBySlug(e.data.slug)?.title ?? e.data.title, year: eraBySlug(e.data.slug)?.year ?? '', img: e.data.featured[member.slug]! }));
+const featuredAcross = byDate.filter(e => e.data.featured?.[member.slug] && eraBySlug(e.data.slug)?.tier === 'era').map(e => ({ slug: e.data.slug, title: eraBySlug(e.data.slug)?.title ?? e.data.title, year: eraBySlug(e.data.slug)?.year ?? '', img: e.data.featured[member.slug]! }));
 const portrait = [...featuredAcross].reverse()[0]?.img ?? null;
 const thumb = (img: any) => img.kind === 'local' ? base + (img.variants?.w960 ?? img.src) : (isPin(img.remote) ? pinVariant(img.remote, 736) : img.remote);
 const emptyImages = { karina: [], giselle: [], winter: [], ningning: [], group: [] } as Record<string, any[]>;

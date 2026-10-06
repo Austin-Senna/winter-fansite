@@ -1684,11 +1684,11 @@
     "karina": {
       "member": "karina",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/16/dd/af/16ddaf08e1d20bb9687e5f04272ad1b1.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/302444931249478639/",
-      "credit": "pinterest:mmichele0683",
-      "width": 1536,
-      "height": 2048,
+      "remote": "https://i.pinimg.com/originals/5e/8d/9a/5e8d9a6b84be7471fd518c89e8239f14.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/523121312994524025/",
+      "credit": "pinterest:nojamesquad",
+      "width": 1116,
+      "height": 1735,
       "tags": []
     },
     "giselle": {
@@ -1724,25 +1724,25 @@
     "group": {
       "member": "group",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/fd/8e/17/fd8e1765bd5e592adfa3b0cb262dddf4.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/380624606034269133/",
-      "credit": "pinterest:eakcomscicmu",
-      "width": 2500,
-      "height": 3750,
+      "remote": "https://i.pinimg.com/originals/7b/92/60/7b92606ddf807b5e77f69034f880df16.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/1128785094089037749/",
+      "credit": "pinterest:idont_know_whyiam",
+      "width": 1080,
+      "height": 1920,
       "tags": []
     },
     "hero": {
       "member": "group",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/fd/8e/17/fd8e1765bd5e592adfa3b0cb262dddf4.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/380624606034269133/",
-      "credit": "pinterest:eakcomscicmu",
-      "width": 2500,
-      "height": 3750,
+      "remote": "https://i.pinimg.com/originals/7b/92/60/7b92606ddf807b5e77f69034f880df16.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/1128785094089037749/",
+      "credit": "pinterest:idont_know_whyiam",
+      "width": 1080,
+      "height": 1920,
       "tags": []
     }
   },
   "title": "Drama",
   "releaseDate": "2023-11-10",
-  "generatedAt": "2026-10-06T05:58:26.113Z"
+  "generatedAt": "2026-10-06T06:03:35.604Z"
 }

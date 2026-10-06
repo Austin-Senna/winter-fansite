@@ -1334,21 +1334,21 @@
     "winter": {
       "member": "winter",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/22/ef/4f/22ef4ffc3c1209d049203dc541bdccc6.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/645070346670711621/",
-      "credit": "pinterest:leeknow1020",
-      "width": 1800,
-      "height": 2700,
+      "remote": "https://i.pinimg.com/originals/3e/b0/2b/3eb02bf1964774878b504665aaf0cef2.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/833377106055979544/",
+      "credit": "pinterest:9ksk0011",
+      "width": 1006,
+      "height": 1185,
       "tags": []
     },
     "ningning": {
       "member": "ningning",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/d6/3e/34/d63e34f8d17ec757c8a9922fa25f2233.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/642748178098685285/",
-      "credit": "pinterest:markmelon23",
-      "width": 2500,
-      "height": 3750,
+      "remote": "https://i.pinimg.com/originals/4f/de/01/4fde01082f8beb6b6bc403de4353f1f5.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/1104718983612666427/",
+      "credit": "pinterest:bcwfsh",
+      "width": 2666,
+      "height": 4096,
       "tags": []
     },
     "group": {
@@ -1374,5 +1374,5 @@
   },
   "title": "Dreams Come True",
   "releaseDate": "2021-12-20",
-  "generatedAt": "2026-10-06T05:58:14.421Z"
+  "generatedAt": "2026-10-06T06:03:35.594Z"
 }

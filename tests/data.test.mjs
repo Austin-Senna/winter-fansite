@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { ERAS, nextEra } from '../src/data/eras.ts';
+import { ERAS, nextEra, MAIN_ERAS } from '../src/data/eras.ts';
 import { MEMBERS } from '../src/data/members.ts';
 
 const SLUGS = ['black-mamba','forever','next-level','savage','dreams-come-true','girls','my-world','better-things','drama','armageddon','whiplash','dirty-work','rich-man','attitude','lemonade','kiss-n-tell','winter-solo'];
@@ -23,9 +23,15 @@ test('every era has complete theme, spotify, story', () => {
     assert.ok(!/—/.test(e.kicker + e.story.text.join('')), `${e.slug} em dash`);
   }
 });
-test('nextEra wraps', () => {
-  assert.equal(nextEra('black-mamba').slug, 'forever');
+test('nextEra follows the main era chain and wraps', () => {
+  assert.equal(nextEra('black-mamba').slug, 'next-level');
+  assert.equal(nextEra('forever').slug, 'next-level');
+  assert.equal(nextEra('kiss-n-tell').slug, 'black-mamba');
   assert.equal(nextEra('winter-solo').slug, 'black-mamba');
+});
+test('main eras are the mini albums, albums and full promotion singles', () => {
+  assert.deepEqual(MAIN_ERAS().map(e => e.slug), ['black-mamba','next-level','savage','girls','my-world','drama','armageddon','whiplash','dirty-work','rich-man','lemonade','kiss-n-tell']);
+  for (const e of ERAS) assert.ok(['era','release'].includes(e.tier), e.slug);
 });
 test('members are the four with lore roles and sources', () => {
   assert.deepEqual(MEMBERS.map(m => m.slug), ['karina','giselle','winter','ningning']);

@@ -69,9 +69,12 @@ function rankCandidates(era, member) {
     .filter(i => i.file && (i.member || 'group') === member && (i.width || 0) >= 1000 && !(i.qc?.flags || []).some(f => QC_BAD.has(f)))
     .sort((a, b) => (/(teaser|concept|photoshoot|promo|cover)/.test(meta(a)) ? 0 : 1) - (/(teaser|concept|photoshoot|promo|cover)/.test(meta(b)) ? 0 : 1) || (SRC_RANK[a.source] ?? 3) - (SRC_RANK[b.source] ?? 3) || (b.width * b.height) - (a.width * a.height));
 }
+// The hand pick wins whenever it is a portrait at all (a 3:4 card crops it gently, anchored near the face).
+// Only a landscape or square pick is swapped for the best clean candidate that is already near 3:4.
+const portraitish = i => i.width && i.height && i.width / i.height <= 0.95;
 function pickForCard(era, member, pickFile) {
   const pick = pickFile ? era.images.find(i => i.file === pickFile) : null;
-  if (pick && nearCard(pick)) return pick.file;
+  if (pick && portraitish(pick)) return pick.file;
   const alt = rankCandidates(era, member).find(nearCard);
   return alt?.file ?? pick?.file ?? null;
 }
