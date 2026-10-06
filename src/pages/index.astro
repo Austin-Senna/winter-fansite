@@ -1,6 +1,26 @@
 ---
 import Base from '@/layouts/Base.astro';
+import Timeline from '@/components/Timeline.astro';
+import { ERAS } from '@/data/eras';
+import { getCollection } from 'astro:content';
+const entries = await getCollection('eras');
+const items = ERAS.filter(e => e.membersEra).map(era => { const c = entries.find(x => x.data.slug === era.slug)?.data; const image = c?.images.group[0] ?? c?.images.winter[0]; return { era, image }; });
+const base = import.meta.env.BASE_URL;
 ---
-<Base title="aespa" description="Fan-made aespa site, Winter first.">
-  <section class="sec"><h1 class="chrome" style="font-family:var(--display);font-size:20vw;line-height:.86;text-transform:uppercase;margin:0">aespa</h1></section>
+<Base title="aespa, by era" description="Fan-made aespa site, Winter first. Every era with its photos, videos, music and story.">
+  <section class="hero">
+    <h1 class="chrome" data-decode>aespa</h1>
+    <p class="kicker" data-synk>Sixteen releases, 2020 to 2026. Pick an era.</p>
+  </section>
+  <Timeline items={items} />
+  <section class="sec"><p class="lede">Fan-made. Not affiliated with SM Entertainment. <a href={`${base}about/`}>Credits and sources</a>.</p></section>
 </Base>
+<style>
+  .hero{min-height:70svh;display:grid;align-content:end;padding:0 var(--gutter) clamp(24px,5vh,56px)}
+  h1{margin:0;font-family:var(--display);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(96px,24vw,360px);line-height:.86}
+  .kicker{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.6vw,36px);margin:.3em 0 0;color:var(--ink-dim)}
+</style>
+<script>
+  import { initMotion } from '@/scripts/motion';
+  document.addEventListener('astro:page-load', initMotion);
+</script>
