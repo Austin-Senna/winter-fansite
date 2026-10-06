@@ -1,0 +1,329 @@
+{
+  "slug": "whiplash",
+  "videos": [
+    {
+      "ytId": "jWQx2f-CErU",
+      "title": "aespa 에스파 'Whiplash' MV",
+      "channel": "SMTOWN",
+      "kind": "mv",
+      "views": 320249929,
+      "member": null
+    },
+    {
+      "ytId": "4hAdcenQWqU",
+      "title": "aespa 에스파 'Whiplash' Dance Practice",
+      "channel": "aespa",
+      "kind": "performance",
+      "views": 14006361,
+      "member": null
+    },
+    {
+      "ytId": "QB7eaAAIZAU",
+      "title": "[#2024MAMA] aespa - Whiplash (MAMA ver.) | Mnet 241123",
+      "channel": "Mnet K-POP",
+      "kind": "performance",
+      "views": 12765069,
+      "member": null
+    },
+    {
+      "ytId": "lMgq1lyIkl4",
+      "title": "에스파 (aespa) 'whiplash 위플래쉬'🔥 | 충남대학교 축제 | 241030",
+      "channel": "Rock Music",
+      "kind": "other",
+      "views": 5182269,
+      "member": null
+    },
+    {
+      "ytId": "YhbqKA4gvUA",
+      "title": "whiplash : aespa : SMTOWN LIVE 2025-26 [THE CULTURE, THE FUTURE] in BANGKOK   [14.02.2026]",
+      "channel": "YIBKLONG 📱",
+      "kind": "other",
+      "views": 533054,
+      "member": null
+    }
+  ],
+  "images": {
+    "karina": [],
+    "giselle": [],
+    "winter": [
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/whiplash/winter/winter-001.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:250111_aespa_Winter_03.jpg",
+        "credit": "snow plumflower",
+        "width": 2400,
+        "height": 3600,
+        "tags": [],
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/whiplash/winter/winter-002.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:250111_aespa_Winter_02.jpg",
+        "credit": "snow plumflower",
+        "width": 2000,
+        "height": 3000,
+        "tags": [],
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/whiplash/winter/winter-003.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:250111_aespa_Winter_01.jpg",
+        "credit": "snow plumflower",
+        "width": 1800,
+        "height": 2700,
+        "tags": [],
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/whiplash/winter/winter-004.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:WINTER_(%EC%9C%88%ED%84%B0)_%E2%80%93_POLO_RALPH_LAUREN_%E2%80%93_2025.03.26_%E2%80%93_P3.jpg",
+        "credit": "티비텐 (TV10)",
+        "width": 1472,
+        "height": 1440,
+        "tags": [],
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/whiplash/winter/winter-005.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:WINTER_(%EC%9C%88%ED%84%B0)_%E2%80%93_POLO_RALPH_LAUREN_%E2%80%93_2025.03.26_%E2%80%93_P6.jpg",
+        "credit": "티비텐 (TV10)",
+        "width": 1184,
+        "height": 1416,
+        "tags": [],
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/whiplash/winter/winter-006.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:WINTER_(%EC%9C%88%ED%84%B0)_%E2%80%93_POLO_RALPH_LAUREN_%E2%80%93_2025.03.26_%E2%80%93_P1.jpg",
+        "credit": "티비텐 (TV10)",
+        "width": 1136,
+        "height": 1440,
+        "tags": [],
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/whiplash/winter/winter-007.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Winter_at_2024_Melon_Music_Awards.png",
+        "credit": "10Asia",
+        "width": 1024,
+        "height": 1532,
+        "tags": [],
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/whiplash/winter/winter-008.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:WINTER_(%EC%9C%88%ED%84%B0)_%E2%80%93_POLO_RALPH_LAUREN_%E2%80%93_2025.03.26_%E2%80%93_P5.jpg",
+        "credit": "티비텐 (TV10)",
+        "width": 1024,
+        "height": 1432,
+        "tags": [],
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/whiplash/winter/winter-009.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:WINTER_(%EC%9C%88%ED%84%B0)_%E2%80%93_POLO_RALPH_LAUREN_%E2%80%93_2025.03.26_%E2%80%93_P4.jpg",
+        "credit": "티비텐 (TV10)",
+        "width": 992,
+        "height": 1328,
+        "tags": [],
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/whiplash/winter/winter-010.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:WINTER_(%EC%9C%88%ED%84%B0)_%E2%80%93_POLO_RALPH_LAUREN_%E2%80%93_2025.03.26_%E2%80%93_P2.jpg",
+        "credit": "티비텐 (TV10)",
+        "width": 984,
+        "height": 1416,
+        "tags": [],
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/whiplash/winter/winter-011.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:WINTER_-_AESPA_-_2025.01.28.jpg",
+        "credit": "David Lee",
+        "width": 834,
+        "height": 1214,
+        "tags": [],
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/09/47/16/094716af153c50c19200feb6bed0eafa.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/494410865364789435/",
+        "credit": "pinterest:laiyongshenlyss",
+        "width": 3072,
+        "height": 4096,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/4b/ab/7d/4bab7d6862029ec4e4c92351c3ace829.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/25403185394013172/",
+        "credit": "pinterest:ParkMochiNochu",
+        "width": 2310,
+        "height": 4093,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/5a/5d/3f/5a5d3f2ab40346ad1d5d3b8b220be0ad.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/123989795986193220/",
+        "credit": "pinterest:666thdistortion",
+        "width": 2044,
+        "height": 2724,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/1b/1b/89/1b1b89d431dbb42c1b9abe2cfa11ae29.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/34269647161194973/",
+        "credit": "pinterest:yumnakanaya",
+        "width": 1871,
+        "height": 2494,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/44/e9/bd/44e9bd0982c5b41d03c7c33ec6cc2926.png",
+        "pageUrl": "https://www.pinterest.com/pin/81627811991752227/",
+        "credit": "pinterest:twelvelevenat",
+        "width": 1800,
+        "height": 1800,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/13/82/01/13820121a26c49ce92aabeb255511d90.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/340866265567061267/",
+        "credit": "pinterest:kbego511",
+        "width": 1464,
+        "height": 1417,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/63/ed/a2/63eda26a4e888b9a3aacd9c877cbaef8.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/258042253645104292/",
+        "credit": "pinterest:mycfsy7a",
+        "width": 1449,
+        "height": 1431,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/91/36/dd/9136dd0da0ba42b9495075beae6dd35a.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/1477812374237201/",
+        "credit": "pinterest:Brittzuu",
+        "width": 1440,
+        "height": 1440,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/7e/c9/62/7ec962ac6b0251bc4d207be38f9ab4d9.png",
+        "pageUrl": "https://www.pinterest.com/pin/333618284921479051/",
+        "credit": "pinterest:yoojini15",
+        "width": 1414,
+        "height": 2000,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/23/27/ae/2327ae0a736688cdc4069c8ef801efde.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/840132505521764372/",
+        "credit": "pinterest:tyang272494588",
+        "width": 1414,
+        "height": 1466,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/2d/19/26/2d19268963d2d040815b2e46be87f93a.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/180988478772065102/",
+        "credit": "pinterest:Aninha_luiza404",
+        "width": 1280,
+        "height": 1600,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/03/cf/cf/03cfcf26da62a46716b1c2370fa7a7c5.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/309059593198403554/",
+        "credit": "pinterest:gatete22cp",
+        "width": 1264,
+        "height": 1640,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/62/0b/16/620b16b33fd023864c8f0ff404165346.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/257620041182164652/",
+        "credit": "pinterest:joosecoelho",
+        "width": 1200,
+        "height": 2133,
+        "tags": []
+      }
+    ],
+    "ningning": [],
+    "group": [
+      {
+        "member": "group",
+        "kind": "local",
+        "src": "media/whiplash/group/group-001.jpg",
+        "pageUrl": "https://aespa-official.jp/discography/whiplash/",
+        "credit": "SM Entertainment / aespa-official.jp",
+        "width": 2000,
+        "height": 2000,
+        "tags": []
+      }
+    ]
+  },
+  "title": "Whiplash",
+  "releaseDate": "2024-10-21",
+  "generatedAt": "2026-10-06T05:05:11.475Z"
+}

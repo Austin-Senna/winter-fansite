@@ -1,0 +1,345 @@
+{
+  "slug": "drama",
+  "videos": [
+    {
+      "ytId": "D8VEhcPeSlc",
+      "title": "aespa 에스파 'Drama' MV",
+      "channel": "SMTOWN",
+      "kind": "mv",
+      "views": 313540412,
+      "member": null
+    },
+    {
+      "ytId": "3CvJKTChsl4",
+      "title": "aespa 에스파 'Drama' Performance Video",
+      "channel": "aespa",
+      "kind": "performance",
+      "views": 55564472,
+      "member": null
+    },
+    {
+      "ytId": "PI-bhsvHdxM",
+      "title": "[MMA2023] aespa FULL Performance | #TrickorTrick #Drama #MMA2023",
+      "channel": "멜론 Melon",
+      "kind": "performance",
+      "views": 12322653,
+      "member": null
+    },
+    {
+      "ytId": "1c_3pK15yWg",
+      "title": "aespa(에스파) - Drama @인기가요 inkigayo 20231112",
+      "channel": "SBSKPOP X INKIGAYO",
+      "kind": "performance",
+      "views": 8932262,
+      "member": null
+    },
+    {
+      "ytId": "V_f8VB5UmEg",
+      "title": "[I-LAND2/1회 풀버전] '방지민, 마이, 윤지윤, 최정은' ♬Drama - aespa @입장 테스트",
+      "channel": "Mnet K-POP",
+      "kind": "other",
+      "views": 3628751,
+      "member": null
+    },
+    {
+      "ytId": "OYplQ8uebUo",
+      "title": "[Knowing Bros] aespa - Drama Performance😍",
+      "channel": "K-contents Voyage",
+      "kind": "other",
+      "views": 3291513,
+      "member": null
+    },
+    {
+      "ytId": "0R_xU7_rSzk",
+      "title": "aespa - 'Drama' | 2025 aespa LIVE TOUR - SYNK : PARALLEL LINE [ENCORE] in SEOUL",
+      "channel": "0808 Presents",
+      "kind": "performance",
+      "views": 535623,
+      "member": null
+    }
+  ],
+  "images": {
+    "karina": [],
+    "giselle": [],
+    "winter": [
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/drama/winter/winter-001.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:250315-16_aespa_Winter_03.jpg",
+        "credit": "snow plumflower",
+        "width": 3840,
+        "height": 2560,
+        "tags": [],
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/drama/winter/winter-002.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:250315-16_aespa_Winter_05.jpg",
+        "credit": "snow plumflower",
+        "width": 3840,
+        "height": 2560,
+        "tags": [],
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/drama/winter/winter-003.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:250315-16_aespa_Winter_02.jpg",
+        "credit": "snow plumflower",
+        "width": 2400,
+        "height": 3600,
+        "tags": [],
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/drama/winter/winter-004.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:250315-16_aespa_Winter_01.jpg",
+        "credit": "snow plumflower",
+        "width": 2400,
+        "height": 3600,
+        "tags": [],
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/drama/winter/winter-005.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:250315-16_aespa_Winter_06.jpg",
+        "credit": "snow plumflower",
+        "width": 2200,
+        "height": 3300,
+        "tags": [],
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/drama/winter/winter-006.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:250315-16_aespa_Winter_04.jpg",
+        "credit": "snow plumflower",
+        "width": 2000,
+        "height": 3000,
+        "tags": [],
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/drama/winter/winter-007.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Winter_aespa_(%EC%97%90%EC%8A%A4%ED%8C%8C)_231124_Love_Your_W.png",
+        "credit": "티비텐",
+        "width": 1739,
+        "height": 2160,
+        "tags": [],
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/drama/winter/winter-008.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Aespa%27s_Winter_9.jpg",
+        "credit": "K-POPIT 케이팝잇",
+        "width": 1594,
+        "height": 1998,
+        "tags": [],
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/drama/winter/winter-009.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Aespa%27s_Winter_7.jpg",
+        "credit": "K-POPIT 케이팝잇",
+        "width": 1586,
+        "height": 1738,
+        "tags": [],
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/drama/winter/winter-010.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Aespa%27s_Winter_8_(cropped).jpg",
+        "credit": "K-POPIT 케이팝잇",
+        "width": 1202,
+        "height": 1828,
+        "tags": [],
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/drama/winter/winter-011.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:250315-16_aespa_Winter_07.jpg",
+        "credit": "snow plumflower",
+        "width": 1200,
+        "height": 1800,
+        "tags": [],
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/a2/df/46/a2df46eca29aa6b95901fe18854c812b.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/188377196910474128/",
+        "credit": "pinterest:khty_pp",
+        "width": 2396,
+        "height": 2396,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/cf/ae/ff/cfaeffd82fdf3cd1c198cf0ef36dc28d.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/591378994864321691/",
+        "credit": "pinterest:AcielBN",
+        "width": 2243,
+        "height": 3168,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/76/95/f1/7695f198244994dcf2d2dd0bfd99573b.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/118641771431634760/",
+        "credit": "pinterest:yaxx176",
+        "width": 2166,
+        "height": 3250,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/d2/eb/e2/d2ebe2d11acef9cafb4cbd75d5f067f2.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/272678952436900575/",
+        "credit": "pinterest:hyeinbunnyjeans",
+        "width": 2090,
+        "height": 3135,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/0c/04/a2/0c04a227c62c2225453cad7e0d169f8a.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/64598575902470019/",
+        "credit": "pinterest:kaitlynerm",
+        "width": 2090,
+        "height": 3135,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/ea/f8/35/eaf83518c5f7c241b8253111e15c1f68.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/889390626398669133/",
+        "credit": "pinterest:takoyakli",
+        "width": 2048,
+        "height": 2048,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/eb/87/7a/eb877aff2a12dde77569098bdb24fb37.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/3518505954740578/",
+        "credit": "pinterest:minnie4puppym",
+        "width": 1440,
+        "height": 1440,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/2d/77/a7/2d77a73811b407e145701e35380d88c2.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/355995545563992992/",
+        "credit": "pinterest:Caitlinxx201",
+        "width": 1440,
+        "height": 1440,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/18/84/0f/18840f130a587cdca7fb24c895957d57.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/292804413291800577/",
+        "credit": "pinterest:eviegreenie",
+        "width": 1347,
+        "height": 1539,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/05/e2/7e/05e27e6f60267c10c7df5dba1a459dbd.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/217509856996787314/",
+        "credit": "pinterest:kiermcc",
+        "width": 1332,
+        "height": 1332,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/82/70/4c/82704c6dd284cbf51d8a8cc279d984cc.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/1266706140145826/",
+        "credit": "pinterest:JuliaSophie7",
+        "width": 1280,
+        "height": 1600,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/fa/7b/3f/fa7b3f883e010e77039c2f31efcc7725.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/333055334962340789/",
+        "credit": "pinterest:sseramyus",
+        "width": 1280,
+        "height": 1600,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/7b/b7/c1/7bb7c1e8cece3bcded7fed2939253f81.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/604537950022829060/",
+        "credit": "pinterest:kfkfjfjdkf",
+        "width": 1280,
+        "height": 1600,
+        "tags": []
+      }
+    ],
+    "ningning": [],
+    "group": [
+      {
+        "member": "group",
+        "kind": "local",
+        "src": "media/drama/group/group-001.jpg",
+        "pageUrl": "https://aespa-official.jp/discography/drama/",
+        "credit": "SM Entertainment / aespa-official.jp",
+        "width": 2000,
+        "height": 2000,
+        "tags": []
+      }
+    ]
+  },
+  "title": "Drama",
+  "releaseDate": "2023-11-10",
+  "generatedAt": "2026-10-06T05:05:09.577Z"
+}

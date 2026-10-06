@@ -1,0 +1,327 @@
+{
+  "slug": "my-world",
+  "videos": [
+    {
+      "ytId": "Os_heh8vPfs",
+      "title": "aespa 에스파 'Spicy' MV",
+      "channel": "SMTOWN",
+      "kind": "mv",
+      "views": 192020098,
+      "member": null
+    },
+    {
+      "ytId": "0xdB_vo4r2c",
+      "title": "aespa 에스파 'Welcome To MY World (Feat. nævis)' MV",
+      "channel": "SMTOWN",
+      "kind": "mv",
+      "views": 27103574,
+      "member": null
+    },
+    {
+      "ytId": "VgmgG0WGx84",
+      "title": "aespa 에스파 'Welcome To MY World (Feat. nævis)' MV Behind The Scenes",
+      "channel": "aespa",
+      "kind": "mv",
+      "views": 434225,
+      "member": null
+    },
+    {
+      "ytId": "k75oGRMiENk",
+      "title": "'최초 공개' aespa - Spicy #엠카운트다운 EP.796 | Mnet 230511 방송",
+      "channel": "Mnet K-POP",
+      "kind": "performance",
+      "views": 3841241,
+      "member": null
+    },
+    {
+      "ytId": "H1c06ycRWaM",
+      "title": "Spicy - aespa [뮤직뱅크/Music Bank] | KBS 230512 방송",
+      "channel": "KBS Kpop",
+      "kind": "performance",
+      "views": 2904006,
+      "member": null
+    },
+    {
+      "ytId": "FZKTX5HgmDY",
+      "title": "Spicy - aespa [Music Bank] | KBS WORLD TV 230512",
+      "channel": "KBS WORLD TV",
+      "kind": "performance",
+      "views": 2456610,
+      "member": null
+    }
+  ],
+  "images": {
+    "karina": [],
+    "giselle": [],
+    "winter": [
+      {
+        "member": "winter",
+        "kind": "local",
+        "src": "media/my-world/winter/winter-001.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:230601_Winter_(aespa).jpg",
+        "credit": "K-POPIT 케이팝잇",
+        "width": 960,
+        "height": 1120,
+        "tags": [],
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/06/b1/e6/06b1e6176676661a21cd08b589ea8cd6.png",
+        "pageUrl": "https://www.pinterest.com/pin/657666351864647455/",
+        "credit": "pinterest:leorays_02",
+        "width": 3000,
+        "height": 2000,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/91/95/3a/91953aa57ace13710cdf066566a300cd.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/945685621740656696/",
+        "credit": "pinterest:gonegirII",
+        "width": 2279,
+        "height": 1535,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/4f/f7/eb/4ff7eb83aa98046b3c5cbaace402c832.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/349943833561441200/",
+        "credit": "pinterest:herroitstrisha",
+        "width": 2226,
+        "height": 3472,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/70/7c/88/707c88c623f7d3dc80ec53f78381d616.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/768989705145205583/",
+        "credit": "pinterest:moonie_kg",
+        "width": 2000,
+        "height": 3000,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/53/2a/f8/532af8b9b3bb7f85a5b21c465e280ea2.png",
+        "pageUrl": "https://www.pinterest.com/pin/1150599404815735769/",
+        "credit": "pinterest:nurfadlilahnur95",
+        "width": 1920,
+        "height": 1080,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/8e/ee/b8/8eeeb844d269b912f2aa2a47fd329427.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/734438651753217682/",
+        "credit": "pinterest:lm_bluuu",
+        "width": 1920,
+        "height": 1080,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/92/1e/7b/921e7b9c0d65b70f9562a89554031783.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/586101339044768831/",
+        "credit": "pinterest:ca629748",
+        "width": 1800,
+        "height": 2700,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/ee/71/19/ee7119da71cdaf7729d4bdd1565900e3.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/12525705209499610/",
+        "credit": "pinterest:azurevelvet",
+        "width": 1440,
+        "height": 1440,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/5d/94/0b/5d940bec1d4fab081e3b18e52a130e29.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/577445983516334122/",
+        "credit": "pinterest:beam11432",
+        "width": 1440,
+        "height": 1440,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/61/e1/1a/61e11acb298ae25fcd75f16a5d9c1ef7.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/679339925086081199/",
+        "credit": "pinterest:diemixor",
+        "width": 1440,
+        "height": 1440,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/c2/7e/9c/c27e9c0c61fb9428ddac5be8dba1f9d5.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/161496336630857299/",
+        "credit": "pinterest:Disrespec",
+        "width": 1362,
+        "height": 1362,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/8a/cb/3f/8acb3f74e31b471bd0c7b0899428b01f.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/272256739969460121/",
+        "credit": "pinterest:alcad123",
+        "width": 1224,
+        "height": 1632,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/c2/09/8d/c2098d50ace34e78e75226dc866aaedc.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/16888567448366552/",
+        "credit": "pinterest:syndromae",
+        "width": 1200,
+        "height": 1600,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/53/c6/66/53c666eae488ceaf48bd45744ab779f2.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/370772981842205466/",
+        "credit": "pinterest:ashuwuy",
+        "width": 1200,
+        "height": 1600,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/72/7e/78/727e7875358c9f609d94e0a40ae01534.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/840132505508916765/",
+        "credit": "pinterest:tyang272494588",
+        "width": 1200,
+        "height": 908,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/9f/44/11/9f441131a4a2367eff3a99fc1486679a.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/578853358379328453/",
+        "credit": "pinterest:sainysaw",
+        "width": 1200,
+        "height": 908,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/3f/4a/bd/3f4abdc9aa21944d64c58dd54b79b79f.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/85216617944172467/",
+        "credit": "pinterest:monsieurapollo",
+        "width": 1200,
+        "height": 1200,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/0b/06/38/0b0638e06c29cf9bf50f79aeb13c72ef.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/517562182203549767/",
+        "credit": "pinterest:chanmansing",
+        "width": 1179,
+        "height": 2096,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/d1/17/09/d11709a8a560f9451ffa7539501222f7.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/37365871902869837/",
+        "credit": "pinterest:strawbiekail",
+        "width": 1179,
+        "height": 1179,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/c3/8f/2c/c38f2cc21ce0d43ddb0fdf4a6a9cd200.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/337277459608612891/",
+        "credit": "pinterest:philipzxd",
+        "width": 1170,
+        "height": 1992,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/51/95/96/5195966bd0a0738dafcf2ae050e24d7d.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/193162271512316224/",
+        "credit": "pinterest:Iaravender",
+        "width": 1168,
+        "height": 1752,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/ac/70/73/ac707367a12e8a383f82b858140da619.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/592856738487451530/",
+        "credit": "pinterest:hyejudaily",
+        "width": 1152,
+        "height": 1801,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/71/a8/83/71a8831c658023b23d592f34918b0e09.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/3729612228815094/",
+        "credit": "pinterest:sukikireii",
+        "width": 1148,
+        "height": 1148,
+        "tags": []
+      }
+    ],
+    "ningning": [],
+    "group": [
+      {
+        "member": "group",
+        "kind": "local",
+        "src": "media/my-world/group/group-001.jpg",
+        "pageUrl": "https://aespa-official.jp/discography/myworld/",
+        "credit": "SM Entertainment / aespa-official.jp",
+        "width": 1000,
+        "height": 1000,
+        "tags": []
+      },
+      {
+        "member": "group",
+        "kind": "local",
+        "src": "media/my-world/group/group-002.jpg",
+        "pageUrl": "https://aespa-official.jp/discography/wtmw/",
+        "credit": "SM Entertainment / aespa-official.jp",
+        "width": 1000,
+        "height": 1000,
+        "tags": []
+      }
+    ]
+  },
+  "title": "My World",
+  "releaseDate": "2023-05-08",
+  "generatedAt": "2026-10-06T05:05:06.875Z"
+}
