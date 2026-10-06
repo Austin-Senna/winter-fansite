@@ -1,0 +1,9 @@
+# fetched media is untrusted and large; regenerate with media/tools
+media/raw/*
+!media/raw/REPORT.md
+media/tools/.venv/
+media/tools/work/
+demo/shots/
+node_modules/
+dist/
+.DS_Store
