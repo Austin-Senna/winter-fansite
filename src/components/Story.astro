@@ -1,0 +1,21 @@
+---
+import type { Era } from '@/data/types';
+const { era } = Astro.props as { era: Era };
+const status = { 'season-1': 'SM Culture Universe, Season 1.', 'season-2': 'Season 2 label. Explicit lore is sparse from here on.', 'none': 'No SMCU lore in this release.' }[era.story.loreStatus];
+---
+<section class="notes" aria-labelledby="story-h">
+  <div>
+    <h2 id="story-h">Story</h2>
+    <p class="status">{status}</p>
+    {era.story.text.map(p => <p>{p}</p>)}
+    <p class="src">Sources: {era.story.sources.map((s, i) => <><a href={s.url} target="_blank" rel="noopener">{s.label}</a>{i < era.story.sources.length - 1 ? '; ' : ''}</>)}</p>
+  </div>
+</section>
+<style>
+  .notes{padding:clamp(56px,10vh,120px) var(--gutter) 0;display:grid;grid-template-columns:minmax(0,56ch) 1fr;gap:var(--gutter)}
+  h2{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(28px,4vw,56px);line-height:1;margin:0 0 .3em}
+  .status{font-family:var(--mono);font-size:12px;color:var(--ink-dim);margin:0 0 1.2em}
+  p{margin:0 0 1em;font-size:clamp(16px,1.3vw,19px)}
+  .src{font-family:var(--mono);font-size:11px;color:var(--ink-dim)} .src a{color:inherit}
+  @media (max-width:720px){.notes{grid-template-columns:1fr}}
+</style>

@@ -1,0 +1,18 @@
+---
+import type { Era } from '@/data/types';
+const { era } = Astro.props as { era: Era };
+const allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+---
+<section class="sec" aria-labelledby="listen-h">
+  <h2 id="listen-h">Listen</h2>
+  <p class="lede">{era.spotify.album ? 'The full release on Spotify.' : 'The tracks on Spotify.'}</p>
+</section>
+<div class="listen">
+  {era.spotify.album
+    ? <iframe src={`https://open.spotify.com/embed/album/${era.spotify.album}?utm_source=generator&theme=0`} loading="lazy" allow={allow} title={`${era.title} on Spotify`} height="352"></iframe>
+    : era.spotify.tracks?.map(t => <iframe src={`https://open.spotify.com/embed/track/${t.id}?utm_source=generator&theme=0`} loading="lazy" allow={allow} title={`${t.title} on Spotify`} height="152"></iframe>)}
+</div>
+<style>
+  .listen{padding:clamp(28px,4vh,48px) var(--gutter) 0;display:grid;gap:12px;grid-template-columns:minmax(0,720px)}
+  iframe{width:100%;border:0;border-radius:12px;background:var(--surface)}
+</style>
