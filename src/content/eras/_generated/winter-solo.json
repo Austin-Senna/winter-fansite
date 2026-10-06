@@ -6,7 +6,7 @@
       "title": "[MV] SOYEON of (G)I-DLE X WINTER of aespa X LIZ of IVE 'NOBODY'",
       "channel": "M:USB 뮤스비",
       "kind": "mv",
-      "views": 40691684,
+      "views": 40691783,
       "member": null
     },
     {
@@ -14,7 +14,7 @@
       "title": "Spark (WINTER Solo)",
       "channel": "aespa",
       "kind": "mv",
-      "views": 20988812,
+      "views": 20989097,
       "member": null
     },
     {
@@ -30,7 +30,7 @@
       "title": "BLUE (WINTER Solo)",
       "channel": "aespa",
       "kind": "mv",
-      "views": 3624657,
+      "views": 3624788,
       "member": null
     },
     {
@@ -38,7 +38,7 @@
       "title": "[MV] 윈터(WINTER) & 닝닝(NINGNING) of aespa - ONCE AGAIN | 우리들의 블루스(Our Blues) OST Part 10",
       "channel": "냠냠엔터테인먼트 YAMYAM ENTERTAINMENT",
       "kind": "mv",
-      "views": 2672923,
+      "views": 2672895,
       "member": null
     },
     {
@@ -54,54 +54,74 @@
       "title": "[MV] WINTER(윈터) _ Voyage(항해) (CASTAWAY DIVA(무인도의 디바) OST Part.8)",
       "channel": "1theK (원더케이)",
       "kind": "mv",
-      "views": 1769654,
-      "member": null
-    },
-    {
-      "ytId": "qCOvn2GVn6g",
-      "title": "Saddle Up (WINTER Solo)",
-      "channel": "aespa",
-      "kind": "mv",
-      "views": 1261144,
+      "views": 1769656,
       "member": null
     },
     {
       "ytId": "YTeFLKMnwjg",
-      "title": "[Special Clip] WINTER - Speed of Summer | dingo Music",
+      "title": "[Special Clip] 윈터 (WINTER) - 여름의 속도 (Speed of Summer) | 딩고뮤직 | dingo Music",
       "channel": "딩고 뮤직 / dingo music",
       "kind": "performance",
-      "views": 7736282,
+      "views": 7736458,
       "member": null
+    },
+    {
+      "ytId": "74fSrrQM5hA",
+      "title": "[4K] 240629-240630 에스파 윈터 Spark 직캠 aespa WINTER FANCAM @SYNKPARALLELLINESEOUL",
+      "channel": "Iberis.",
+      "kind": "fancam",
+      "views": 2438043,
+      "member": "winter"
     },
     {
       "ytId": "eZiCkuXnTRQ",
       "title": "WINTER of aespa (에스파 윈터) - BLUE｜야외녹음실｜Beyond the Studio｜LIVE",
       "channel": "1theK Live - 원더케이 라이브",
       "kind": "other",
-      "views": 2059395,
-      "member": null
+      "views": 2059467,
+      "member": "winter"
     },
     {
       "ytId": "T7AdZyTYHOI",
       "title": "[직캠] 에스파 윈터 ‘Spark (WINTER Solo)’ㅣ2024 aespa LIVE TOUR - SYNK : PARALLEL LINE Concert in SEOUL",
       "channel": "aespa",
       "kind": "performance",
-      "views": 1879925,
+      "views": 1879952,
       "member": null
     },
     {
-      "ytId": "DQYlzUuxCHY",
-      "title": "방예담 (BANG YEDAM) X 윈터 (WINTER of aespa) ‘Officially Cool’ M/V BEHIND",
-      "channel": "BANG YEDAM OFFICIAL",
-      "kind": "other",
-      "views": 176461,
-      "member": null
+      "ytId": "IfBKO3cRbLI",
+      "title": "[#2024KGMA] 윈터 (aespa WINTER) - Spark | #윈터 #WINTER #에스파 #aespa | ENA 241117 방송",
+      "channel": "ENA 이엔에이",
+      "kind": "fancam",
+      "views": 452320,
+      "member": "winter"
     }
   ],
   "images": {
     "karina": [],
     "giselle": [],
     "winter": [
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/0b/82/fe/0b82fe4435efb03bc72a406e3e2a3bf5.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/757449231124257448/",
+        "credit": "pinterest:louise__martin",
+        "width": 4096,
+        "height": 2732,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/89/9d/d8/899dd81bc669d0cc7a89e652d6e81f52.png",
+        "pageUrl": "https://www.pinterest.com/pin/1144195849115318583/",
+        "credit": "pinterest:likezipidcpic",
+        "width": 3648,
+        "height": 4560,
+        "tags": []
+      },
       {
         "member": "winter",
         "kind": "remote",
@@ -125,221 +145,201 @@
       {
         "member": "winter",
         "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/59/52/c2/5952c22563a2fbc672fa7751a26aa0cf.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/318207529945437274/",
-        "credit": "pinterest:jjashiknom",
-        "width": 2446,
+        "remote": "https://i.pinimg.com/originals/22/b9/f4/22b9f409e23a220c027c657d2ee57acc.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/744993963387934772/",
+        "credit": "pinterest:aespamyaycia",
+        "width": 2730,
+        "height": 4095,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/04/2a/97/042a97fd6effafbdaffbf687fafc8d9f.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/392165080075189915/",
+        "credit": "pinterest:Toshunio",
+        "width": 2730,
         "height": 4096,
         "tags": []
       },
       {
         "member": "winter",
         "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/d2/66/d4/d266d4fa6e3b0fd109dd6d772d09726b.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/414331234490992121/",
-        "credit": "pinterest:cait99bly",
-        "width": 2304,
-        "height": 4096,
+        "remote": "https://i.pinimg.com/originals/51/f1/16/51f11673b5bdf0360aea1167a97271ff.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/328622104077816575/",
+        "credit": "pinterest:neptunianess",
+        "width": 2730,
+        "height": 4095,
         "tags": []
       },
       {
         "member": "winter",
         "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/01/9c/fc/019cfca73acb472ae053a337296e4959.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/686095324526879343/",
-        "credit": "pinterest:attacktitan845",
-        "width": 2304,
-        "height": 4096,
-        "tags": []
-      },
-      {
-        "member": "winter",
-        "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/9b/1c/43/9b1c43b13c04b2bfd32bb28bc0a4cdc1.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/1107111520938286382/",
-        "credit": "pinterest:killarini",
-        "width": 1920,
-        "height": 3412,
-        "tags": []
-      },
-      {
-        "member": "winter",
-        "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/41/3c/0e/413c0e8653d9b64c23c7339bbad446fb.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/574209021262494001/",
-        "credit": "pinterest:earn14",
-        "width": 1800,
-        "height": 2700,
-        "tags": []
-      },
-      {
-        "member": "winter",
-        "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/2d/2f/f2/2d2ff2ac071eb8e430e720839e335e38.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/564990715772016539/",
-        "credit": "pinterest:whosaidlala",
-        "width": 1462,
-        "height": 2048,
-        "tags": []
-      },
-      {
-        "member": "winter",
-        "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/2f/57/92/2f57922f285727e462a914c0a0340d00.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/901986631619471379/",
-        "credit": "pinterest:1xnzd",
-        "width": 1460,
-        "height": 2044,
-        "tags": []
-      },
-      {
-        "member": "winter",
-        "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/4d/37/e0/4d37e06588f4f245b327d2d48d9e8de6.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/685532374577863251/",
-        "credit": "pinterest:qkrtjsrb1995",
-        "width": 1440,
+        "remote": "https://i.pinimg.com/originals/12/d0/06/12d00683870513d43007c0b2a4d32875.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/1003176885769746043/",
+        "credit": "pinterest:ipatovaekaterina73",
+        "width": 2560,
         "height": 1440,
         "tags": []
       },
       {
         "member": "winter",
         "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/7e/eb/c7/7eebc745d96b0c8e8cc5d9b8be214810.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/392165080074581061/",
+        "remote": "https://i.pinimg.com/originals/36/2b/a7/362ba737f229f43cf9bcd9fe21ed493b.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/392165080075119056/",
         "credit": "pinterest:Toshunio",
-        "width": 1440,
-        "height": 2160,
+        "width": 2560,
+        "height": 3840,
         "tags": []
       },
       {
         "member": "winter",
         "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/6f/38/1e/6f381e858b51a0471529a497ee32cd8d.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/364721269842004219/",
-        "credit": "pinterest:jisoonika",
-        "width": 1431,
-        "height": 1449,
+        "remote": "https://i.pinimg.com/originals/a1/6c/b9/a16cb9c998af30c98b73713ca64d5534.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/649855421277942438/",
+        "credit": "pinterest:soobinspancakes",
+        "width": 2504,
+        "height": 3754,
         "tags": []
       },
       {
         "member": "winter",
         "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/50/95/dc/5095dc4590af0864c9a9c3018aad5d1e.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/95349717105861964/",
-        "credit": "pinterest:inhumanity18",
-        "width": 1407,
-        "height": 1474,
+        "remote": "https://i.pinimg.com/originals/eb/f3/15/ebf3152e15f7938d39c700bd4a9f4a91.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/1135329387307944823/",
+        "credit": "pinterest:luelev_",
+        "width": 2332,
+        "height": 2332,
         "tags": []
       },
       {
         "member": "winter",
         "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/1a/97/75/1a9775db8fdbf3302855fea7fc2ac381.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/311311393011731515/",
-        "credit": "pinterest:sasanabi",
-        "width": 1405,
-        "height": 1476,
+        "remote": "https://i.pinimg.com/originals/cc/f7/ed/ccf7ed032f0cb3207fe4c55e613253ac.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/32228953579130884/",
+        "credit": "pinterest:soniavouga",
+        "width": 2304,
+        "height": 3072,
         "tags": []
       },
       {
         "member": "winter",
         "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/79/eb/f3/79ebf31143140ee7176419212f97d322.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/142426406961130477/",
-        "credit": "pinterest:hohokz",
-        "width": 1367,
+        "remote": "https://i.pinimg.com/originals/65/0e/97/650e97d29fb42569ff7700828a30ea26.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/591941944824968097/",
+        "credit": "pinterest:sadsooyaa",
+        "width": 2048,
+        "height": 1167,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/4b/68/45/4b684558efa97f6bf0d5ba62681e5796.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/587790188912240224/",
+        "credit": "pinterest:Ame111301",
+        "width": 2043,
+        "height": 2724,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/6e/08/77/6e08774a95388ae80a37c2ac1bab9758.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/163748136448441488/",
+        "credit": "pinterest:angel009isaac",
+        "width": 2032,
+        "height": 3048,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/a5/b5/84/a5b584c816fece94775dba94dc2968fb.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/889038782736705186/",
+        "credit": "pinterest:linna_1200",
+        "width": 1920,
+        "height": 3413,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/4c/79/15/4c79153e288a25b2c318ebd570581b75.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/1116963145113307234/",
+        "credit": "pinterest:heesdiors",
+        "width": 1602,
+        "height": 1602,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/25/33/04/25330465b627d0acf7a7927ed7446aec.webp",
+        "pageUrl": "https://www.pinterest.com/pin/698761698504296282/",
+        "credit": "pinterest:serenahisao",
+        "width": 1580,
+        "height": 2108,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/cf/0e/a0/cf0ea07f2845a8c3136cd0e00d4bed6b.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/889038782733335199/",
+        "credit": "pinterest:linna_1200",
+        "width": 1554,
+        "height": 2296,
+        "tags": []
+      },
+      {
+        "member": "winter",
+        "kind": "remote",
+        "remote": "https://i.pinimg.com/originals/81/92/32/819232ecd3caf0c03a80de69c8e8e7df.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/519954719506096866/",
+        "credit": "pinterest:hosunflower",
+        "width": 1536,
         "height": 2048,
         "tags": []
       },
       {
         "member": "winter",
         "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/15/ca/fd/15cafd162fbee37594dfd914882ea685.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/1089730441268695306/",
-        "credit": "pinterest:jodiestarling142",
-        "width": 1366,
-        "height": 2048,
+        "remote": "https://i.pinimg.com/originals/67/2f/31/672f31dff0e5e01ab5704b275566b379.png",
+        "pageUrl": "https://www.pinterest.com/pin/1015491416026943884/",
+        "credit": "pinterest:klurinae",
+        "width": 1500,
+        "height": 1500,
         "tags": []
       },
       {
         "member": "winter",
         "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/b5/85/f2/b585f208438dcdf113d2d97e1a036604.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/609182287136245397/",
-        "credit": "pinterest:moogndine",
-        "width": 1366,
-        "height": 2048,
+        "remote": "https://i.pinimg.com/originals/c5/5e/78/c55e783c31fde44a760b9f6f26df0680.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/33706697208142076/",
+        "credit": "pinterest:rip2yu",
+        "width": 1483,
+        "height": 1977,
         "tags": []
       },
       {
         "member": "winter",
         "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/71/38/e0/7138e0d90a097ae856227fee66ca67c6.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/475974254391552646/",
-        "credit": "pinterest:ellieisacat",
-        "width": 1366,
-        "height": 2048,
+        "remote": "https://i.pinimg.com/originals/59/f9/b9/59f9b941dc86ca0e60c022ba655aa401.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/109704940918908341/",
+        "credit": "pinterest:rosiesirenity",
+        "width": 1463,
+        "height": 1920,
         "tags": []
       },
       {
         "member": "winter",
         "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/03/6b/30/036b30f885740613ecd657267333c669.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/49469295905435550/",
-        "credit": "pinterest:justincabanos",
-        "width": 1366,
+        "remote": "https://i.pinimg.com/originals/d9/9b/9f/d99b9f2ed0c9f350374e61a4abe034b7.jpg",
+        "pageUrl": "https://www.pinterest.com/pin/345299496450809436/",
+        "credit": "pinterest:amocityy",
+        "width": 1462,
         "height": 2048,
-        "tags": []
-      },
-      {
-        "member": "winter",
-        "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/b8/ad/5f/b8ad5f55424bd4b73c6b0be8cf41d426.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/676877019031768121/",
-        "credit": "pinterest:nuocepduahaukhongda",
-        "width": 1366,
-        "height": 2048,
-        "tags": []
-      },
-      {
-        "member": "winter",
-        "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/c2/ea/c7/c2eac7b323f40be7438c9e3f1c8e93c7.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/974184963169966683/",
-        "credit": "pinterest:pepsik7str",
-        "width": 1366,
-        "height": 2048,
-        "tags": []
-      },
-      {
-        "member": "winter",
-        "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/1f/90/55/1f9055342601283132d95001c37c7e8f.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/45880489948811603/",
-        "credit": "pinterest:onepunchk1ng",
-        "width": 1365,
-        "height": 2048,
-        "tags": []
-      },
-      {
-        "member": "winter",
-        "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/e3/fa/53/e3fa53c6ccdbca1870b138c966e34c14.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/875176140114860059/",
-        "credit": "pinterest:juanitosirenita23",
-        "width": 1365,
-        "height": 2048,
-        "tags": []
-      },
-      {
-        "member": "winter",
-        "kind": "remote",
-        "remote": "https://i.pinimg.com/originals/34/f9/9e/34f99e55920b82cb2f588be876cbbeec.jpg",
-        "pageUrl": "https://www.pinterest.com/pin/690598924139231928/",
-        "credit": "pinterest:oddchromia",
-        "width": 1308,
-        "height": 1585,
         "tags": []
       }
     ],
@@ -348,5 +348,5 @@
   },
   "title": "Winter solo / OST / collaborations",
   "releaseDate": "2022-05-22",
-  "generatedAt": "2026-10-06T05:05:14.243Z"
+  "generatedAt": "2026-10-06T05:21:08.367Z"
 }
