@@ -22,7 +22,7 @@ const rest = videos.filter(v => v !== mv);
 )}
 <style>
   .rail{height:100svh;display:grid;align-content:center;overflow:hidden}
-  .track{display:flex;gap:clamp(12px,1.6vw,24px);padding:0 var(--gutter);width:max-content;will-change:transform}
+  .track{display:flex;align-items:flex-start;gap:clamp(12px,1.6vw,24px);padding:0 var(--gutter);width:max-content;will-change:transform}
   .vid{position:relative;flex:0 0 auto;width:clamp(260px,34vw,520px);border-radius:4px;overflow:hidden;background:var(--surface);box-shadow:0 30px 60px -30px rgba(0,0,0,.6),inset 0 0 0 1px var(--line)}
   .vid.mv{width:clamp(300px,46vw,720px)}
   .vid lite-youtube{max-width:none;aspect-ratio:16/9}

@@ -1,0 +1,51 @@
+---
+import Photocard from './Photocard.astro';
+const MEMBERS = [['karina','Karina'],['giselle','Giselle'],['winter','Winter'],['ningning','Ningning'],['group','Group']] as const;
+const { images, eraSlug } = Astro.props as { images: Record<string, any[]>; eraSlug: string };
+const first = MEMBERS.find(([m]) => images[m]?.length)?.[0] ?? 'winter';
+---
+<section class="sec" aria-labelledby="gal-h">
+  <h2 id="gal-h">Photocards</h2>
+</section>
+<div class="wrap" data-tabs="photocards">
+  <div class="tabs" role="tablist" aria-label="Member">
+    {MEMBERS.map(([m, label]) => <button role="tab" data-tab={m} aria-selected={m === first ? 'true' : 'false'}>{label}<small>{images[m]?.length ?? 0}</small></button>)}
+  </div>
+  {MEMBERS.map(([m, label]) => (
+    <div role="tabpanel" data-panel={m} hidden={m !== first}>
+      {images[m]?.length
+        ? <div class="gallery">{images[m].map((img, i) => <Photocard img={img} index={i} era={eraSlug} />)}</div>
+        : <p class="empty">No {label === 'Group' ? 'group' : label} photos yet for this era.</p>}
+    </div>
+  ))}
+</div>
+<dialog id="lightbox" aria-label="Full size photo"><img alt="" /><form method="dialog"><button aria-label="Close">×</button></form></dialog>
+<style>
+  .wrap{padding:0 var(--gutter)}
+  .tabs{display:flex;gap:clamp(14px,2vw,28px);margin:0 0 18px;border-bottom:1px solid var(--line);overflow-x:auto}
+  .tabs button{appearance:none;border:0;background:transparent;padding:10px 0 12px;cursor:pointer;font-family:var(--display);font-weight:800;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-dim);position:relative;transition:color .2s;display:flex;gap:6px;align-items:baseline;white-space:nowrap}
+  .tabs button small{font-family:var(--mono);font-size:10px;letter-spacing:0}
+  .tabs button:hover,.tabs button[aria-selected="true"]{color:var(--ink)}
+  .tabs button::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--era-b);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+  .tabs button[aria-selected="true"]::after{transform:scaleX(1)}
+  .gallery{columns:3;column-gap:clamp(12px,1.6vw,24px)}
+  @media (max-width:900px){.gallery{columns:2}} @media (max-width:560px){.gallery{columns:1}}
+  .empty{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2vw,28px);color:var(--ink-dim);margin:24px 0 0}
+  dialog{background:transparent;border:0;padding:0;max-width:96vw;max-height:94vh}
+  dialog::backdrop{background:rgba(0,0,0,.92)}
+  dialog img{max-width:96vw;max-height:92vh;object-fit:contain;display:block}
+  dialog button{position:fixed;top:16px;right:16px;font-size:28px;background:transparent;border:0;color:#fff;cursor:pointer}
+</style>
+<script>
+  function bind() {
+    const dlg = document.getElementById('lightbox') as HTMLDialogElement | null; if (!dlg) return;
+    const img = dlg.querySelector('img')!;
+    document.querySelectorAll<HTMLElement>('.card').forEach(c => {
+      const open = () => { img.src = c.dataset.full || ''; img.alt = c.querySelector('img')?.alt || ''; dlg.showModal(); };
+      c.addEventListener('click', open);
+      c.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+    });
+    dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+  }
+  document.addEventListener('astro:page-load', bind);
+</script>
