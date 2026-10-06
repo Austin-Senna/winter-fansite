@@ -216,9 +216,9 @@ Sketch, no server required:
 Not in phases 0 to 4. Revisit after the era pages are live.
 
 ## 11. Decisions for Austin
-1. **Stack: Astro (recommended) vs vanilla Vite.** Astro costs one layer of indirection around the canvas and buys the image pipeline and typed manifests. If you'd rather own every line, Vite is fine and the shader and motion code is identical.
+1. **Stack: Astro (recommended) vs vanilla Vite.** Both build to static files and deploy to GitHub Pages identically. Astro costs one layer of indirection around the canvas and buys the build-time image pipeline (AVIF, srcset) and typed manifests. Vite means hand-rolling both. The shader and motion code is the same either way.
 2. **Hosting.** Decided: GitHub Pages with a curated self-hosted set and embeds for the rest. Public repo once era pages exist.
 3. **Embed policy.** Decided: self-host official assets and the curated picks, embed the rest.
 4. **Era granularity.** Separate pages for thin eras (Forever, Dreams Come True, Better Things, ATTITUDE) or fold them into the nearest big era as a section. Recommendation: fold until the media exists to justify a page.
-5. **Member scope order.** Build Winter end to end first and add the other three once the pipeline is proven, or fetch all four before building any era page. Recommendation: Winter first, since the fetch for the others takes about fifteen minutes and can run while phase 1 is underway.
+5. **Member scope order.** Decided 2026-10-06: Winter end to end first. The other three members' media is fetched and curated in parallel, and their tabs light up on each era page as their curation lands.
 6. **Spotify vs YouTube for audio.** Spotify embeds give tracklists and full playback for logged-in listeners but cannot run in the background across pages. The YouTube player can. Recommendation: Spotify in the Listen section, YouTube for the persistent player, both driven from the same manifest.

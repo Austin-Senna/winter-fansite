@@ -42,6 +42,14 @@
   .card .flags span.src{color:var(--dim)}
   .card .tags{position:absolute;right:6px;bottom:6px;display:flex;gap:4px}
   .card .tags span{font-size:10px;background:rgba(0,0,0,.65);padding:2px 5px;border-radius:4px}
+  .card .act{position:absolute;inset:auto 0 0 0;display:flex;gap:4px;padding:6px;background:linear-gradient(transparent,rgba(0,0,0,.75));opacity:0;transition:opacity .15s;flex-wrap:wrap;justify-content:center}
+  .card:hover .act,.card.sel .act{opacity:1}
+  .card .act button{font:inherit;font-size:11px;padding:4px 8px;border-radius:5px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.55);color:var(--ink);cursor:pointer}
+  .card .act button.k{background:var(--keep);color:#000;border-color:transparent;font-weight:600}
+  .card .act button.x{background:var(--reject);color:#000;border-color:transparent;font-weight:600}
+  .card .act button.t[aria-pressed="true"]{background:var(--ink);color:#000}
+  .card:hover .flags,.card.sel .flags,.card:hover .tags,.card.sel .tags{opacity:0}
+  .card .flags,.card .tags{transition:opacity .15s}
   .card.vid{aspect-ratio:16/9}
   .card .title{position:absolute;left:0;right:0;bottom:0;padding:24px 8px 6px;font-size:11px;background:linear-gradient(transparent,rgba(0,0,0,.8))}
   aside.rail{border-right:0;border-left:1px solid var(--line);padding:10px}
@@ -145,7 +153,8 @@ function renderGrid(){
     const ord=it.rec.state==='keep'?kept.indexOf(it.rec)+1:null;
     const flags=it.flags.map(f=>`<span>${f}</span>`).join('')+(mode==='images'?`<span class="src">${it.img.source}${it.img.width?' '+it.img.width+'×'+it.img.height:''}</span>`:`<span class="src">${it.vid.kind} ${fmtViews(it.vid.viewCount)}</span>`);
     const tags=(it.rec.tags||[]).map(t=>`<span>${t}</span>`).join('');
-    c.innerHTML=`<img src="${thumb}" loading="lazy" alt=""><span class="n">${i+1}${it.rec.member&&it.rec.member!==member?' → '+it.rec.member:''}</span>${ord?`<span class="ord">${ord}</span>`:''}<div class="flags">${flags}</div><div class="tags">${tags}</div>${mode==='videos'?`<div class="title">${esc(it.vid.title)}</div>`:''}`;
+    c.innerHTML=`<img src="${thumb}" loading="lazy" alt=""><span class="n">${i+1}${it.rec.member&&it.rec.member!==member?' → '+it.rec.member:''}</span>${ord?`<span class="ord">${ord}</span>`:''}<div class="flags">${flags}</div><div class="tags">${tags}</div>${mode==='videos'?`<div class="title">${esc(it.vid.title)}</div>`:''}<div class="act"><button class="k" data-a="keep">Keep</button><button class="x" data-a="reject">Reject</button>${it.rec.state?'<button data-a="unreview">Undo</button>':''}${mode==='images'?TAGS.map(t=>`<button class="t" data-t="${t}" aria-pressed="${(it.rec.tags||[]).includes(t)}">${t}</button>`).join(''):''}</div>`;
+    c.querySelectorAll('.act button').forEach(b=>b.onclick=ev=>{ ev.stopPropagation(); sel=i; if(b.dataset.a) setState(b.dataset.a==='unreview'?null:b.dataset.a); else toggleTag(b.dataset.t); });
     c.onclick=()=>{sel=i;renderGrid();}; c.ondblclick=()=>openLightbox(it); g.appendChild(c); });
   const all=items(); $('#counts').textContent=`${vis.length} shown · ${all.filter(x=>x.rec.state==='keep').length} kept · ${all.filter(x=>x.rec.state==='reject').length} rejected · ${all.filter(x=>!x.rec.state).length} unreviewed`;
   document.querySelector('.card.sel')?.scrollIntoView({block:'nearest'});
