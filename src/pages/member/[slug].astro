@@ -11,7 +11,7 @@ const { member } = Astro.props;
 const entries = await getCollection('eras');
 const latest = entries.filter(e => e.data.images[member.slug].length).sort((a, b) => b.data.releaseDate.localeCompare(a.data.releaseDate))[0];
 const soloEra = member.slug === 'winter' ? eraBySlug('winter-solo')! : undefined;
-const theme = soloEra?.theme ?? { a: '#0B0B10', b: '#A9D6FF', glow: '#FFFFFF', ink: '#F3EFE6', mode: 0 as const };
+const theme = member.theme;
 const trackEra: Era = soloEra ?? { ...ERAS[0], title: member.name, spotify: { tracks: member.solo.filter(s => s.spotifyTrack).map(s => ({ id: s.spotifyTrack!, title: s.title })) } };
 const base = import.meta.env.BASE_URL;
 const emptyImages = { karina: [], giselle: [], winter: [], ningning: [], group: [] } as Record<string, any[]>;

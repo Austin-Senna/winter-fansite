@@ -31,3 +31,10 @@ test('members are the four with lore roles and sources', () => {
   assert.deepEqual(MEMBERS.map(m => m.slug), ['karina','giselle','winter','ningning']);
   for (const m of MEMBERS) { assert.ok(m.loreRole && m.sources.length >= 1 && m.solo.length >= 1, m.slug); }
 });
+test('every member has a complete page theme', () => {
+  for (const m of MEMBERS) {
+    for (const k of ['a','b','glow','ink']) assert.match(m.theme[k], HEX, `${m.slug} ${k}`);
+    assert.ok([0,1,2,3].includes(m.theme.mode), m.slug);
+  }
+  assert.notEqual(MEMBERS[0].theme.a, MEMBERS[3].theme.a, 'members do not share a palette');
+});
