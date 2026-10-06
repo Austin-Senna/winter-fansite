@@ -1,7 +1,7 @@
 # aespa fansite (Winter first): design spec
 
 Date: 2026-10-05
-Status: draft for Austin's review. Demo of the visual system lives at `demo/index.html` (serve the repo root over HTTP so it can read `media/raw/manifest.json`).
+Status: approved by Austin 2026-10-06. Demo of the visual system lives at `demo/index.html` (serve the repo root over HTTP so it can read `media/raw/manifest.json`).
 Revised 2026-10-06 after Austin's feedback: all four members, storyline per era, Spotify per era, member subtabs.
 Research: `docs/research/aespa-winter-brief.md`, `docs/research/ui-tech-brief.md`.
 
@@ -216,7 +216,7 @@ Sketch, no server required:
 Not in phases 0 to 4. Revisit after the era pages are live.
 
 ## 11. Decisions for Austin
-1. **Stack: Astro (recommended) vs vanilla Vite.** Both build to static files and deploy to GitHub Pages identically. Astro costs one layer of indirection around the canvas and buys the build-time image pipeline (AVIF, srcset) and typed manifests. Vite means hand-rolling both. The shader and motion code is the same either way.
+1. **Stack.** Decided 2026-10-06: Astro. Both options build to static files for GitHub Pages; Astro adds the build-time image pipeline (AVIF, srcset) and typed manifests.
 2. **Hosting.** Decided: GitHub Pages with a curated self-hosted set and embeds for the rest. Public repo once era pages exist.
 3. **Embed policy.** Decided: self-host official assets and the curated picks, embed the rest.
 4. **Era granularity.** Separate pages for thin eras (Forever, Dreams Come True, Better Things, ATTITUDE) or fold them into the nearest big era as a section. Recommendation: fold until the media exists to justify a page.
