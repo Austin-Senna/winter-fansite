@@ -1,7 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { ERAS } from '../src/data/eras.ts';
+import { MEMBERS } from '../src/data/members.ts';
 const dist = path.resolve('dist');
-const required = (process.argv.slice(2).length ? process.argv.slice(2) : ['index.html']);
+const defaults = ['index.html', 'about/index.html', ...ERAS.map(e => `era/${e.slug}/index.html`), ...MEMBERS.map(m => `member/${m.slug}/index.html`)];
+const required = process.argv.slice(2).length ? process.argv.slice(2) : defaults;
 let fail = false;
 for (const rel of required) {
   const p = path.join(dist, rel);
