@@ -3,6 +3,7 @@ import Base from '@/layouts/Base.astro';
 import Timeline from '@/components/Timeline.astro';
 import { ERAS } from '@/data/eras';
 import { getCollection } from 'astro:content';
+import { COPY } from '@/data/copy';
 const entries = await getCollection('eras');
 const items = ERAS.filter(e => e.membersEra).map(era => { const c = entries.find(x => x.data.slug === era.slug)?.data; const image = c?.images.group[0] ?? c?.images.winter[0]; return { era, image }; });
 const base = import.meta.env.BASE_URL;
@@ -10,7 +11,7 @@ const base = import.meta.env.BASE_URL;
 <Base title="aespa, by era" description="Fan-made aespa site, Winter first. Every era with its photos, videos, music and story.">
   <section class="hero">
     <h1 class="chrome" data-decode>aespa</h1>
-    <p class="kicker" data-synk>Sixteen releases, 2020 to 2026. Pick an era.</p>
+    <p class="kicker" data-synk>{COPY.home.kicker}</p>
   </section>
   <Timeline items={items} />
   <section class="sec"><p class="lede">Fan-made. Not affiliated with SM Entertainment. <a href={`${base}about/`}>Credits and sources</a>.</p></section>

@@ -1,8 +1,9 @@
 import type { Era } from './types';
+import { COPY } from './copy.ts';
 
 const src = (label: string, url: string) => ({ label, url });
 
-export const ERAS: Era[] = [
+const BASE_ERAS: Era[] = [
   { slug: 'black-mamba', title: 'Black Mamba', shortTitle: 'Black Mamba', releaseDate: '2020-11-17', year: '2020', type: 'debut single',
     kicker: 'Debut. Four members, four æ, one villain.', concept: 'hyperreal æ arena',
     theme: { a: '#0A1E3F', b: '#A9D6FF', glow: '#FFFFFF', ink: '#F3EFE6', mode: 0 },
@@ -164,6 +165,10 @@ export const ERAS: Era[] = [
       sources: [src('Wikipedia, Winter (singer)', 'https://en.wikipedia.org/wiki/Winter_(singer)'), src('Bandwagon on SYNK : COMPLæXITY solos', 'https://www.bandwagon.asia/articles/aespa-release-solo-tracks-from-synk-compl-xity-world-tour-listen')] },
     membersEra: false },
 ];
+
+const copyFor = (slug: string) => (COPY.eras as Record<string, { kicker: string; story: readonly string[]; sources: readonly { label: string; url: string }[] } | undefined>)[slug];
+// Written copy overlays the base data: kicker, story paragraphs and sources. Concept words and themes stay with the base.
+export const ERAS: Era[] = BASE_ERAS.map(e => { const c = copyFor(e.slug); return c ? { ...e, kicker: c.kicker, story: { ...e.story, text: [...c.story], sources: [...c.sources] } } : e; });
 
 export function eraBySlug(slug: string): Era | undefined { return ERAS.find(e => e.slug === slug); }
 export function nextEra(slug: string): Era { const i = ERAS.findIndex(e => e.slug === slug); return ERAS[(i + 1) % ERAS.length]; }

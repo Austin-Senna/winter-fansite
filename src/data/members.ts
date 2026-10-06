@@ -1,6 +1,7 @@
 import type { Member } from './types';
+import { COPY } from './copy.ts';
 const src = (label: string, url: string) => ({ label, url });
-export const MEMBERS: Member[] = [
+const BASE_MEMBERS: Member[] = [
   { slug: 'karina', name: 'Karina', hangul: '카리나', born: '2000-04-11', birthplace: 'Suwon', position: 'leader, dancer, rapper, vocalist',
     loreRole: 'Rocket Puncher', loreNote: 'In the Black Mamba MV, æ-Karina is the avatar the Black Mamba corrupts, cutting the SYNK.',
     fanSourced: { symbol: 'heart', color: 'blue', animal: 'whale' },
@@ -26,4 +27,7 @@ export const MEMBERS: Member[] = [
     moments: ['Coachella 2022 high notes went viral.', 'Versace (2024) and Gucci (2026) global ambassador.', 'Revealed as the third member on October 28, 2020.'],
     sources: [src('Wikipedia, Ningning', 'https://en.wikipedia.org/wiki/Ningning')] },
 ];
+const copyFor = (slug: string) => (COPY.members as Record<string, { intro: string; loreNote: string; moments: readonly string[] } | undefined>)[slug];
+export const MEMBERS: Member[] = BASE_MEMBERS.map(m => { const c = copyFor(m.slug); return c ? { ...m, intro: c.intro, loreNote: c.loreNote, moments: [...c.moments] } : m; });
+
 export function memberBySlug(slug: string): Member | undefined { return MEMBERS.find(m => m.slug === slug); }

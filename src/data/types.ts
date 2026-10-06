@@ -7,4 +7,4 @@ export interface Era {
   story: { text: string[]; sources: { label: string; url: string }[]; loreStatus: 'season-1' | 'season-2' | 'none' };
   membersEra: boolean; // false for winter-solo
 }
-export interface Member { slug: 'karina'|'giselle'|'winter'|'ningning'; name: string; hangul: string; born: string; birthplace: string; position: string; loreRole: string; loreNote: string; fanSourced: { symbol: string; color: string; animal: string }; solo: { title: string; date: string; note: string; spotifyTrack?: string }[]; moments: string[]; sources: { label: string; url: string }[] }
+export interface Member { slug: 'karina'|'giselle'|'winter'|'ningning'; name: string; hangul: string; born: string; birthplace: string; position: string; loreRole: string; loreNote: string; intro?: string; fanSourced: { symbol: string; color: string; animal: string }; solo: { title: string; date: string; note: string; spotifyTrack?: string }[]; moments: string[]; sources: { label: string; url: string }[] }

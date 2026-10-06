@@ -18,7 +18,7 @@ const emptyImages = { karina: [], giselle: [], winter: [], ningning: [], group: 
 ---
 <Base title={`${member.name}, aespa`} description={`${member.name} (${member.hangul}), ${member.position}. ${member.loreRole}.`} theme={theme}>
   <section class="hero">
-    <p class="kicker" data-synk>{member.hangul}. {member.position}.</p>
+    <p class="kicker" data-synk>{member.intro ?? `${member.hangul}. ${member.position}.`}</p>
     <h1 class="chrome" data-decode>{member.name}</h1>
     <div class="strip">
       <div data-synk>born<b>{member.born.replaceAll('-', '.')}, {member.birthplace}</b></div>
