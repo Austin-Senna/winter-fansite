@@ -18,7 +18,7 @@ channel names, era dates, Winter solo tracks) still hold.
   moved the existing Winter files to `<era>/winter/`, release artwork to `<era>/group/official/`
   (winter-solo artwork stays under winter), and rewrote the work files to `images/<stage>-<era>-<member>.json`.
 - `collect_images.py --member <slug|all>`: stages pinterest | commons | official | index. Pinterest runs
-  `--range 1-120` per query with `--write-metadata` sidecars, gallery-dl `--download-archive` per member
+  `--range 1-30` per query (120 was tried first: one such query is 42-56 MB per era+member, which would have spent the whole member budget on 10 eras with a single query each) with `--write-metadata` sidecars, gallery-dl `--download-archive` per member
   (cross-era pin dedupe), pacing (`--sleep-request 1-2.5`, `--sleep 0.3-0.8`, `--sleep-429 60`), block
   detection (429/403/captcha in stderr -> backoff 90/180/360 s, then the era is skipped and retried once at the
   end after 300 s; blocks logged to `work/pinterest-blocks-<member>.json`). Budget: 500 MB per member total,

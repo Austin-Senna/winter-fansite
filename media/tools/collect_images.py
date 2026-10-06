@@ -33,9 +33,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 GDL = os.path.join(HERE, ".venv", "bin", "gallery-dl")
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/124 Safari/537.36"
 COMMONS_UA = "winter-fansite-collector/0.2 (personal fansite; austinsenna@gmail.com)"
-PIN_RANGE = "1-120"
-MEMBER_BYTE_CAP = 500 * 1024 * 1024      # per member, all eras, all sources
-ERA_BYTE_CAP = 32 * 1024 * 1024          # per era+member, keeps the budget spread across eras
+PIN_RANGE = "1-60"                  # ~24 MB per query; 5 queries fit the per-era cap
+MEMBER_BYTE_CAP = 1536 * 1024 * 1024     # per member, all eras, all sources
+ERA_BYTE_CAP = 120 * 1024 * 1024         # per era+member
 BLOCK_RE = re.compile(r"(429|403|too many requests|rate limit|captcha|blocked|access denied)", re.I)
 BLOCK_BACKOFF = (90, 180, 360)           # seconds between retries of a blocked query
 SSL_CTX = ssl.create_default_context(cafile=certifi.where())
