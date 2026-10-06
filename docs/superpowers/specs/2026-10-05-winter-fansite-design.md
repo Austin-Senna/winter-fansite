@@ -129,7 +129,7 @@ Reduced motion: shader renders a still frame, SYNK-in and Decode become instant,
 - Lenis 1.3 for smoothed scroll on desktop, native on touch.
 - OGL 1.0 for the single fullscreen shader quad (WebGL2). WebGPU not required; if a 3D chrome logo is wanted later, add three/webgpu for that one island.
 - lite-youtube-embed for players.
-- Hosting: Cloudflare Workers static assets (Pages is in maintenance mode). GitHub Pages is the fallback but caps the repo at 1GB, which committed photos will hit.
+- Hosting: **GitHub Pages** (decided 2026-10-06), deployed by a GitHub Actions workflow on push to main. Pages caps the site at 1 GB and about 100 GB per month of bandwidth, so the site holds a curated, resized set of self-hosted images and embeds the rest. Budget: under 400 MB of committed media. The repo is private until the first era pages are ready, then public, since Pages on a free plan requires a public repo.
 
 ### Shader design (one quad, two passes)
 - Pass A: domain-warped FBM (3 octaves desktop, 2 mobile) shaped into a liquid-chrome height field; normals lit by a two-color gradient "matcap" built from `--era-a`, `--era-b`, `--era-glow`; thin-film iridescence ramp keyed to view angle; pointer flow map (ping-pong FBO at 1/4 res, decays per frame) warps UVs.
@@ -165,8 +165,8 @@ src/content/eras/<slug>.json   curated, ordered, committed. The only thing pages
 An image is either `src` (self-hosted, lives in `public/media/<era>/`) or `embed` (rendered via the official embed script). The gallery component accepts both, so switching policy later is a data edit.
 
 ### Embed vs self-host policy
-- Self-host: official SM teaser and concept photos, Wikimedia Commons CC photos, YouTube thumbnails as posters.
-- Embed: Pinterest pins, Instagram, TikTok, and any fan-taken photo unless the photographer allows reposting.
+- Self-host: official SM teaser and concept photos, Wikimedia Commons CC photos, YouTube thumbnails as posters, and the curated top picks per era and member (resized to 1600 px long edge, AVIF with JPEG fallback, roughly 40 per era per member).
+- Embed: Pinterest pins, Instagram, TikTok, and any fan-taken photo beyond the curated set or where the photographer forbids reposting. Embeds cost nothing against the Pages size cap.
 - `/about/` carries credits and a takedown email. Honor requests within a day.
 
 ## 6. Curator tool (`tools/curator/`)
@@ -176,7 +176,7 @@ A local dev tool, not shipped with the site.
 - `node tools/curator/server.mjs` serves `media/raw/` read-only plus a single page at `http://localhost:4747`, and accepts `PUT /curation/<era>.json`.
 - UI: era picker on the left, member tabs across the top. Main area is a grid of fetched images for that era and member with the YouTube thumbnails in a second tab. Keyboard: `K` keep, `X` reject, `1-4` tag (teaser / stage / behind / fan), `M` cycle member assignment (fixes Pinterest results that landed in the wrong member or era), `E` move to another era, arrows move, `Space` opens full size. Drag to reorder kept items; the kept rail on the right shows the final order.
 - Writes `src/content/eras/<slug>.json` by merging the kept, ordered, tagged items with the era metadata. Rejected items are listed in `media/raw/<era>/rejected.txt` so re-running the fetch does not resurface them.
-- A `Copy to public/` button hard-links kept files into `public/media/<era>/` with zero-padded names and runs a resize to 2000px long edge.
+- A `Copy to public/` button writes kept files into `public/media/<era>/<member>/` with zero-padded names, resized to 1600 px long edge as AVIF plus JPEG fallback, and shows the running total against the 400 MB budget.
 
 ## 7. Performance and accessibility
 - Largest Contentful Paint is the era title or MV poster, never the canvas.
@@ -192,7 +192,7 @@ A local dev tool, not shipped with the site.
 1. **Scaffold + curator.** Astro project, tokens, fonts, shader island, era page template fed by one real curated manifest. Curator tool working end to end on the fetched media. Review gate: one era page live locally with real photos.
 2. **All eras + home.** Curate every era, build the Portal home and timeline, Winter solo page, about page.
 3. **Motion polish + soundtrack.** Portal wipe across routes, lightbox morph, Flip filtering, magnetic buttons and cursor on desktop, era soundtrack player.
-4. **Deploy.** Cloudflare Workers static assets, custom domain if wanted, Lighthouse pass.
+4. **Deploy.** GitHub Actions workflow to Pages, repo flipped public, custom domain if wanted, Lighthouse pass.
 
 Fluid cursor trail and a 3D glTF logo are explicitly deferred to after phase 4.
 
@@ -216,8 +216,8 @@ Not in phases 0 to 4. Revisit after the era pages are live.
 
 ## 11. Decisions for Austin
 1. **Stack: Astro (recommended) vs vanilla Vite.** Astro costs one layer of indirection around the canvas and buys the image pipeline and typed manifests. If you'd rather own every line, Vite is fine and the shader and motion code is identical.
-2. **Hosting: Cloudflare Workers (recommended) vs GitHub Pages.** GitHub Pages is zero-setup but the 1GB repo cap bites once photos are committed.
-3. **Embed policy.** Spec says embed fan photos, self-host official assets. If you want everything self-hosted for design control, say so and the manifest handles it; the risk is takedowns, not engineering.
+2. **Hosting.** Decided: GitHub Pages with a curated self-hosted set and embeds for the rest. Public repo once era pages exist.
+3. **Embed policy.** Decided: self-host official assets and the curated picks, embed the rest.
 4. **Era granularity.** Separate pages for thin eras (Forever, Dreams Come True, Better Things, ATTITUDE) or fold them into the nearest big era as a section. Recommendation: fold until the media exists to justify a page.
 5. **Member scope order.** Build Winter end to end first and add the other three once the pipeline is proven, or fetch all four before building any era page. Recommendation: Winter first, since the fetch for the others takes about fifteen minutes and can run while phase 1 is underway.
 6. **Spotify vs YouTube for audio.** Spotify embeds give tracklists and full playback for logged-in listeners but cannot run in the background across pages. The YouTube player can. Recommendation: Spotify in the Listen section, YouTube for the persistent player, both driven from the same manifest.
