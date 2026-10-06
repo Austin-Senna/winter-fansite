@@ -1,0 +1,25 @@
+<canvas id="gl" aria-hidden="true" transition:persist transition:name="gl"></canvas>
+<div id="gl-fallback" aria-hidden="true"></div>
+<style is:global>
+  #gl{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block}
+  #gl-fallback{position:fixed;inset:0;z-index:0;display:none;background:radial-gradient(120% 90% at 20% 30%,var(--era-b) 0%,transparent 55%),radial-gradient(90% 90% at 80% 80%,var(--era-glow) 0%,transparent 50%),var(--era-a)}
+  .no-webgl #gl{display:none}.no-webgl #gl-fallback{display:block}
+</style>
+<script>
+  import { mountShader, type Palette } from '@/scripts/shader';
+  declare global { interface Window { __shader?: ReturnType<typeof mountShader> } }
+  function paletteFromHtml(): Palette {
+    const cs = getComputedStyle(document.documentElement);
+    return { a: cs.getPropertyValue('--era-a').trim(), b: cs.getPropertyValue('--era-b').trim(), glow: cs.getPropertyValue('--era-glow').trim(), mode: Number(document.documentElement.dataset.mode || 0) as Palette['mode'] };
+  }
+  function boot() {
+    const canvas = document.getElementById('gl') as HTMLCanvasElement | null;
+    if (!canvas) return;
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const coarse = matchMedia('(pointer: coarse)').matches;
+    if (new URLSearchParams(location.search).has('nogl')) { document.documentElement.classList.add('no-webgl'); return; }
+    if (!window.__shader) { window.__shader = mountShader(canvas, paletteFromHtml(), { reduced, coarse }); if (!window.__shader) document.documentElement.classList.add('no-webgl'); }
+    else { window.__shader.glitch(1, 450); window.__shader.setPalette(paletteFromHtml(), true); }
+  }
+  document.addEventListener('astro:page-load', boot);
+</script>

@@ -1,0 +1,35 @@
+---
+import { ERAS } from '@/data/eras';
+interface Props { current?: string }
+const { current } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<div class="hud">
+  <a class="mark" href={base} aria-label="aespa, home"><span class="ae">æ</span><span class="who">aespa</span></a>
+  <nav class="eras" aria-label="Eras">
+    {ERAS.filter(e => e.membersEra).map(e => (
+      <a href={`${base}era/${e.slug}/`} aria-current={e.slug === current ? 'page' : undefined} aria-label={`${e.title}, ${e.year}`} style={`--a:${e.theme.a};--b:${e.theme.b}`}>
+        <span class="sw"></span><span class="yr">{e.year}</span>
+      </a>
+    ))}
+  </nav>
+  <div class="synk" aria-hidden="true"><div class="bar"><i id="synkbar"></i></div><span class="pct" id="synkpct">synk 000</span></div>
+</div>
+<style>
+  .hud{position:fixed;inset:0;z-index:5;pointer-events:none;font-family:var(--mono);font-size:11px;letter-spacing:.02em;color:var(--ink-dim)}
+  .hud > *{pointer-events:auto}
+  .mark{position:absolute;top:18px;left:var(--gutter);display:flex;align-items:baseline;gap:10px;text-decoration:none;color:var(--ink)}
+  .mark .ae{font-family:var(--serif);font-style:italic;font-size:30px;line-height:1}
+  .mark .who{font-family:var(--display);font-weight:800;font-size:14px;letter-spacing:.18em;text-transform:uppercase}
+  .eras{position:absolute;top:20px;right:var(--gutter);display:flex;gap:6px;align-items:center;max-width:60vw;flex-wrap:wrap;justify-content:flex-end}
+  .eras a{display:grid;gap:5px;justify-items:center;text-decoration:none;color:inherit}
+  .eras .sw{width:26px;height:9px;border-radius:2px;background:linear-gradient(90deg,var(--a),var(--b));box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);transition:transform .25s}
+  .eras a:hover .sw,.eras a[aria-current] .sw{transform:scaleY(1.9)}
+  .eras .yr{opacity:0;transition:opacity .2s}
+  .eras a[aria-current] .yr,.eras a:hover .yr{opacity:1}
+  .synk{position:absolute;right:calc(var(--gutter) - 6px);top:50%;transform:translateY(-50%);display:grid;gap:8px;justify-items:center}
+  .synk .bar{width:2px;height:160px;background:var(--line);position:relative;overflow:hidden}
+  .synk .bar i{position:absolute;inset:0;background:var(--ice);transform-origin:top;transform:scaleY(var(--p,0))}
+  .synk .pct{writing-mode:vertical-rl}
+  @media (max-width:720px){.eras{display:none}.synk{display:none}}
+</style>
