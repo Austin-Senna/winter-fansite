@@ -9,7 +9,7 @@ const any = MEMBERS.some(([m]) => featured[m]);
 {any && (
 <nav class="strip" aria-label="Members in this era">
   {MEMBERS.map(([m, label]) => featured[m] ? (
-    <button type="button" class="m" data-select-tab={m} aria-label={`${label}, open photocards`}>
+    <button type="button" class="m" data-select-tab={m} aria-label={`${label}, open photocards`} style={`--ar:${featured[m].width ?? 3}/${featured[m].height ?? 4}`}>
       <span class="frame"><img src={thumb(featured[m])} alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.m').remove()" /></span>
       <span class="name">{label}</span>
     </button>
@@ -19,9 +19,9 @@ const any = MEMBERS.some(([m]) => featured[m]);
 </nav>
 )}
 <style>
-  .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.4vw,20px);padding:clamp(24px,4vh,48px) var(--gutter) 0}
+  .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.4vw,20px);padding:clamp(24px,4vh,48px) var(--gutter) 0;align-items:end}
   .m{appearance:none;border:0;padding:0;background:transparent;color:inherit;font:inherit;text-decoration:none;display:grid;gap:8px;cursor:pointer;text-align:left}
-  .frame{display:block;aspect-ratio:3/4;border-radius:6px;overflow:hidden;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+  .frame{display:block;aspect-ratio:var(--ar,3/4);border-radius:6px;overflow:hidden;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
   .frame img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
   .m:hover .frame img,.m:focus-visible .frame img{transform:scale(1.04)}
   .name{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:13px;color:var(--ink-dim)}

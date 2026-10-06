@@ -1,13 +1,14 @@
 ---
 import type { Era } from '@/data/types';
-const { items } = Astro.props as { items: { era: Era; image?: { kind: 'local' | 'remote'; src?: string; remote?: string } }[] };
+const { items } = Astro.props as { items: { era: Era; image?: { kind: 'local' | 'remote'; src?: string; remote?: string; width?: number | null; height?: number | null } }[] };
 const base = import.meta.env.BASE_URL;
+const ar = (image?: { width?: number | null; height?: number | null }) => image?.width && image?.height ? `${image.width}/${image.height}` : '3/4';
 const thumb = (image?: { kind: 'local' | 'remote'; src?: string; remote?: string }) => !image ? null : image.kind === 'local' ? base + image.src : image.remote?.replace('/originals/', '/736x/');
 ---
 <section class="rail" aria-label="Eras in order">
   <div class="track">
     {items.map(({ era, image }) => (
-      <a class="era" href={`${base}era/${era.slug}/`} data-a={era.theme.a} data-b={era.theme.b} data-glow={era.theme.glow} data-mode={era.theme.mode} style={`--a:${era.theme.a};--b:${era.theme.b}`}>
+      <a class="era" href={`${base}era/${era.slug}/`} data-a={era.theme.a} data-b={era.theme.b} data-glow={era.theme.glow} data-mode={era.theme.mode} style={`--a:${era.theme.a};--b:${era.theme.b};--ar:${ar(image)}`}>
         <span class="swatch"></span>
         <span class="frame">{thumb(image) ? <img src={thumb(image)} alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" /> : null}</span>
         <span class="meta"><b>{era.title}</b><small>{era.releaseDate.replaceAll('-', '.')} · {era.type}</small></span>
@@ -18,9 +19,9 @@ const thumb = (image?: { kind: 'local' | 'remote'; src?: string; remote?: string
 <style>
   .rail{height:100svh;display:grid;align-content:center;overflow:hidden}
   .track{display:flex;gap:clamp(14px,2vw,32px);padding:0 var(--gutter);width:max-content;align-items:end;will-change:transform}
-  .era{flex:0 0 auto;width:clamp(200px,22vw,320px);text-decoration:none;color:inherit;display:grid;gap:10px}
+  .era{flex:0 0 auto;width:clamp(200px,22vw,320px);max-width:min(44vw,520px);text-decoration:none;color:inherit;display:grid;gap:10px}
   .swatch{height:8px;border-radius:2px;background:linear-gradient(90deg,var(--a),var(--b));box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
-  .frame{display:block;aspect-ratio:3/4;border-radius:6px;overflow:hidden;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+  .frame{display:block;aspect-ratio:var(--ar,3/4);border-radius:6px;overflow:hidden;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
   .frame img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
   .era:hover .frame img{transform:scale(1.04)}
   .meta{display:grid;gap:2px} .meta b{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:20px;letter-spacing:.02em} .meta small{font-family:var(--mono);font-size:11px;color:var(--ink-dim)}
