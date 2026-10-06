@@ -2,8 +2,10 @@
 """Verify every downloaded file is a real image >= MIN_EDGE px; delete the rest.
 
 Usage: .venv/bin/python3 -I verify_images.py <raw_dir> <work_dir>
+Walks <era>/yt-thumbs/ and <era>/<member>/{pinterest,commons,official}/.
 Writes <work_dir>/verify.json: {relpath: {width, height, bytes, format}} for kept files,
-and <work_dir>/verify-deleted.json for removed files with the reason.
+and <work_dir>/verify-deleted.json for removed files with the reason (gallery-dl .json
+sidecars of removed files are removed too).
 """
 import json
 import os
@@ -22,46 +24,52 @@ def file_says_image(path: str) -> bool:
     return out.strip().startswith("image/")
 
 
+def image_dirs(raw_dir: str) -> list:
+    """All directories named after a source, at any depth under raw_dir."""
+    out = []
+    for root, dirs, _ in os.walk(raw_dir):
+        for d in dirs:
+            if d in IMAGE_DIRS:
+                out.append(os.path.join(root, d))
+    return sorted(out)
+
+
+def check(path: str) -> tuple[str | None, dict | None]:
+    """Return (reason_to_delete, info)."""
+    if not file_says_image(path):
+        return "not an image per file(1)", None
+    try:
+        with Image.open(path) as im:
+            im.verify()
+        with Image.open(path) as im:
+            w, h = im.size
+            fmt = im.format
+    except Exception as ex:
+        return f"PIL cannot decode: {ex}", None
+    if max(w, h) < MIN_EDGE:
+        return f"too small: {w}x{h}", None
+    return None, {"width": w, "height": h, "bytes": os.path.getsize(path), "format": fmt}
+
+
 def main() -> None:
     """Entry point."""
     raw_dir, work_dir = sys.argv[1:3]
     kept, deleted = {}, {}
-    for slug in sorted(os.listdir(raw_dir)):
-        era_dir = os.path.join(raw_dir, slug)
-        if not os.path.isdir(era_dir):
-            continue
-        for sub in IMAGE_DIRS:
-            d = os.path.join(era_dir, sub)
-            if not os.path.isdir(d):
+    for d in image_dirs(raw_dir):
+        for name in sorted(os.listdir(d)):
+            path = os.path.join(d, name)
+            if name.endswith(".json") or not os.path.isfile(path):
+                continue  # gallery-dl metadata sidecar, kept for provenance
+            relp = os.path.relpath(path, raw_dir)
+            reason, info = check(path)
+            if reason:
+                deleted[relp] = reason
+                os.remove(path)
+                side = path + ".json"
+                if os.path.exists(side):
+                    os.remove(side)
                 continue
-            for name in sorted(os.listdir(d)):
-                path = os.path.join(d, name)
-                relp = os.path.relpath(path, raw_dir)
-                if name.endswith(".json"):
-                    continue  # gallery-dl metadata sidecar, kept for provenance
-                reason = None
-                if not file_says_image(path):
-                    reason = "not an image per file(1)"
-                else:
-                    try:
-                        with Image.open(path) as im:
-                            im.verify()
-                        with Image.open(path) as im:
-                            w, h = im.size
-                            fmt = im.format
-                    except Exception as ex:
-                        reason = f"PIL cannot decode: {ex}"
-                    else:
-                        if max(w, h) < MIN_EDGE:
-                            reason = f"too small: {w}x{h}"
-                if reason:
-                    deleted[relp] = reason
-                    os.remove(path)
-                    side = path + ".json"
-                    if os.path.exists(side):
-                        os.remove(side)
-                    continue
-                kept[relp] = {"width": w, "height": h, "bytes": os.path.getsize(path), "format": fmt}
+            kept[relp] = info
     with open(os.path.join(work_dir, "verify.json"), "w") as f:
         json.dump(kept, f, indent=1)
     with open(os.path.join(work_dir, "verify-deleted.json"), "w") as f:

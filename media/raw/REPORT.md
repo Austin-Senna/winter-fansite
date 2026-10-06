@@ -1,64 +1,84 @@
-# Winter (aespa) media collection report
+# aespa media collection report (all members)
 
-Generated: 2026-10-06T03:55:24+00:00
-Root: `/Users/austinsenna/work/winter-fansite/media/raw/` (375M on disk, 331 videos, 674 manifest images across 17 eras)
-Tools: `/Users/austinsenna/work/winter-fansite/media/tools/` (venv with yt-dlp 2026.08.19, gallery-dl 1.32.15, Pillow, certifi; ffmpeg present at /opt/homebrew/bin/ffmpeg but unused)
+Status: PIPELINE GENERALIZED, FETCH IN PROGRESS. The five per-member Pinterest collectors, the video
+collector and the Commons collector were launched as background processes at 00:15 local time and are
+still running. verify -> qc -> build_manifest -> report tables must be run after they finish (commands below).
+The previous Winter-only report is superseded; its findings (TLS/certifi, Commons 429 pacing, collaborative
+channel names, era dates, Winter solo tracks) still hold.
 
-## What worked
+## What changed in the pipeline (media/tools/)
 
-- **YouTube (yt-dlp flat search)**: 3 to 11 searches per era (`... Winter fancam`, `... MV`, `... Winter focus`, plus per-track searches for the solo era). Results filtered to aespa-related titles, noise removed (reactions, lyric videos, teasers, covers, shorts), deduped, sorted by `view_count`, top 20 kept per era (official MVs always kept). Kind classification: `mv` (SMTOWN/aespa/label uploads), `performance` (dance practice, music shows, award shows, tour clips), `fancam`, `other`. Thumbnails downloaded for 331/331 videos (`maxresdefault.jpg`, fallback `hqdefault.jpg`) into `<era>/yt-thumbs/`. No video files downloaded.
-- **Pinterest (gallery-dl, no login)**: search URLs worked without authentication. 40 pins per query, 1 to 2 queries per era, each with a `.json` sidecar (pin id, original URL, pinner, source link). Deduped across eras by pin id. Pinterest images are fan uploads: treat as reference material, copyright unverified.
-- **Wikimedia Commons (API)**: 45 CC-licensed photos of Winter (CC BY 3.0 x16, CC BY 4.0 x12, CC BY-SA 2.0 x12, CC BY-SA 4.0 x4, CC BY 2.0 x1). Author, license and license URL recorded per image. Bucketed into eras by capture date (the era active on that date), so these are event/airport/press photos from the era window rather than concept photos. Downloaded at 2000px thumbnails to cap size.
-- **Official (aespa-official.jp)**: one release-artwork image per release (2000x2000 webp) from the discography pages, plus Winter's profile image for the solo era. `aespa.smtown.com` does not resolve at all (connection failure, not a block). smtown.com redirects to smentertainment.com which has no per-era teaser galleries reachable without JS.
+- `eras.json`: new top-level `members` (slug, display name, Korean name, aliases incl. Japanese/Chinese),
+  `pinterestQueryTemplates` (member: "aespa {member} {title}", "... teaser", "... stage", "... concept photo",
+  "{member} aespa {year}"; group: 5 analogous queries), `videoQueryTemplates` ("aespa {title} {member} fancam",
+  "{member} focus {title}"), `qcGenericTerms`. Per era: `shortTitle`, `year`, `qcTerms` (title tracks used by the
+  era-mismatch check), `memberPinterestQueries` (the original Winter queries, kept as extras), and `members`
+  (winter-solo is Winter-only). The `{year}` query runs once per year, on that year's first era.
+- Layout: `raw/<era>/<member>/{pinterest,commons,official}/` plus `raw/<era>/yt-thumbs/`. `migrate_layout.py`
+  moved the existing Winter files to `<era>/winter/`, release artwork to `<era>/group/official/`
+  (winter-solo artwork stays under winter), and rewrote the work files to `images/<stage>-<era>-<member>.json`.
+- `collect_images.py --member <slug|all>`: stages pinterest | commons | official | index. Pinterest runs
+  `--range 1-120` per query with `--write-metadata` sidecars, gallery-dl `--download-archive` per member
+  (cross-era pin dedupe), pacing (`--sleep-request 1-2.5`, `--sleep 0.3-0.8`, `--sleep-429 60`), block
+  detection (429/403/captcha in stderr -> backoff 90/180/360 s, then the era is skipped and retried once at the
+  end after 300 s; blocks logged to `work/pinterest-blocks-<member>.json`). Budget: 500 MB per member total,
+  32 MB per era+member so the budget spreads over all 17 eras instead of exhausting on the first ones (in
+  practice ~2 of the 5 queries run per era before the era cap). Commons is now per member
+  (Category:<member> in <year> + name searches).
+- `collect_videos.py --member <slug|all|base>`: base queries -> `work/videos/<era>.json`, member fancam
+  queries -> `work/videos/<era>.<member>.json` (10 kept per member per era, preferring titles naming only
+  that member). Every row has `member` (fancam/other naming exactly one member; null for MV/performance) and
+  `membersNamed`.
+- `verify_images.py`: recursive walk of the new layout; otherwise unchanged (deletes non-images, undecodable,
+  < 300 px).
+- `qc_images.py` (new, needs `imagehash` + numpy, installed in .venv): writes `raw/<era>/<member>/qc.json`
+  and `work/qc-summary.json`. Flags: `small` (long edge < 1000), `dupe` (phash distance <= 6, global across
+  eras and members, largest kept, `dupeOf` recorded), `blurry` (Laplacian variance on a 512 px grey copy
+  < 40; calibrated on the 874 Winter images: p01 = 39, p05 = 110, p50 = 658; files at 12-36 were visually
+  confirmed as upscaled video stills, a Commons portrait at 72 was fine), `member-mismatch` (sidecar
+  title/description/board names another member alone, or for group a single member), `era-mismatch`
+  (names another era's distinctive title track and not this era's; generic words like forever/girls/drama
+  do not trigger), `unverified` (no metadata text). Only small/dupe/undecodable are excluded.
+- `build_manifest.py --member`: merges base + member video files, `member` on every image and video,
+  `qc` block on every image, pin-id dedupe across everything, `MAX_IMAGES_PER_MEMBER = 120` per era+member,
+  per-era `members` summary (counts, flags, sources). Paths stay relative to raw/.
+- `report_stats.py` (new): prints the member x era table, totals, sizes and blocked queries for this report.
+- Initial QC on the existing Winter set (874 files): small 161, dupe 42, blurry 11, member-mismatch 2
+  (Karina teaser photos in the Winter folder), era-mismatch 7 (e.g. Whiplash pins under Attitude), unverified 175.
 
-## What got blocked or needed workarounds
+## Run state and how to finish
 
-- **TLS on first run**: the python.org 3.14 framework build has no CA bundle, so urllib failed on every HTTPS fetch. Fixed by using `certifi` in both scripts (thumbnails and Commons/official were re-run; no data lost).
-- **Commons 429 rate limit**: the first pass tripped "too many requests". Added 2 s pacing and 429 backoff; second pass completed with 0 errors.
-- **Collaborative channel names**: yt-dlp now reports `"SMTOWN and aespa"` for co-uploaded MVs; exact-match on channel name missed every 2025-2026 MV. Classifier now splits on `and`/`,`.
-- **Commons filenames**: thumbnail URLs carry a query string, which leaked into file extensions. Fixed by deriving the extension from MIME; files renamed in place.
-- **Verification**: `file(1)` + Pillow decode + size check on all 1216 downloaded files; 1205 kept. Deleted 11: 8 Pinterest videos (.mp4 slipped through despite `videos=false`), 2 HEIC files Pillow cannot decode, 1 image under 300 px. Nothing else was rejected.
-- **No official teaser/concept photo galleries** were collected: SM's teaser pages are not reachable server-side. For concept photos, the Pinterest set is the fallback; the manifest records `sourceUrl` and `pageUrl` so they can be re-fetched.
-- **Attitude era**: only 11 qualifying videos. ATTITUDE is a Japanese anime tie-in single (Kill Blue opening) with no SMTOWN MV; the top result is the anime OP video (kind `other`). Pinterest gave 35 images.
+Background processes (logs in `media/tools/work/`): `pinterest-{karina,giselle,winter,ningning,group}.log`,
+`videos.log`, `commons.log`. Check with `pgrep -fl "collect_(images|videos)"`.
 
-## Eras verified / discovered
+Then, from `media/tools/`:
 
-Dates verified against Wikipedia (aespa discography, Winter (singer)) and kprofiles:
+```
+.venv/bin/python3 -I verify_images.py ../raw work
+.venv/bin/python3 -I qc_images.py eras.json ../raw work
+.venv/bin/python3 -I build_manifest.py eras.json ../raw work
+.venv/bin/python3 -I report_stats.py eras.json ../raw work   # paste the tables below
+```
 
-- 2025: Dirty Work (2025-06-27, single album), Rich Man (2025-09-05, EP).
-- **2026 (new, added as eras)**: ATTITUDE (2026-03-06, Japanese single, Kill Blue anime OP), **LEMONADE** (2026-05-29, 2nd full album, title track "Lemonade"; MV 86.9M views), KISS N TELL (2026-07-24, 1st Japanese mini album).
-- Not added as an era (2024, Japanese): Hot Mess (2024-07-03). Artwork exists at aespa-official.jp/discography/hotmess/ if wanted.
-- **Winter solo / OST / collabs** (all verified, listed in manifest `tracks`): Once Again w/ Ningning (2022-05-22, Our Blues OST), Floral Sense (Yesung feat. Winter, 2023-02-27), Win For You w/ Yim Siwan (2023-09-21), Nobody w/ Soyeon & Liz (2023-11-16), Voyage (2023-11-19, Castaway Diva OST), With You (2023-12-08, My Demon OST), Officially Cool w/ Bang Yedam (2024-04-02), Spark (2024-10-09), Hunjung Yeonsuh (2024-12-01, Lady Ok OST), On Such a Day (2025-04-19, Resident Playbook OST), BLUE (2025-11-17), Speed of Summer (2026-08-27, Dingo), Saddle Up (2026-09-14, SYNK: COMPLaeXITY special single).
-- **"Sorry Not Sorry" does not exist** in any Winter discography source checked. Excluded.
+## Exact re-run commands (full pipeline)
 
-## Counts per era
+```
+cd media/tools
+for m in karina giselle winter ningning group; do
+  nohup .venv/bin/python3 -I collect_images.py --member $m eras.json ../raw work pinterest > work/pinterest-$m.log 2>&1 &
+done
+nohup .venv/bin/python3 -I collect_videos.py --member all eras.json ../raw work > work/videos.log 2>&1 &
+nohup .venv/bin/python3 -I collect_images.py --member all eras.json ../raw work commons > work/commons.log 2>&1 &
+.venv/bin/python3 -I collect_images.py eras.json ../raw work official          # artwork, already done, idempotent
+# after the background jobs exit:
+.venv/bin/python3 -I verify_images.py ../raw work
+.venv/bin/python3 -I qc_images.py eras.json ../raw work
+.venv/bin/python3 -I build_manifest.py eras.json ../raw work
+.venv/bin/python3 -I report_stats.py eras.json ../raw work
+```
+`collect_images.py ... index` re-indexes Pinterest sidecars without network; `qc_images.py ... --calibrate 40`
+prints the blur distribution.
 
-| era | release | videos | mv/perf/fancam/other | images (manifest) | official/commons/pinterest | >=1000px | image files on disk | MB |
-|---|---|---|---|---|---|---|---|---|
-| black-mamba | 2020-11-17 | 20 | 2/4/13/1 | 40 | 1/0/39 | 34 | 41 | 13 |
-| forever | 2021-02-05 | 20 | 2/5/9/4 | 40 | 1/1/38 | 28 | 42 | 9 |
-| next-level | 2021-05-17 | 20 | 2/4/13/1 | 40 | 1/0/39 | 29 | 41 | 8 |
-| savage | 2021-10-05 | 20 | 2/6/12/0 | 40 | 1/2/37 | 27 | 43 | 13 |
-| dreams-come-true | 2021-12-20 | 20 | 2/4/13/1 | 40 | 1/0/39 | 23 | 41 | 12 |
-| girls | 2022-07-08 | 20 | 3/5/11/1 | 40 | 2/0/38 | 40 | 77 | 18 |
-| my-world | 2023-05-08 | 20 | 3/3/14/0 | 40 | 2/1/37 | 40 | 81 | 25 |
-| better-things | 2023-08-18 | 20 | 2/5/13/0 | 40 | 1/3/36 | 34 | 44 | 44 |
-| drama | 2023-11-10 | 20 | 1/4/13/2 | 40 | 1/12/27 | 40 | 53 | 28 |
-| armageddon | 2024-05-27 | 20 | 2/6/12/0 | 40 | 1/2/37 | 40 | 74 | 27 |
-| whiplash | 2024-10-21 | 20 | 1/2/15/2 | 40 | 1/11/28 | 40 | 51 | 27 |
-| dirty-work | 2025-06-27 | 20 | 2/4/13/1 | 40 | 1/0/39 | 30 | 41 | 32 |
-| rich-man | 2025-09-05 | 20 | 2/3/12/3 | 40 | 1/11/28 | 39 | 52 | 30 |
-| attitude | 2026-03-06 | 11 | 0/0/8/3 | 36 | 1/0/35 | 34 | 41 | 11 |
-| lemonade | 2026-05-29 | 20 | 2/3/12/3 | 40 | 1/2/37 | 40 | 42 | 33 |
-| kiss-n-tell | 2026-07-24 | 20 | 1/1/9/9 | 38 | 1/0/37 | 37 | 39 | 28 |
-| winter-solo | 2022-05-22 | 20 | 8/3/7/2 | 40 | 1/0/39 | 40 | 71 | 25 |
+## Per member x era table, Pinterest blocks, total size
 
-Notes on the table: "images (manifest)" is capped at 40 per era (official first, then Commons, then Pinterest by resolution); "image files on disk" includes Pinterest extras beyond the cap and pins deduped into an earlier era. Those extras are valid, verified images but are not referenced by manifest.json; delete or raise `MAX_IMAGES_PER_ERA` in `build_manifest.py` as preferred. MB includes yt-thumbs and gallery-dl `.json` sidecars.
-
-## Files
-
-- `raw/manifest.json`: per-era `videos[]` (id, title, channel, viewCount, uploadDate, duration, kind, winterFocus, url, thumbnail) and `images[]` (file, sourceUrl, pageUrl, source, width, height, bytes, license/licenseUrl/credit/title where known). Paths are relative to `raw/`.
-- `raw/<era>/yt-thumbs/<videoId>.jpg`, `raw/<era>/pinterest/<pinId>.<ext>` (+ `.json` sidecar), `raw/<era>/commons/<pageId>.<ext>`, `raw/<era>/official/<name>.webp`.
-- `tools/eras.json` (era config and search queries), `tools/collect_videos.py`, `tools/collect_images.py`, `tools/verify_images.py`, `tools/build_manifest.py`, `tools/work/` (intermediate JSON and logs).
-
-Re-run order: `collect_videos.py` -> `collect_images.py <stage>` -> `verify_images.py` -> `build_manifest.py`, all with `.venv/bin/python3 -I`.
+TO FILL from `report_stats.py` once the collectors finish.

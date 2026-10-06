@@ -216,27 +216,27 @@
 <script>
 /* ---------- era data (from docs/research/aespa-winter-brief.md) ---------- */
 const ERAS = [
-  { slug:'black-mamba', spotify:null, title:'Black Mamba', year:'2020', date:'2020.11.17', fmt:'debut single', con:'hyperreal æ arena',
+  { slug:'black-mamba', spotify:'3syEYrKIsgxaZMB5t1dVG7', title:'Black Mamba', year:'2020', date:'2020.11.17', fmt:'debut single', con:'hyperreal æ arena',
     kicker:'Debut. Four members, four æ, one villain.', a:'#0A1E3F', b:'#A9D6FF', glow:'#FFFFFF', mode:0, ink:'#F3EFE6',
     notes:['aespa debuted on November 17, 2020 with their æ counterparts rendered as hyperreal CGI twins. Winter was the first member revealed.',
            'æ-Winter wore silver-white hair in an ice-blue digital arena, which is where this site takes its base palette.'],
     src:'Wikipedia, aespa; PAPER, Winter cover story' },
-  { slug:'savage', spotify:null, title:'Savage', year:'2021', date:'2021.10.05', fmt:'1st mini album', con:'liquid chrome, the P.O.S opens',
+  { slug:'savage', spotify:'3vyyDkvYWC36DwgZCYd3Wu', title:'Savage', year:'2021', date:'2021.10.05', fmt:'1st mini album', con:'liquid chrome, the P.O.S opens',
     kicker:'First mini album. nævis opens the Port of Soul.', a:'#3B0F6B', b:'#B6FF3B', glow:'#C9CED6', mode:0, ink:'#F3EFE6',
     notes:['Savage put the members face to face with Black Mamba for the first time, with nævis as their guide. The lettering is liquid chrome bursting out of a threshold.',
            'The wormhole-shaped album case won the iF Design Award 2022 for packaging UX. Scanning the CD opened the P.O.S in AR.'],
     src:'Korea JoongAng Daily; Bandwagon Asia' },
-  { slug:'drama', spotify:null, title:'Drama', year:'2023', date:'2023.11.10', fmt:'4th mini album', con:'femme fatale cinema',
+  { slug:'drama', spotify:'5NMtxQJy4wq3mpo3ERVnLs', title:'Drama', year:'2023', date:'2023.11.10', fmt:'4th mini album', con:'femme fatale cinema',
     kicker:'Fourth mini album. Red car, antlers, no lore.', a:'#B3121B', b:'#0B0B10', glow:'#D4AF37', mode:1, ink:'#F3EFE6',
     notes:['Drama swapped lore for cinema: gritty urban sets, a red car, deer antlers, and a femme fatale read that reviewers compared to Kill Bill.',
            'The display face goes matte here. Red carries the page and gold is reserved for highlights.'],
     src:'Hallyucon album review' },
-  { slug:'whiplash', spotify:null, title:'Whiplash', year:'2024', date:'2024.10.21', fmt:'5th mini album', con:'futuristic runway',
+  { slug:'whiplash', spotify:'7J41hCLBI2kEwL6RVSxfNx', title:'Whiplash', year:'2024', date:'2024.10.21', fmt:'5th mini album', con:'futuristic runway',
     kicker:'Fifth mini album. Runway, two sets, one palette.', a:'#000000', b:'#FFFFFF', glow:'#C9CED6', mode:2, ink:'#F3EFE6',
     notes:['Directed by MELTMIRROR, Whiplash is a runway with two sets, chrome accessories, conceptual nails and glitch cut-ins timed to the beat.',
            'The site goes monochrome with it. Color is removed from the shader rather than added.'],
     src:'UCSD Guardian; Grazia Singapore' },
-  { slug:'lemonade', spotify:null, title:'Lemonade', year:'2026', date:'2026.05.29', fmt:'2nd full album', con:'glossy parallel world',
+  { slug:'lemonade', spotify:'1GjT1mri5wvJAYZ3rnZamk', title:'Lemonade', year:'2026', date:'2026.05.29', fmt:'2nd full album', con:'glossy parallel world',
     kicker:'Second full album. Candy colors, Billboard 200 top ten.', a:'#F7E85A', b:'#F6A9D8', glow:'#A8F0D1', mode:3, ink:'#1A1A1E',
     notes:['The second full album landed at number nine on the Billboard 200. Retro candy colors, a glossy parallel world, features from Ty Dolla $ign and Becky G.',
            'Candy mode flips the page light. Ink darkens and the chrome type reads against pink and lemon.'],
@@ -402,7 +402,7 @@ function buildEras(){
 function buildRail(e){
   const track=$('#track'); track.innerHTML='';
   const all=media?.eras?.find(x=>x.slug===e.slug)?.videos||[];
-  const vids=all.filter(v=>v.kind!=='fancam'||member==='winter').slice(0,8);
+  const vids=all.filter(v=>v.kind!=='fancam'||v.member===member||(!v.member&&member==='winter')).slice(0,8);
   const items = vids?.length ? vids.map((v,i)=>({mv:v.kind==='mv'||i===0,title:v.title,sub:`${v.channel}  ${fmtViews(v.viewCount)}`,img:v.thumbnail?`../media/raw/${v.thumbnail}`:(v.id?`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`:null)}))
     : [ {mv:true,title:`${e.title} MV`,sub:'SMTOWN  official'},
         {title:'Stage performance',sub:'music show  sample'},
@@ -417,8 +417,9 @@ function buildRail(e){
 }
 function buildGallery(e){
   const g=$('#gallery'); g.innerHTML='';
-  const imgs=member==='winter'?media?.eras?.find(x=>x.slug===e.slug)?.images?.filter(x=>x.file)?.slice(0,9):null;
-  $('#gal-lede').textContent=member==='winter'?'Curated in the order you set.':`No ${member} media fetched yet. The fetch script takes a member flag.`;
+  const pool=media?.eras?.find(x=>x.slug===e.slug)?.images?.filter(x=>x.file&&(x.member===member||(!x.member&&member==='winter'))&&!(x.qc?.flags||[]).some(f=>f==='small'||f==='dupe'))||[];
+  const imgs=pool.length?pool.slice(0,9):null;
+  $('#gal-lede').textContent=imgs?'Curated in the order you set.':(media?`No ${member} media fetched yet for this era.`:'Curated in the order you set.');
   const ars=['3/4','4/5','1/1','3/4','2/3','4/5','3/4','1/1','2/3'];
   for(let i=0;i<9;i++){ const c=document.createElement('div'); c.className='card'; c.tabIndex=0; c.style.setProperty('--ar',ars[i]);
     const im=imgs?.[i];

@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
-"""Search YouTube per era via yt-dlp, rank by views, classify, download thumbnails.
+"""Search YouTube per era via yt-dlp, rank by views, classify, tag member, download thumbnails.
 
-Usage: python3 -I collect_videos.py <eras.json> <raw_dir> <work_dir> [slug ...]
-Writes <work_dir>/videos/<slug>.json and thumbnails to <raw_dir>/<slug>/yt-thumbs/.
+Usage: .venv/bin/python3 -I collect_videos.py --member <slug|all|base> <eras.json> <raw_dir> <work_dir> [era-slug ...]
+  base:   the era's own videoQueries (MVs, performances, the original Winter fancam searches)
+          -> <work_dir>/videos/<slug>.json
+  member: the member fancam templates ("aespa <era> <member> fancam", "<member> focus <era>")
+          -> <work_dir>/videos/<slug>.<member>.json
+  all:    base plus every member (karina, giselle, winter, ningning)
+Thumbnails go to <raw_dir>/<slug>/yt-thumbs/<id>.jpg. build_manifest.py merges the per-era files.
+--thumbs-only re-classifies and fetches missing thumbnails for existing work files without searching.
 """
+import argparse
 import json
 import os
 import re
@@ -16,9 +23,11 @@ import certifi
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 YTDLP = os.path.join(HERE, ".venv", "bin", "yt-dlp")
-KEEP_PER_ERA = 20
+KEEP_PER_ERA = 20          # base queries
+KEEP_PER_MEMBER = 10       # member fancam queries
 SSL_CTX = ssl.create_default_context(cafile=certifi.where())
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/124 Safari/537.36"
+MEMBERS = ["karina", "giselle", "winter", "ningning"]
 
 OFFICIAL_CHANNELS = {"SMTOWN", "aespa", "SMTOWN SUBS", "SMP FLOOR", "SMTOWN DANCE"}
 # labels / rights-holders that upload official MVs for Winter's OSTs and collaborations
@@ -43,6 +52,15 @@ PERF = re.compile(
     r"live ver|band ver|special stage|showcase)", re.I)
 MV = re.compile(r"(\bmv\b|\bm/v\b|music video|official video)", re.I)
 WINTER = re.compile(r"(winter|윈터|ウィンター|kim minjeong|minjeong|민정)", re.I)
+
+
+def member_regexes(cfg: dict) -> dict:
+    """Compile one alias regex per member (excluding group)."""
+    out = {}
+    for slug in MEMBERS:
+        aliases = [re.escape(a) for a in cfg["members"][slug]["aliases"]]
+        out[slug] = re.compile("(" + "|".join(aliases) + ")", re.I)
+    return out
 
 
 def run_search(query: str,
@@ -99,6 +117,22 @@ def classify(item: dict,
     return "other"
 
 
+def members_in_title(title: str,
+    rx: dict,
+) -> list:
+    """Members named in a title, in canonical order."""
+    return [m for m in MEMBERS if rx[m].search(title or "")]
+
+
+def video_member(kind: str,
+    named: list,
+) -> str | None:
+    """Member slug for a fancam/other video naming exactly one member; null for MV/performance."""
+    if kind in ("mv", "performance"):
+        return None
+    return named[0] if len(named) == 1 else None
+
+
 def about_aespa(item: dict,
     era: dict,
 ) -> bool:
@@ -129,9 +163,11 @@ def fetch_thumb(vid: str,
 ) -> str | None:
     """Download maxresdefault, fall back to hqdefault. Returns local path or None."""
     os.makedirs(dest_dir, exist_ok=True)
+    dest = os.path.join(dest_dir, f"{vid}.jpg")
+    if os.path.exists(dest) and os.path.getsize(dest) >= 4000:
+        return dest
     for variant in ("maxresdefault", "hqdefault"):
         url = f"https://i.ytimg.com/vi/{vid}/{variant}.jpg"
-        dest = os.path.join(dest_dir, f"{vid}.jpg")
         req = urllib.request.Request(url, headers={"User-Agent": UA})
         try:
             with urllib.request.urlopen(req, timeout=30, context=SSL_CTX) as r:
@@ -147,75 +183,149 @@ def fetch_thumb(vid: str,
     return None
 
 
-def main() -> None:
-    """Entry point."""
-    args = [a for a in sys.argv[1:] if a != "--thumbs-only"]
-    thumbs_only = "--thumbs-only" in sys.argv
-    eras_path, raw_dir, work_dir = args[:3]
-    only = set(args[3:])
-    with open(eras_path) as f:
-        eras = json.load(f)["eras"]
-    os.makedirs(os.path.join(work_dir, "videos"), exist_ok=True)
+def row_for(vid: str,
+    item: dict,
+    era: dict,
+    rx: dict,
+) -> dict:
+    """Build one output row."""
+    title = item.get("title") or ""
+    kind = classify(item, era)
+    named = members_in_title(title, rx)
+    return {
+        "id": vid,
+        "title": title,
+        "channel": item.get("channel") or item.get("uploader"),
+        "viewCount": item.get("view_count"),
+        "uploadDate": item.get("upload_date"),
+        "duration": item.get("duration"),
+        "kind": kind,
+        "member": video_member(kind, named),
+        "membersNamed": named,
+        "winterFocus": bool(WINTER.search(title)),
+        "url": f"https://www.youtube.com/watch?v={vid}",
+    }
+
+
+def queries_for(cfg: dict,
+    era: dict,
+    member: str,
+) -> list:
+    """Queries for base or one member."""
+    if member == "base":
+        return era["videoQueries"]
+    if era.get("members") and member not in era["members"]:
+        return []
+    if era.get("solo"):
+        return []  # the solo era's own videoQueries already cover Winter
+    name = cfg["members"][member]["name"]
+    return [{"q": t["q"].format(member=name, title=era["shortTitle"]), "n": t.get("n", 15)}
+            for t in cfg["videoQueryTemplates"]["member"]]
+
+
+def collect(cfg: dict,
+    era: dict,
+    member: str,
+    raw_dir: str,
+    work_dir: str,
+    rx: dict,
+) -> None:
+    """Search, rank, keep, fetch thumbs, write the work file for era+member."""
+    slug = era["slug"]
+    queries = queries_for(cfg, era, member)
+    if not queries:
+        return
+    print(f"== {slug} / {member}", file=sys.stderr, flush=True)
+    seen = {}
+    for q in queries:
+        for item in run_search(q["q"], q.get("n", 15)):
+            vid = item.get("id")
+            if not vid or vid in seen or not about_aespa(item, era):
+                continue
+            seen[vid] = item
+    rows = [row_for(vid, item, era, rx) for vid, item in seen.items()]
+    rows.sort(key=lambda r: (r["viewCount"] or 0), reverse=True)
+    if member == "base":
+        keep = [r for r in rows if r["kind"] == "mv"][:3]
+        limit = KEEP_PER_ERA
+    else:
+        # member run: prefer videos that actually name this member alone
+        keep = [r for r in rows if r["member"] == member][:KEEP_PER_MEMBER]
+        limit = KEEP_PER_MEMBER
+    for r in rows:
+        if len(keep) >= limit:
+            break
+        if r not in keep:
+            keep.append(r)
+    keep.sort(key=lambda r: (r["viewCount"] or 0), reverse=True)
+    thumb_dir = os.path.join(raw_dir, slug, "yt-thumbs")
+    for r in keep:
+        p = fetch_thumb(r["id"], thumb_dir)
+        r["thumbnail"] = os.path.relpath(p, raw_dir) if p else None
+    name = f"{slug}.json" if member == "base" else f"{slug}.{member}.json"
+    with open(os.path.join(work_dir, "videos", name), "w") as f:
+        json.dump({"slug": slug, "member": member, "candidates": len(rows), "videos": keep}, f,
+                  ensure_ascii=False, indent=1)
+    print(f"  {len(rows)} candidates -> kept {len(keep)}", file=sys.stderr, flush=True)
+
+
+def thumbs_only(cfg: dict,
+    eras: list,
+    raw_dir: str,
+    work_dir: str,
+    rx: dict,
+) -> None:
+    """Re-classify, re-tag member and fetch missing thumbnails for existing work files."""
     for era in eras:
         slug = era["slug"]
-        if only and slug not in only:
-            continue
-        if thumbs_only:
-            path = os.path.join(work_dir, "videos", f"{slug}.json")
-            with open(path) as f:
+        for path in sorted(os.listdir(os.path.join(work_dir, "videos"))):
+            if not (path == f"{slug}.json" or path.startswith(f"{slug}.") and path.endswith(".json")):
+                continue
+            full = os.path.join(work_dir, "videos", path)
+            with open(full) as f:
                 data = json.load(f)
             thumb_dir = os.path.join(raw_dir, slug, "yt-thumbs")
             for r in data["videos"]:
                 r["kind"] = classify({"title": r["title"], "channel": r["channel"]}, era)
+                r["membersNamed"] = members_in_title(r["title"], rx)
+                r["member"] = video_member(r["kind"], r["membersNamed"])
                 if not r.get("thumbnail"):
                     p = fetch_thumb(r["id"], thumb_dir)
                     r["thumbnail"] = os.path.relpath(p, raw_dir) if p else None
-            with open(path, "w") as f:
+            with open(full, "w") as f:
                 json.dump(data, f, ensure_ascii=False, indent=1)
-            print(f"{slug}: {sum(1 for r in data['videos'] if r['thumbnail'])}/{len(data['videos'])} thumbs",
+            print(f"{path}: {sum(1 for r in data['videos'] if r['thumbnail'])}/{len(data['videos'])} thumbs",
                   file=sys.stderr)
-            continue
-        print(f"== {slug}", file=sys.stderr)
-        seen = {}
-        for q in era["videoQueries"]:
-            n = q.get("n", 15)
-            for item in run_search(q["q"], n):
-                vid = item.get("id")
-                if not vid or vid in seen:
-                    continue
-                if not about_aespa(item, era):
-                    continue
-                seen[vid] = item
-        rows = []
-        for vid, item in seen.items():
-            rows.append({
-                "id": vid,
-                "title": item.get("title"),
-                "channel": item.get("channel") or item.get("uploader"),
-                "viewCount": item.get("view_count"),
-                "uploadDate": item.get("upload_date"),
-                "duration": item.get("duration"),
-                "kind": classify(item, era),
-                "winterFocus": bool(WINTER.search(item.get("title") or "")),
-                "url": f"https://www.youtube.com/watch?v={vid}",
-            })
-        rows.sort(key=lambda r: (r["viewCount"] or 0), reverse=True)
-        # keep official MV(s) regardless of rank, then top by views
-        keep = [r for r in rows if r["kind"] == "mv"][:3]
-        for r in rows:
-            if len(keep) >= KEEP_PER_ERA:
-                break
-            if r not in keep:
-                keep.append(r)
-        keep.sort(key=lambda r: (r["viewCount"] or 0), reverse=True)
-        thumb_dir = os.path.join(raw_dir, slug, "yt-thumbs")
-        for r in keep:
-            p = fetch_thumb(r["id"], thumb_dir)
-            r["thumbnail"] = os.path.relpath(p, raw_dir) if p else None
-        with open(os.path.join(work_dir, "videos", f"{slug}.json"), "w") as f:
-            json.dump({"slug": slug, "candidates": len(rows), "videos": keep}, f,
-                      ensure_ascii=False, indent=1)
-        print(f"  {len(rows)} candidates -> kept {len(keep)}", file=sys.stderr)
+
+
+def main() -> None:
+    """Entry point."""
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--member", default="all", help="karina|giselle|winter|ningning|base|all")
+    ap.add_argument("--thumbs-only", action="store_true")
+    ap.add_argument("eras")
+    ap.add_argument("raw_dir")
+    ap.add_argument("work_dir")
+    ap.add_argument("slugs", nargs="*")
+    a = ap.parse_args()
+    with open(a.eras) as f:
+        cfg = json.load(f)
+    rx = member_regexes(cfg)
+    only = set(a.slugs)
+    eras = [e for e in cfg["eras"] if not only or e["slug"] in only]
+    os.makedirs(os.path.join(a.work_dir, "videos"), exist_ok=True)
+    if a.thumbs_only:
+        thumbs_only(cfg, eras, a.raw_dir, a.work_dir, rx)
+        return
+    if a.member == "all":
+        runs = ["base"] + MEMBERS
+    elif a.member in MEMBERS or a.member == "base":
+        runs = [a.member]
+    else:
+        sys.exit(f"unknown member {a.member}")
+    for era in eras:
+        for member in runs:
+            collect(cfg, era, member, a.raw_dir, a.work_dir, rx)
 
 
 if __name__ == "__main__":
