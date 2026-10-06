@@ -110,7 +110,11 @@
         "height": 1120,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/my-world/karina/karina-93c54ce100-480.webp",
+          "w960": "media/my-world/karina/karina-93c54ce100-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -596,7 +600,11 @@
         "height": 1120,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/my-world/winter/winter-85f2dd8491-480.webp",
+          "w960": "media/my-world/winter/winter-85f2dd8491-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -840,7 +848,11 @@
         "height": 3514,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/my-world/ningning/ningning-b923a13170-480.webp",
+          "w960": "media/my-world/ningning/ningning-b923a13170-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -852,7 +864,11 @@
         "height": 3313,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/my-world/ningning/ningning-74426c041d-480.webp",
+          "w960": "media/my-world/ningning/ningning-74426c041d-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -864,7 +880,11 @@
         "height": 1923,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/my-world/ningning/ningning-a78076c779-480.webp",
+          "w960": "media/my-world/ningning/ningning-a78076c779-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -1086,7 +1106,11 @@
         "credit": "SM Entertainment / aespa-official.jp",
         "width": 1000,
         "height": 1000,
-        "tags": []
+        "tags": [],
+        "variants": {
+          "w480": "media/my-world/group/group-355e06c86d-480.webp",
+          "w960": "media/my-world/group/group-355e06c86d-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1344,11 +1368,11 @@
     "winter": {
       "member": "winter",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/5d/68/a4/5d68a4b4e0c84d3642c32d87729a4485.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/127086020728968746/",
-      "credit": "pinterest:LoveEmmaW",
-      "width": 1124,
-      "height": 1124,
+      "remote": "https://i.pinimg.com/originals/70/7c/88/707c88c623f7d3dc80ec53f78381d616.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/768989705145205583/",
+      "credit": "pinterest:moonie_kg",
+      "width": 2000,
+      "height": 3000,
       "tags": []
     },
     "ningning": {
@@ -1370,9 +1394,19 @@
       "width": 2000,
       "height": 3000,
       "tags": []
+    },
+    "hero": {
+      "member": "group",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/64/17/61/6417615e89f8c0a9907989aafcff52fe.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/313703930309078190/",
+      "credit": "pinterest:gamemoka09",
+      "width": 2000,
+      "height": 3000,
+      "tags": []
     }
   },
   "title": "My World",
   "releaseDate": "2023-05-08",
-  "generatedAt": "2026-10-06T05:38:19.895Z"
+  "generatedAt": "2026-10-06T05:58:17.208Z"
 }

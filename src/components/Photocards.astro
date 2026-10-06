@@ -15,7 +15,7 @@ const shown = tabs ? MEMBERS : MEMBERS.filter(([m]) => m === first);
   {shown.map(([m, label]) => (
     <div role={tabs ? 'tabpanel' : undefined} id={tabs ? `panel-${m}` : undefined} aria-labelledby={tabs ? `tab-${m}` : undefined} data-panel={m} hidden={m !== first}>
       {images[m]?.length
-        ? <div class="gallery">{images[m].map((img, i) => <Photocard img={img} index={i} era={eraSlug} />)}</div>
+        ? <div class="gallery">{images[m].map((img, i) => <Photocard img={img} index={i} era={eraSlug} eager={m === first && i < 2} />)}</div>
         : <p class="empty">No {label === 'Group' ? 'group' : label} photos yet for this era.</p>}
     </div>
   ))}

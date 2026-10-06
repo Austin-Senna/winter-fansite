@@ -110,7 +110,11 @@
         "height": 1924,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/savage/karina/karina-9885e98a0f-480.webp",
+          "w960": "media/savage/karina/karina-9885e98a0f-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -122,7 +126,11 @@
         "height": 1904,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/savage/karina/karina-3e1a70d19f-480.webp",
+          "w960": "media/savage/karina/karina-3e1a70d19f-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -356,7 +364,11 @@
         "height": 1740,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/savage/giselle/giselle-7e57b5ae17-480.webp",
+          "w960": "media/savage/giselle/giselle-7e57b5ae17-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -600,7 +612,11 @@
         "height": 1480,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/savage/winter/winter-fd2566db44-480.webp",
+          "w960": "media/savage/winter/winter-fd2566db44-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -844,7 +860,11 @@
         "height": 1848,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/savage/ningning/ningning-fc6386bf4f-480.webp",
+          "w960": "media/savage/ningning/ningning-fc6386bf4f-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -856,7 +876,11 @@
         "height": 1464,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/savage/ningning/ningning-192d0fc78d-480.webp",
+          "w960": "media/savage/ningning/ningning-192d0fc78d-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -868,7 +892,11 @@
         "height": 1040,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/savage/ningning/ningning-52888b228a-480.webp",
+          "w960": "media/savage/ningning/ningning-52888b228a-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -1090,7 +1118,11 @@
         "credit": "SM Entertainment / aespa-official.jp",
         "width": 1000,
         "height": 1000,
-        "tags": []
+        "tags": [],
+        "variants": {
+          "w480": "media/savage/group/group-c1176929ac-480.webp",
+          "w960": "media/savage/group/group-c1176929ac-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1102,7 +1134,11 @@
         "height": 2176,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/savage/group/group-7bf93dbf74-480.webp",
+          "w960": "media/savage/group/group-7bf93dbf74-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1114,7 +1150,11 @@
         "height": 461,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/savage/group/group-e6ab3b0229-480.webp",
+          "w960": "media/savage/group/group-e6ab3b0229-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1126,7 +1166,11 @@
         "height": 490,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/savage/group/group-bcc3e45860-480.webp",
+          "w960": "media/savage/group/group-bcc3e45860-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1138,7 +1182,11 @@
         "height": 514,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/savage/group/group-7697062f92-480.webp",
+          "w960": "media/savage/group/group-7697062f92-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1150,7 +1198,11 @@
         "height": 746,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/savage/group/group-535bf8359e-480.webp",
+          "w960": "media/savage/group/group-535bf8359e-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1162,7 +1214,11 @@
         "height": 778,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/savage/group/group-403b75cd82-480.webp",
+          "w960": "media/savage/group/group-403b75cd82-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1174,7 +1230,11 @@
         "height": 613,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/savage/group/group-529475c9be-480.webp",
+          "w960": "media/savage/group/group-529475c9be-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1342,11 +1402,11 @@
     "karina": {
       "member": "karina",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/b5/23/28/b52328144c00aec45ff046b654d2f350.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/15058979994878161/",
-      "credit": "pinterest:marym11_7",
-      "width": 1000,
-      "height": 1550,
+      "remote": "https://i.pinimg.com/originals/6c/af/c1/6cafc18a4a77baf374fa262cc27666ed.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/856106210461334207/",
+      "credit": "pinterest:8Owl",
+      "width": 2333,
+      "height": 3500,
       "tags": []
     },
     "giselle": {
@@ -1388,9 +1448,19 @@
       "width": 1367,
       "height": 2048,
       "tags": []
+    },
+    "hero": {
+      "member": "group",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/d2/14/e2/d214e258ebf6e9171e9719ed33ce109a.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/422282902584759279/",
+      "credit": "pinterest:wiki_97",
+      "width": 1367,
+      "height": 2048,
+      "tags": []
     }
   },
   "title": "Savage",
   "releaseDate": "2021-10-05",
-  "generatedAt": "2026-10-06T05:38:19.887Z"
+  "generatedAt": "2026-10-06T05:58:14.419Z"
 }

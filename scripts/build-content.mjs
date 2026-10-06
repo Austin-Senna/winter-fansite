@@ -7,6 +7,7 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { eraContent, MEMBERS } from './lib/select.mjs';
 import { outputName, pruneUnreferenced } from './lib/media-files.mjs';
+import sharp from 'sharp';
 
 const exec = promisify(execFile);
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -35,6 +36,20 @@ async function localize(slug, img) {
   return path.posix.join('media', slug, img.member, name);
 }
 
+// Responsive WebP copies of a local image, content-addressed next to the JPEG. Returns { variants: { w480, w960 } }.
+async function variants(slug, img) {
+  if (!img.src) return {};
+  const jpeg = path.join(ROOT, 'public', img.src);
+  const out = {};
+  for (const w of [480, 960]) {
+    const rel = img.src.replace(/\.jpg$/, `-${w}.webp`);
+    const abs = path.join(ROOT, 'public', rel);
+    if (!existsSync(abs)) await sharp(jpeg).resize({ width: w, withoutEnlargement: true }).webp({ quality: 78 }).toFile(abs);
+    out['w' + w] = rel;
+  }
+  return { variants: out };
+}
+
 async function dirSize(d) {
   let t = 0; if (!existsSync(d)) return 0;
   for (const e of await fs.readdir(d, { withFileTypes: true })) { const p = path.join(d, e.name); t += e.isDirectory() ? await dirSize(p) : (await fs.stat(p)).size; }
@@ -43,6 +58,23 @@ async function dirSize(d) {
 
 const manifest = await readJson(path.join(RAW, 'manifest.json'));
 const featuredPicks = existsSync(FEATURED) ? await readJson(FEATURED) : {};
+// Cover cards are 3:4. Prefer the hand pick when its own proportions are close; otherwise the best clean candidate that is.
+const CARD = 3 / 4, TOL = 0.09;
+const nearCard = i => i.width && i.height && Math.abs(i.width / i.height - CARD) <= TOL;
+const QC_BAD = new Set(['small', 'dupe', 'blurry', 'member-mismatch', 'era-mismatch']);
+const SRC_RANK = { official: 0, pinterest: 1, commons: 2 };
+function rankCandidates(era, member) {
+  const meta = i => [i.title, i.description, i.board, i.altText].map(x => String(x || '').toLowerCase()).join(' ');
+  return era.images
+    .filter(i => i.file && (i.member || 'group') === member && (i.width || 0) >= 1000 && !(i.qc?.flags || []).some(f => QC_BAD.has(f)))
+    .sort((a, b) => (/(teaser|concept|photoshoot|promo|cover)/.test(meta(a)) ? 0 : 1) - (/(teaser|concept|photoshoot|promo|cover)/.test(meta(b)) ? 0 : 1) || (SRC_RANK[a.source] ?? 3) - (SRC_RANK[b.source] ?? 3) || (b.width * b.height) - (a.width * a.height));
+}
+function pickForCard(era, member, pickFile) {
+  const pick = pickFile ? era.images.find(i => i.file === pickFile) : null;
+  if (pick && nearCard(pick)) return pick.file;
+  const alt = rankCandidates(era, member).find(nearCard);
+  return alt?.file ?? pick?.file ?? null;
+}
 function shapeFeatured(era, file) {
   const i = era.images.find(x => x.file === file);
   if (!i) return null;
@@ -56,19 +88,21 @@ for (const era of manifest.eras) {
   const referenced = new Set();
   for (const m of MEMBERS) {
     for (const img of content.images[m]) {
-      if (img.kind === 'local') { img.src = await localize(era.slug, img); referenced.add(img.src); }
+      if (img.kind === 'local') { img.src = await localize(era.slug, img); Object.assign(img, await variants(era.slug, img)); referenced.add(img.src); for (const v of Object.values(img.variants ?? {})) referenced.add(v); }
       delete img.file; // raw paths never ship
       totalImages++;
     }
   }
   content.featured = {};
   for (const m of MEMBERS) {
-    const file = featuredPicks[era.slug]?.[m];
+    const file = pickForCard(era, m, featuredPicks[era.slug]?.[m]);
     const f = file ? shapeFeatured(era, file) : null;
-    if (f && f.kind === 'local') { f.src = await localize(era.slug, f); referenced.add(f.src); }
+    if (f && f.kind === 'local') { f.src = await localize(era.slug, f); Object.assign(f, await variants(era.slug, f)); referenced.add(f.src); for (const v of Object.values(f.variants ?? {})) referenced.add(v); }
     if (f) delete f.file;
     content.featured[m] = f;
   }
+  // Hero: a group photo near 3:4 if one exists, else the first member slot that is.
+  content.featured.hero = content.featured.group ?? content.featured.winter ?? content.featured.karina ?? content.featured.giselle ?? content.featured.ningning ?? null;
   const pruned = pruneUnreferenced(PUBLIC, era.slug, referenced);
   if (pruned.length) console.log(`pruned ${pruned.length} unreferenced files under public/media/${era.slug}`);
   content.title = era.title; content.releaseDate = era.releaseDate; content.generatedAt = new Date().toISOString();

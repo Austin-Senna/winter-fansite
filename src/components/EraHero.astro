@@ -17,10 +17,10 @@ const { era, feature } = Astro.props as { era: Era; feature?: any };
 </section>
 <style>
   .hero{min-height:100svh;display:grid;align-content:end;padding:0 var(--gutter) clamp(24px,5vh,56px)}
-  .hero.with-feature{grid-template-columns:minmax(220px,42vw) minmax(0,1fr);gap:clamp(24px,4vw,72px);align-items:end;padding-top:96px}
-  .photo{display:flex;align-items:flex-end;justify-content:flex-start;--max:72svh}
+  .hero.with-feature{grid-template-columns:min(34vw,54svh) minmax(0,1fr);gap:clamp(24px,4vw,72px);align-items:end;padding-top:96px}
+  .photo{display:block}
   .text{min-width:0}
-  @media (max-width:900px){.hero.with-feature{grid-template-columns:1fr;align-content:end}.photo{order:-1;justify-content:flex-start;margin-top:72px;--max:46svh}}
+  @media (max-width:900px){.hero.with-feature{grid-template-columns:1fr;align-content:end}.photo{order:-1;margin-top:72px;width:min(60vw,36svh)}}
   .kicker{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.6vw,36px);line-height:1.1;margin:0 0 .4em;max-width:28ch;text-shadow:0 1px 18px color-mix(in oklab,var(--era-a) 70%,transparent)}
   h1{margin:0;font-family:var(--display);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(56px,11vw,200px);line-height:.86;overflow-wrap:anywhere;filter:drop-shadow(0 2px 0 rgba(0,0,0,.25))}
   .strip{display:grid;grid-template-columns:repeat(3,auto) 1fr;gap:clamp(16px,4vw,64px);margin-top:clamp(20px,3vh,36px);padding-top:14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--ink-dim)}

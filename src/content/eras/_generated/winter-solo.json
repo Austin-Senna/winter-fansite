@@ -360,9 +360,19 @@
       "tags": []
     },
     "ningning": null,
-    "group": null
+    "group": null,
+    "hero": {
+      "member": "winter",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/6c/36/14/6c3614b9229db96934b9ba6c5f3d8a9f.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/318559373660485522/",
+      "credit": "pinterest:michaelarox2",
+      "width": 2731,
+      "height": 4096,
+      "tags": []
+    }
   },
   "title": "Winter solo / OST / collaborations",
   "releaseDate": "2022-05-22",
-  "generatedAt": "2026-10-06T05:38:20.205Z"
+  "generatedAt": "2026-10-06T05:58:46.878Z"
 }

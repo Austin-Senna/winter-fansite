@@ -110,7 +110,11 @@
         "height": 3600,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/karina/karina-4c2c36f730-480.webp",
+          "w960": "media/whiplash/karina/karina-4c2c36f730-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -122,7 +126,11 @@
         "height": 3600,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/karina/karina-2c021535aa-480.webp",
+          "w960": "media/whiplash/karina/karina-2c021535aa-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -134,7 +142,11 @@
         "height": 3600,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/karina/karina-8b2a1946a9-480.webp",
+          "w960": "media/whiplash/karina/karina-8b2a1946a9-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -146,7 +158,11 @@
         "height": 1412,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/whiplash/karina/karina-c15b8b9283-480.webp",
+          "w960": "media/whiplash/karina/karina-c15b8b9283-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -158,7 +174,11 @@
         "height": 1292,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/karina/karina-4bcef490e4-480.webp",
+          "w960": "media/whiplash/karina/karina-4bcef490e4-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -170,7 +190,11 @@
         "height": 1029,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/whiplash/karina/karina-bb967cc82a-480.webp",
+          "w960": "media/whiplash/karina/karina-bb967cc82a-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -364,7 +388,11 @@
         "height": 3600,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/giselle/giselle-2ddb6bad94-480.webp",
+          "w960": "media/whiplash/giselle/giselle-2ddb6bad94-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -376,7 +404,11 @@
         "height": 2700,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/giselle/giselle-4f93f0aca9-480.webp",
+          "w960": "media/whiplash/giselle/giselle-4f93f0aca9-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -388,7 +420,11 @@
         "height": 2700,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/giselle/giselle-ec775b21a8-480.webp",
+          "w960": "media/whiplash/giselle/giselle-ec775b21a8-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -400,7 +436,11 @@
         "height": 1460,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/whiplash/giselle/giselle-20a2120065-480.webp",
+          "w960": "media/whiplash/giselle/giselle-20a2120065-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -412,7 +452,11 @@
         "height": 1543,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/giselle/giselle-6ee2e697b1-480.webp",
+          "w960": "media/whiplash/giselle/giselle-6ee2e697b1-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -424,7 +468,11 @@
         "height": 1222,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/giselle/giselle-616cf97391-480.webp",
+          "w960": "media/whiplash/giselle/giselle-616cf97391-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -436,7 +484,11 @@
         "height": 1177,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/giselle/giselle-be8113289b-480.webp",
+          "w960": "media/whiplash/giselle/giselle-be8113289b-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -620,7 +672,11 @@
         "height": 3600,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/winter/winter-d2da7a4c89-480.webp",
+          "w960": "media/whiplash/winter/winter-d2da7a4c89-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -632,7 +688,11 @@
         "height": 3000,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/winter/winter-eef89eb3ec-480.webp",
+          "w960": "media/whiplash/winter/winter-eef89eb3ec-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -644,7 +704,11 @@
         "height": 2700,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/winter/winter-535633e8fd-480.webp",
+          "w960": "media/whiplash/winter/winter-535633e8fd-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -656,7 +720,11 @@
         "height": 1440,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/whiplash/winter/winter-3680d91545-480.webp",
+          "w960": "media/whiplash/winter/winter-3680d91545-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -668,7 +736,11 @@
         "height": 1416,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/whiplash/winter/winter-811eda2293-480.webp",
+          "w960": "media/whiplash/winter/winter-811eda2293-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -680,7 +752,11 @@
         "height": 1440,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/whiplash/winter/winter-d0a46591a6-480.webp",
+          "w960": "media/whiplash/winter/winter-d0a46591a6-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -692,7 +768,11 @@
         "height": 1532,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/whiplash/winter/winter-29bb95f75f-480.webp",
+          "w960": "media/whiplash/winter/winter-29bb95f75f-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -704,7 +784,11 @@
         "height": 1432,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/whiplash/winter/winter-0fb9d8d9c1-480.webp",
+          "w960": "media/whiplash/winter/winter-0fb9d8d9c1-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -716,7 +800,11 @@
         "height": 1328,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/whiplash/winter/winter-c173a9fde4-480.webp",
+          "w960": "media/whiplash/winter/winter-c173a9fde4-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -728,7 +816,11 @@
         "height": 1416,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/whiplash/winter/winter-664b541613-480.webp",
+          "w960": "media/whiplash/winter/winter-664b541613-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -740,7 +832,11 @@
         "height": 1214,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/winter/winter-02310a2531-480.webp",
+          "w960": "media/whiplash/winter/winter-02310a2531-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -884,7 +980,11 @@
         "height": 3600,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/ningning/ningning-8df55e238d-480.webp",
+          "w960": "media/whiplash/ningning/ningning-8df55e238d-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -896,7 +996,11 @@
         "height": 3600,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/ningning/ningning-28fea52568-480.webp",
+          "w960": "media/whiplash/ningning/ningning-28fea52568-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -908,7 +1012,11 @@
         "height": 3600,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/ningning/ningning-8cbf9249d3-480.webp",
+          "w960": "media/whiplash/ningning/ningning-8cbf9249d3-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -920,7 +1028,11 @@
         "height": 3600,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/ningning/ningning-d53e69944f-480.webp",
+          "w960": "media/whiplash/ningning/ningning-d53e69944f-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -932,7 +1044,11 @@
         "height": 3600,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/ningning/ningning-241dc67901-480.webp",
+          "w960": "media/whiplash/ningning/ningning-241dc67901-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -944,7 +1060,11 @@
         "height": 3000,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/ningning/ningning-7b7aa4a8b2-480.webp",
+          "w960": "media/whiplash/ningning/ningning-7b7aa4a8b2-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -956,7 +1076,11 @@
         "height": 2700,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/ningning/ningning-dbc0f43d42-480.webp",
+          "w960": "media/whiplash/ningning/ningning-dbc0f43d42-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -968,7 +1092,11 @@
         "height": 2250,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/ningning/ningning-0684420487-480.webp",
+          "w960": "media/whiplash/ningning/ningning-0684420487-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -980,7 +1108,11 @@
         "height": 2250,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/ningning/ningning-f56170d767-480.webp",
+          "w960": "media/whiplash/ningning/ningning-f56170d767-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -992,7 +1124,11 @@
         "height": 1310,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/ningning/ningning-5f2456cc70-480.webp",
+          "w960": "media/whiplash/ningning/ningning-5f2456cc70-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -1004,7 +1140,11 @@
         "height": 1064,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/ningning/ningning-2e998c6bd2-480.webp",
+          "w960": "media/whiplash/ningning/ningning-2e998c6bd2-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -1016,7 +1156,11 @@
         "height": 1041,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/ningning/ningning-5fec4c9e8f-480.webp",
+          "w960": "media/whiplash/ningning/ningning-5fec4c9e8f-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -1148,7 +1292,11 @@
         "credit": "SM Entertainment / aespa-official.jp",
         "width": 2000,
         "height": 2000,
-        "tags": []
+        "tags": [],
+        "variants": {
+          "w480": "media/whiplash/group/group-7c9219bbe3-480.webp",
+          "w960": "media/whiplash/group/group-7c9219bbe3-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1160,7 +1308,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-515a5b60e8-480.webp",
+          "w960": "media/whiplash/group/group-515a5b60e8-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1172,7 +1324,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-d3233251f8-480.webp",
+          "w960": "media/whiplash/group/group-d3233251f8-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1184,7 +1340,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-6278154af9-480.webp",
+          "w960": "media/whiplash/group/group-6278154af9-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1196,7 +1356,11 @@
         "height": 2562,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-55ac3bec4f-480.webp",
+          "w960": "media/whiplash/group/group-55ac3bec4f-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1208,7 +1372,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-8d26e5812e-480.webp",
+          "w960": "media/whiplash/group/group-8d26e5812e-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1220,7 +1388,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-7b3c20e9b8-480.webp",
+          "w960": "media/whiplash/group/group-7b3c20e9b8-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1232,7 +1404,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-0b5a811e8d-480.webp",
+          "w960": "media/whiplash/group/group-0b5a811e8d-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1244,7 +1420,11 @@
         "height": 2562,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-57699181ab-480.webp",
+          "w960": "media/whiplash/group/group-57699181ab-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1256,7 +1436,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-3a11449658-480.webp",
+          "w960": "media/whiplash/group/group-3a11449658-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1268,7 +1452,11 @@
         "height": 2561,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-e6dc60283e-480.webp",
+          "w960": "media/whiplash/group/group-e6dc60283e-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1280,7 +1468,11 @@
         "height": 2562,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-5cbf76922e-480.webp",
+          "w960": "media/whiplash/group/group-5cbf76922e-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1292,7 +1484,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-a6bbc641e6-480.webp",
+          "w960": "media/whiplash/group/group-a6bbc641e6-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1304,7 +1500,11 @@
         "height": 2562,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-b4530b080b-480.webp",
+          "w960": "media/whiplash/group/group-b4530b080b-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1316,7 +1516,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-3bab2f7485-480.webp",
+          "w960": "media/whiplash/group/group-3bab2f7485-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1328,7 +1532,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-a3063ca363-480.webp",
+          "w960": "media/whiplash/group/group-a3063ca363-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1340,7 +1548,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-6c433b545a-480.webp",
+          "w960": "media/whiplash/group/group-6c433b545a-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1352,7 +1564,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-0df6223f5a-480.webp",
+          "w960": "media/whiplash/group/group-0df6223f5a-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1364,7 +1580,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-79152640bb-480.webp",
+          "w960": "media/whiplash/group/group-79152640bb-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1376,7 +1596,11 @@
         "height": 3023,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-7e125575ae-480.webp",
+          "w960": "media/whiplash/group/group-7e125575ae-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1388,7 +1612,11 @@
         "height": 2470,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-6cde52c6a7-480.webp",
+          "w960": "media/whiplash/group/group-6cde52c6a7-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1400,7 +1628,11 @@
         "height": 2001,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-a7a37363e3-480.webp",
+          "w960": "media/whiplash/group/group-a7a37363e3-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1412,7 +1644,11 @@
         "height": 2482,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-9f34b87ef8-480.webp",
+          "w960": "media/whiplash/group/group-9f34b87ef8-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1424,7 +1660,11 @@
         "height": 2410,
         "tags": [],
         "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "variants": {
+          "w480": "media/whiplash/group/group-923e6b30e6-480.webp",
+          "w960": "media/whiplash/group/group-923e6b30e6-960.webp"
+        }
       }
     ]
   },
@@ -1472,15 +1712,25 @@
     "group": {
       "member": "group",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/ef/c7/e1/efc7e10b21643e3a844d5ca6e2e71871.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/211174978597605/",
-      "credit": "pinterest:saviocoded",
-      "width": 2612,
-      "height": 3072,
+      "remote": "https://i.pinimg.com/originals/9a/9c/ed/9a9ced352990d9010724efd031a06e8d.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/125397170870831919/",
+      "credit": "pinterest:jessrogers3663",
+      "width": 2731,
+      "height": 4096,
+      "tags": []
+    },
+    "hero": {
+      "member": "group",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/9a/9c/ed/9a9ced352990d9010724efd031a06e8d.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/125397170870831919/",
+      "credit": "pinterest:jessrogers3663",
+      "width": 2731,
+      "height": 4096,
       "tags": []
     }
   },
   "title": "Whiplash",
   "releaseDate": "2024-10-21",
-  "generatedAt": "2026-10-06T05:38:19.904Z"
+  "generatedAt": "2026-10-06T05:58:35.779Z"
 }

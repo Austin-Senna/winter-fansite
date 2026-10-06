@@ -110,7 +110,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "variants": {
+          "w480": "media/kiss-n-tell/karina/karina-089d39e11a-480.webp",
+          "w960": "media/kiss-n-tell/karina/karina-089d39e11a-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -122,7 +126,11 @@
         "height": 4602,
         "tags": [],
         "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "variants": {
+          "w480": "media/kiss-n-tell/karina/karina-2376e0f47f-480.webp",
+          "w960": "media/kiss-n-tell/karina/karina-2376e0f47f-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -134,7 +142,11 @@
         "height": 853,
         "tags": [],
         "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "variants": {
+          "w480": "media/kiss-n-tell/karina/karina-5d9b311ad4-480.webp",
+          "w960": "media/kiss-n-tell/karina/karina-5d9b311ad4-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -146,7 +158,11 @@
         "height": 853,
         "tags": [],
         "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "variants": {
+          "w480": "media/kiss-n-tell/karina/karina-5c62e63211-480.webp",
+          "w960": "media/kiss-n-tell/karina/karina-5c62e63211-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -158,7 +174,11 @@
         "height": 1005,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/kiss-n-tell/karina/karina-b31ae3dcb4-480.webp",
+          "w960": "media/kiss-n-tell/karina/karina-b31ae3dcb4-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -846,7 +866,11 @@
         "height": 2045,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/kiss-n-tell/ningning/ningning-38ff45344e-480.webp",
+          "w960": "media/kiss-n-tell/ningning/ningning-38ff45344e-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -858,7 +882,11 @@
         "height": 2006,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/kiss-n-tell/ningning/ningning-ad8dc08fc2-480.webp",
+          "w960": "media/kiss-n-tell/ningning/ningning-ad8dc08fc2-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -870,7 +898,11 @@
         "height": 1935,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/kiss-n-tell/ningning/ningning-10ca7c6011-480.webp",
+          "w960": "media/kiss-n-tell/ningning/ningning-10ca7c6011-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -882,7 +914,11 @@
         "height": 1934,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/kiss-n-tell/ningning/ningning-23e51f5bb4-480.webp",
+          "w960": "media/kiss-n-tell/ningning/ningning-23e51f5bb4-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -894,7 +930,11 @@
         "height": 1895,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/kiss-n-tell/ningning/ningning-e7cdd699d0-480.webp",
+          "w960": "media/kiss-n-tell/ningning/ningning-e7cdd699d0-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -1344,36 +1384,55 @@
     "giselle": {
       "member": "giselle",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/09/cc/8b/09cc8bb90ddef5c545249b5ccf4409b7.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/934989572661785290/",
-      "credit": "pinterest:A4l1y4hAl1",
-      "width": 1287,
-      "height": 2048,
+      "remote": "https://i.pinimg.com/originals/69/41/f2/6941f28b1714a6f8ce8680edbab07050.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/582864376820506721/",
+      "credit": "pinterest:lilakkumaa",
+      "width": 3072,
+      "height": 4096,
       "tags": []
     },
     "winter": {
       "member": "winter",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/68/5c/b1/685cb16db3fd86d553ce3cfddfaed0ee.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/113434484359308663/",
-      "credit": "pinterest:iaklink",
-      "width": 1537,
-      "height": 1537,
+      "remote": "https://i.pinimg.com/originals/8f/81/1d/8f811d7b3b55dbe6acbf9bfdf2e1946f.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/491455378110889186/",
+      "credit": "pinterest:lazypeachi",
+      "width": 3219,
+      "height": 4096,
       "tags": []
     },
     "ningning": {
       "member": "ningning",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/1a/21/8a/1a218af18566ce1c6d5ee36fdbbde631.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/261842165833211433/",
-      "credit": "pinterest:akwon1230221",
-      "width": 1179,
-      "height": 1809,
+      "remote": "https://i.pinimg.com/originals/06/a7/4f/06a74fdc3e96e3312dbf6225bd5adee4.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/722053752811179787/",
+      "credit": "pinterest:qqhaoyu",
+      "width": 2736,
+      "height": 3648,
       "tags": []
     },
-    "group": null
+    "group": {
+      "member": "group",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/2c/99/9e/2c999e4b2166d8b41eed1d60f52ea282.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/178032991517636583/",
+      "credit": "pinterest:asiaphyle",
+      "width": 3888,
+      "height": 5184,
+      "tags": []
+    },
+    "hero": {
+      "member": "group",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/2c/99/9e/2c999e4b2166d8b41eed1d60f52ea282.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/178032991517636583/",
+      "credit": "pinterest:asiaphyle",
+      "width": 3888,
+      "height": 5184,
+      "tags": []
+    }
   },
   "title": "Kiss n Tell (JP mini)",
   "releaseDate": "2026-07-24",
-  "generatedAt": "2026-10-06T05:38:20.158Z"
+  "generatedAt": "2026-10-06T05:58:46.877Z"
 }

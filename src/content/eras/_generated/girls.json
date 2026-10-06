@@ -110,7 +110,11 @@
         "height": 3528,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/girls/karina/karina-8659f9ab76-480.webp",
+          "w960": "media/girls/karina/karina-8659f9ab76-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -122,7 +126,11 @@
         "height": 2928,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/girls/karina/karina-324443a96a-480.webp",
+          "w960": "media/girls/karina/karina-324443a96a-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -134,7 +142,11 @@
         "height": 2435,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/girls/karina/karina-7da6896ae2-480.webp",
+          "w960": "media/girls/karina/karina-7da6896ae2-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -146,7 +158,11 @@
         "height": 1500,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/girls/karina/karina-2f7f2e7c44-480.webp",
+          "w960": "media/girls/karina/karina-2f7f2e7c44-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -158,7 +174,11 @@
         "height": 2740,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/girls/karina/karina-5212d61b92-480.webp",
+          "w960": "media/girls/karina/karina-5212d61b92-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -362,7 +382,11 @@
         "height": 2928,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/girls/giselle/giselle-5b7853c83a-480.webp",
+          "w960": "media/girls/giselle/giselle-5b7853c83a-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -374,7 +398,11 @@
         "height": 2880,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/girls/giselle/giselle-81ec5b70ee-480.webp",
+          "w960": "media/girls/giselle/giselle-81ec5b70ee-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -386,7 +414,11 @@
         "height": 2158,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/girls/giselle/giselle-ebc78e2c39-480.webp",
+          "w960": "media/girls/giselle/giselle-ebc78e2c39-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -1092,7 +1124,11 @@
         "credit": "SM Entertainment / aespa-official.jp",
         "width": 2000,
         "height": 2000,
-        "tags": []
+        "tags": [],
+        "variants": {
+          "w480": "media/girls/group/group-e2495759fe-480.webp",
+          "w960": "media/girls/group/group-e2495759fe-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1102,7 +1138,11 @@
         "credit": "SM Entertainment / aespa-official.jp",
         "width": 2000,
         "height": 2000,
-        "tags": []
+        "tags": [],
+        "variants": {
+          "w480": "media/girls/group/group-7a415a8d43-480.webp",
+          "w960": "media/girls/group/group-7a415a8d43-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1114,7 +1154,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/girls/group/group-1d75f288b7-480.webp",
+          "w960": "media/girls/group/group-1d75f288b7-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1126,7 +1170,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/girls/group/group-0563232cfa-480.webp",
+          "w960": "media/girls/group/group-0563232cfa-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1138,7 +1186,11 @@
         "height": 1646,
         "tags": [],
         "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "variants": {
+          "w480": "media/girls/group/group-205f74297f-480.webp",
+          "w960": "media/girls/group/group-205f74297f-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1150,7 +1202,11 @@
         "height": 1950,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/girls/group/group-2bdc3e06ee-480.webp",
+          "w960": "media/girls/group/group-2bdc3e06ee-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1162,7 +1218,11 @@
         "height": 1027,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/girls/group/group-cf2014acfe-480.webp",
+          "w960": "media/girls/group/group-cf2014acfe-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1174,7 +1234,11 @@
         "height": 964,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/girls/group/group-24d527c21f-480.webp",
+          "w960": "media/girls/group/group-24d527c21f-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1342,11 +1406,11 @@
     "karina": {
       "member": "karina",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/6a/28/de/6a28debb30024aed96f63d658dcb44cb.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/865676359603259599/",
-      "credit": "pinterest:yourbby945",
-      "width": 1000,
-      "height": 1066,
+      "remote": "https://i.pinimg.com/originals/de/aa/6d/deaa6d6d607aafaed4aef7e806c522a0.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/402931497938243590/",
+      "credit": "pinterest:bshbsj11",
+      "width": 1500,
+      "height": 2250,
       "tags": []
     },
     "giselle": {
@@ -1382,15 +1446,25 @@
     "group": {
       "member": "group",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/05/14/88/051488d382e0949e104e5d9ac7d0df9d.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/118852877664053631/",
-      "credit": "pinterest:genessibastos",
-      "width": 1500,
-      "height": 1000,
+      "remote": "https://i.pinimg.com/originals/9e/9b/3b/9e9b3bd77ca4560feb23f0a198536a7e.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/407083253839954910/",
+      "credit": "pinterest:lovefelixmysunshinemyhusband",
+      "width": 1365,
+      "height": 2048,
+      "tags": []
+    },
+    "hero": {
+      "member": "group",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/9e/9b/3b/9e9b3bd77ca4560feb23f0a198536a7e.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/407083253839954910/",
+      "credit": "pinterest:lovefelixmysunshinemyhusband",
+      "width": 1365,
+      "height": 2048,
       "tags": []
     }
   },
   "title": "Girls",
   "releaseDate": "2022-07-08",
-  "generatedAt": "2026-10-06T05:38:19.891Z"
+  "generatedAt": "2026-10-06T05:58:16.433Z"
 }

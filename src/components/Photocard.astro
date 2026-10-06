@@ -1,18 +1,22 @@
 ---
-interface Img { member: string; kind: 'local' | 'remote'; src?: string; remote?: string; pageUrl: string | null; credit: string | null; width: number | null; height: number | null; tags: string[]; license?: string }
-const { img, index, era } = Astro.props as { img: Img; index: number; era: string };
+import { pinVariant, pinSrcset, isPin } from '@/lib/pin';
+interface Img { member: string; kind: 'local' | 'remote'; src?: string; remote?: string; variants?: { w480: string; w960: string }; pageUrl: string | null; credit: string | null; width: number | null; height: number | null; tags: string[]; license?: string }
+const { img, index, era, eager = false } = Astro.props as { img: Img; index: number; era: string; eager?: boolean };
+const sizes = '(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw';
 const base = import.meta.env.BASE_URL;
 const w = img.width ?? 3, h = img.height ?? 4;
 const alt = `${img.member === 'group' ? 'aespa' : img.member}, ${era}${img.tags.length ? ', ' + img.tags.join(', ') : ''}`;
 const full = img.kind === 'local' ? base + img.src : img.remote;
 // Pinterest serves a 736px variant at the same hash path; the original is the fallback and the lightbox source.
-const grid = img.remote?.replace('/originals/', '/736x/');
+const grid = isPin(img.remote) ? pinVariant(img.remote!, 736) : img.remote;
+const gridSet = isPin(img.remote) ? pinSrcset(img.remote!, [474, 736]) : undefined;
+const localSet = img.variants ? `${base}${img.variants.w480} 480w, ${base}${img.variants.w960} 960w, ${base}${img.src} 1600w` : undefined;
 ---
 <figure class="card" style={`--ar:${w}/${h}`} data-full={full}>
   <button type="button" class="view" aria-label={`View full size: ${alt}`}>
   {img.kind === 'local'
-    ? <img src={base + img.src} alt={alt} width={w} height={h} loading={index < 3 ? 'eager' : 'lazy'} decoding="async" />
-    : <img src={grid} data-orig={img.remote} alt={alt} width={w} height={h} loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="if(this.dataset.orig&&this.src!==this.dataset.orig){this.src=this.dataset.orig}else{this.closest('.card').remove()}" />}
+    ? <img src={base + img.src} srcset={localSet} sizes={localSet ? sizes : undefined} alt={alt} width={w} height={h} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+    : <img src={grid} srcset={gridSet} sizes={gridSet ? sizes : undefined} data-orig={img.remote} alt={alt} width={w} height={h} loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="if(this.dataset.orig&&this.src!==this.dataset.orig){this.removeAttribute('srcset');this.src=this.dataset.orig}else{this.closest('.card').remove()}" />}
   </button>
   <div class="shine"></div><div class="glare"></div>
   <figcaption class="cap">

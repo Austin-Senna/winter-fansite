@@ -13,6 +13,7 @@ const image = z.object({
   tags: z.array(z.string()),
   license: z.string().optional(),
   licenseUrl: z.string().nullable().optional(),
+  variants: z.object({ w480: z.string(), w960: z.string() }).optional(),
 }).refine(i => (i.kind === 'local' ? !!i.src : !!i.remote), { message: 'local needs src, remote needs remote' });
 
 const video = z.object({
@@ -26,7 +27,7 @@ const eras = defineCollection({
     slug: z.string(), title: z.string(), releaseDate: z.string(), generatedAt: z.string(),
     videos: z.array(video),
     images: z.object({ karina: z.array(image), giselle: z.array(image), winter: z.array(image), ningning: z.array(image), group: z.array(image) }),
-    featured: z.object({ karina: image.nullable(), giselle: image.nullable(), winter: image.nullable(), ningning: image.nullable(), group: image.nullable() }),
+    featured: z.object({ karina: image.nullable(), giselle: image.nullable(), winter: image.nullable(), ningning: image.nullable(), group: image.nullable(), hero: image.nullable() }),
   }),
 });
 

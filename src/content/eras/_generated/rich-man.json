@@ -110,7 +110,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/karina/karina-30bbb27913-480.webp",
+          "w960": "media/rich-man/karina/karina-30bbb27913-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -122,7 +126,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/karina/karina-eadaf28f0c-480.webp",
+          "w960": "media/rich-man/karina/karina-eadaf28f0c-960.webp"
+        }
       },
       {
         "member": "karina",
@@ -356,7 +364,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "variants": {
+          "w480": "media/rich-man/giselle/giselle-6883c0582f-480.webp",
+          "w960": "media/rich-man/giselle/giselle-6883c0582f-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -368,7 +380,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "variants": {
+          "w480": "media/rich-man/giselle/giselle-1723fb0c60-480.webp",
+          "w960": "media/rich-man/giselle/giselle-1723fb0c60-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -380,7 +396,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "variants": {
+          "w480": "media/rich-man/giselle/giselle-30929501fe-480.webp",
+          "w960": "media/rich-man/giselle/giselle-30929501fe-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -392,7 +412,11 @@
         "height": 2400,
         "tags": [],
         "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "variants": {
+          "w480": "media/rich-man/giselle/giselle-9377aaef4e-480.webp",
+          "w960": "media/rich-man/giselle/giselle-9377aaef4e-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -404,7 +428,11 @@
         "height": 3600,
         "tags": [],
         "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "variants": {
+          "w480": "media/rich-man/giselle/giselle-a489508171-480.webp",
+          "w960": "media/rich-man/giselle/giselle-a489508171-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -416,7 +444,11 @@
         "height": 2700,
         "tags": [],
         "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "variants": {
+          "w480": "media/rich-man/giselle/giselle-6297e9c724-480.webp",
+          "w960": "media/rich-man/giselle/giselle-6297e9c724-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -428,7 +460,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/giselle/giselle-d40ba8cbd1-480.webp",
+          "w960": "media/rich-man/giselle/giselle-d40ba8cbd1-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -440,7 +476,11 @@
         "height": 1896,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/giselle/giselle-91f07d4858-480.webp",
+          "w960": "media/rich-man/giselle/giselle-91f07d4858-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -452,7 +492,11 @@
         "height": 1896,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/giselle/giselle-4000c100f3-480.webp",
+          "w960": "media/rich-man/giselle/giselle-4000c100f3-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -464,7 +508,11 @@
         "height": 1896,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/giselle/giselle-40dfa48b39-480.webp",
+          "w960": "media/rich-man/giselle/giselle-40dfa48b39-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -476,7 +524,11 @@
         "height": 1896,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/giselle/giselle-7e1a37dab9-480.webp",
+          "w960": "media/rich-man/giselle/giselle-7e1a37dab9-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -488,7 +540,11 @@
         "height": 897,
         "tags": [],
         "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "variants": {
+          "w480": "media/rich-man/giselle/giselle-de4c03a134-480.webp",
+          "w960": "media/rich-man/giselle/giselle-de4c03a134-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -500,7 +556,11 @@
         "height": 1395,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/giselle/giselle-20e96e4f7f-480.webp",
+          "w960": "media/rich-man/giselle/giselle-20e96e4f7f-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -512,7 +572,11 @@
         "height": 1174,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/giselle/giselle-a323d2bce8-480.webp",
+          "w960": "media/rich-man/giselle/giselle-a323d2bce8-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -524,7 +588,11 @@
         "height": 1004,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/giselle/giselle-b5a80d9530-480.webp",
+          "w960": "media/rich-man/giselle/giselle-b5a80d9530-960.webp"
+        }
       },
       {
         "member": "giselle",
@@ -628,7 +696,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/winter/winter-92cac804af-480.webp",
+          "w960": "media/rich-man/winter/winter-92cac804af-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -640,7 +712,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/winter/winter-97d22bd0e5-480.webp",
+          "w960": "media/rich-man/winter/winter-97d22bd0e5-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -652,7 +728,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/winter/winter-10dbad1e19-480.webp",
+          "w960": "media/rich-man/winter/winter-10dbad1e19-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -664,7 +744,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/winter/winter-f8d91f855d-480.webp",
+          "w960": "media/rich-man/winter/winter-f8d91f855d-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -676,7 +760,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/winter/winter-6c37b5318e-480.webp",
+          "w960": "media/rich-man/winter/winter-6c37b5318e-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -688,7 +776,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/winter/winter-fcf8a52350-480.webp",
+          "w960": "media/rich-man/winter/winter-fcf8a52350-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -700,7 +792,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/winter/winter-8f73d598a7-480.webp",
+          "w960": "media/rich-man/winter/winter-8f73d598a7-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -712,7 +808,11 @@
         "height": 2158,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/winter/winter-291026897b-480.webp",
+          "w960": "media/rich-man/winter/winter-291026897b-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -724,7 +824,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/winter/winter-039147fde8-480.webp",
+          "w960": "media/rich-man/winter/winter-039147fde8-960.webp"
+        }
       },
       {
         "member": "winter",
@@ -888,7 +992,11 @@
         "height": 2065,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/ningning/ningning-dc20ae5131-480.webp",
+          "w960": "media/rich-man/ningning/ningning-dc20ae5131-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -900,7 +1008,11 @@
         "height": 1908,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/ningning/ningning-23db45357c-480.webp",
+          "w960": "media/rich-man/ningning/ningning-23db45357c-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -912,7 +1024,11 @@
         "height": 1555,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/ningning/ningning-907a76b891-480.webp",
+          "w960": "media/rich-man/ningning/ningning-907a76b891-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -924,7 +1040,11 @@
         "height": 1430,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/ningning/ningning-dc6da0a1fe-480.webp",
+          "w960": "media/rich-man/ningning/ningning-dc6da0a1fe-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -936,7 +1056,11 @@
         "height": 1730,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/ningning/ningning-f82fd49f2c-480.webp",
+          "w960": "media/rich-man/ningning/ningning-f82fd49f2c-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -948,7 +1072,11 @@
         "height": 1567,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/ningning/ningning-a7130280bd-480.webp",
+          "w960": "media/rich-man/ningning/ningning-a7130280bd-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -960,7 +1088,11 @@
         "height": 1507,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/ningning/ningning-a3c66b9195-480.webp",
+          "w960": "media/rich-man/ningning/ningning-a3c66b9195-960.webp"
+        }
       },
       {
         "member": "ningning",
@@ -1142,7 +1274,11 @@
         "credit": "SM Entertainment / aespa-official.jp",
         "width": 2000,
         "height": 2000,
-        "tags": []
+        "tags": [],
+        "variants": {
+          "w480": "media/rich-man/group/group-c661ef46c8-480.webp",
+          "w960": "media/rich-man/group/group-c661ef46c8-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1154,7 +1290,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-ceec635473-480.webp",
+          "w960": "media/rich-man/group/group-ceec635473-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1166,7 +1306,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-2a80cf93e1-480.webp",
+          "w960": "media/rich-man/group/group-2a80cf93e1-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1178,7 +1322,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-253a727bfb-480.webp",
+          "w960": "media/rich-man/group/group-253a727bfb-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1190,7 +1338,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-73dbd2e3ef-480.webp",
+          "w960": "media/rich-man/group/group-73dbd2e3ef-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1202,7 +1354,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-63578ae5b0-480.webp",
+          "w960": "media/rich-man/group/group-63578ae5b0-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1214,7 +1370,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-7675382ca2-480.webp",
+          "w960": "media/rich-man/group/group-7675382ca2-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1226,7 +1386,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-cbc0714628-480.webp",
+          "w960": "media/rich-man/group/group-cbc0714628-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1238,7 +1402,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-a866769669-480.webp",
+          "w960": "media/rich-man/group/group-a866769669-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1250,7 +1418,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-ede4b3f420-480.webp",
+          "w960": "media/rich-man/group/group-ede4b3f420-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1262,7 +1434,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-2edee5046d-480.webp",
+          "w960": "media/rich-man/group/group-2edee5046d-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1274,7 +1450,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-969df90de0-480.webp",
+          "w960": "media/rich-man/group/group-969df90de0-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1286,7 +1466,11 @@
         "height": 2560,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-9d19ee4568-480.webp",
+          "w960": "media/rich-man/group/group-9d19ee4568-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1298,7 +1482,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-a4d5e1d985-480.webp",
+          "w960": "media/rich-man/group/group-a4d5e1d985-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1310,7 +1498,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-755580a611-480.webp",
+          "w960": "media/rich-man/group/group-755580a611-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1322,7 +1514,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-2ebcf6b07a-480.webp",
+          "w960": "media/rich-man/group/group-2ebcf6b07a-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1334,7 +1530,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-428d3340ee-480.webp",
+          "w960": "media/rich-man/group/group-428d3340ee-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1346,7 +1546,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-4378d5a7cb-480.webp",
+          "w960": "media/rich-man/group/group-4378d5a7cb-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1358,7 +1562,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-91f298f637-480.webp",
+          "w960": "media/rich-man/group/group-91f298f637-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1370,7 +1578,11 @@
         "height": 2160,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-7ccbdee56f-480.webp",
+          "w960": "media/rich-man/group/group-7ccbdee56f-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1382,7 +1594,11 @@
         "height": 1859,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-c374765276-480.webp",
+          "w960": "media/rich-man/group/group-c374765276-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1394,7 +1610,11 @@
         "height": 1857,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-995d04894c-480.webp",
+          "w960": "media/rich-man/group/group-995d04894c-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1406,7 +1626,11 @@
         "height": 1800,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-6c50daca4a-480.webp",
+          "w960": "media/rich-man/group/group-6c50daca4a-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1418,7 +1642,11 @@
         "height": 1800,
         "tags": [],
         "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "variants": {
+          "w480": "media/rich-man/group/group-4a31dedc08-480.webp",
+          "w960": "media/rich-man/group/group-4a31dedc08-960.webp"
+        }
       }
     ]
   },
@@ -1473,10 +1701,30 @@
       "tags": [],
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "src": "media/rich-man/group/group-b8ea474c01.jpg"
+      "src": "media/rich-man/group/group-b8ea474c01.jpg",
+      "variants": {
+        "w480": "media/rich-man/group/group-b8ea474c01-480.webp",
+        "w960": "media/rich-man/group/group-b8ea474c01-960.webp"
+      }
+    },
+    "hero": {
+      "member": "group",
+      "kind": "local",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Aespa_@_East_End_Studios_11_13_2025_(54996848733).jpg",
+      "credit": "Justin Higuchi",
+      "width": 3200,
+      "height": 3200,
+      "tags": [],
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "src": "media/rich-man/group/group-b8ea474c01.jpg",
+      "variants": {
+        "w480": "media/rich-man/group/group-b8ea474c01-480.webp",
+        "w960": "media/rich-man/group/group-b8ea474c01-960.webp"
+      }
     }
   },
   "title": "Rich Man",
   "releaseDate": "2025-09-05",
-  "generatedAt": "2026-10-06T05:38:20.100Z"
+  "generatedAt": "2026-10-06T05:58:44.612Z"
 }

@@ -1078,7 +1078,11 @@
         "height": 978,
         "tags": [],
         "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "variants": {
+          "w480": "media/black-mamba/group/group-57a5f1a8ef-480.webp",
+          "w960": "media/black-mamba/group/group-57a5f1a8ef-960.webp"
+        }
       },
       {
         "member": "group",
@@ -1346,25 +1350,35 @@
     "ningning": {
       "member": "ningning",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/6b/f5/78/6bf578199c4e09dfcf8ebc2d9e40813d.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/594193744582103387/",
-      "credit": "pinterest:xxfreazbie",
-      "width": 1182,
-      "height": 1986,
+      "remote": "https://i.pinimg.com/originals/03/05/e7/0305e77ab349462cf10385b7dbe4a709.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/927811960740143312/",
+      "credit": "pinterest:aethink",
+      "width": 2002,
+      "height": 3000,
       "tags": []
     },
     "group": {
       "member": "group",
       "kind": "remote",
-      "remote": "https://i.pinimg.com/originals/cf/9b/7f/cf9b7f3391cdf456d6b735810a3005c6.jpg",
-      "pageUrl": "https://www.pinterest.com/pin/25755029108828318/",
-      "credit": "pinterest:L0VEDU",
-      "width": 2997,
-      "height": 2000,
+      "remote": "https://i.pinimg.com/originals/be/a1/13/bea11318dee9dff7addf5a2a1aaa28ee.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/45247171248857983/",
+      "credit": "pinterest:strangerinhere",
+      "width": 2000,
+      "height": 2997,
+      "tags": []
+    },
+    "hero": {
+      "member": "group",
+      "kind": "remote",
+      "remote": "https://i.pinimg.com/originals/be/a1/13/bea11318dee9dff7addf5a2a1aaa28ee.jpg",
+      "pageUrl": "https://www.pinterest.com/pin/45247171248857983/",
+      "credit": "pinterest:strangerinhere",
+      "width": 2000,
+      "height": 2997,
       "tags": []
     }
   },
   "title": "Black Mamba",
   "releaseDate": "2020-11-17",
-  "generatedAt": "2026-10-06T05:38:19.880Z"
+  "generatedAt": "2026-10-06T05:58:10.947Z"
 }
